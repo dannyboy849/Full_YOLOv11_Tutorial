@@ -1,3 +1,24 @@
-Experiment 3 proved the most successful. With an accuracy of -%, and -% accurate on untrained data.
+Experiment 3 proved the most successful. With an accuracy of 54.4%, and 23.4% accurate on untrained data.
+
+Precision (P):
+
+    Male: 0.482 (slight improvement)
+    Female: 0.493 (similar to male, showing balanced precision across classes)
+
+Recall (R):
+
+    Male: 0.748 (this is a strong recall, meaning the model is detecting many male instances)
+    Female: 0.676 (slightly lower than male recall but still solid)
+
+mAP50 (Accuracy at 50% IoU):
+
+    Overall mAP50 is 0.544, which is a strong result, showing that the model is good at detecting objects with at least 50% overlap.
+    Male: 0.531 (good but could still improve a bit)
+    Female: 0.557 (slightly better than male, which is a positive sign)
+
+mAP50-95 (Accuracy at various IoU thresholds):
+
+    Overall mAP50-95 is 0.234, which is a decent result, indicating that the model is handling higher IoU thresholds well.
+    Female: 0.238 (better performance at higher thresholds compared to male)
 
 Selected this one to integrate with semantic segmentation.
