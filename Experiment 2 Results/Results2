@@ -1,0 +1,2 @@
+Results for Experiment 2 were --%, --% on untrained data. This included Albumentation (augmenting software) which improved the accuracy.
+Very poor results. Recommended to train with more epochs (was on 100, try 1000)
