@@ -1,1 +1,2 @@
-Results for Experiment 1 (90% accuracy, 70% accuracy on new camera angles)
+Results for Experiment 1 (98% accuracy, 70% accuracy on new camera angles)
+Unfortunately, it was overfitting. Therefore, we must remove it from a contender.
