@@ -1,0 +1,5 @@
+Overall Precision (P): 68.4% — The proportion of correctly identified instances out of all instances predicted as a certain class.
+Overall Recall (R): 59.1% — The proportion of correctly identified instances out of all ground-truth instances.
+Mean Average Precision (mAP50): 66.5% — Average precision at 50% Intersection over Union (IoU) threshold.
+mAP50-95: 27.3% — Average precision across multiple IoU thresholds (from 0.5 to 0.95 in steps of 0.05).
+Relative high accuracy. Recommend to use weights from CAM3 instead of CAM1.
