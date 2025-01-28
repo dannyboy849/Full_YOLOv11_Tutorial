@@ -4,6 +4,8 @@ This will be my repository where I upload all of my files mainly as a backup, bu
 As of now, our best results for Camera 1 are 54% precison and 23.4% accurate in IoU. This, of course, is without the aid of semantic segmentation which is likely to boost the accuracy to ~70% or higher.
 Our best results for Camera 3 are 64% precison and 27.3% accurate in IoU (mAP-50-95)
 
+Will be testing on Yolov11 soon - working on complicated installation. 
+
 Instructions: 
 Download Yolov5
 Set up your system with Ubuntu (version doesn't matter) - I used dual boot
