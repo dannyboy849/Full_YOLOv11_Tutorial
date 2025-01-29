@@ -50,7 +50,7 @@ def auto_annotate(
 ):
 ```
 
-This changes the model used to yolo11s (or which ever .pt you want)
+det_model will use yolo11s (or which ever .pt you want) so long as the file is inside of the data folder as well. if not, it will assume yolo11n.
 device="0" ensures you use your GPU (if you have more add "0,1,2,...")
 conf is confidence threshold, depending on your images, I recommend .7 for 70%
 iou should be standard at .5, unless you plan on using it for multi-object tracking.
