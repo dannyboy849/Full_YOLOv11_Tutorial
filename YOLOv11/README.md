@@ -1,8 +1,8 @@
-How to install YOLOv11 (the easy way)
+# How to install YOLOv11 (the easy way)
 
-1. Make a Docker Image - See Docker Image Instructions (Strongly Recommend GPU enabled)
-2. Make a Docker Container - See Docker Container Instructions
-3. Create a clear structure where you will be working in:
+# 1. Make a Docker Image - See Docker Image Instructions (Strongly Recommend GPU enabled)
+# 2. Make a Docker Container - See Docker Container Instructions
+# 3. Create a clear structure where you will be working in:
 
 home/path/your/folder/to/data
 ├── images/
@@ -28,10 +28,10 @@ home/path/your/folder/to/data
 
 IMPORTANT:
 
-!!!Inside of Data, you may have to create an "Images" and "Labels" Folder
+!!! Inside of Data, you may have to create an "Images" and "Labels" Folder
 Inside of Images AND labels, make 3 folders: train, val, test. Ensure you match appropriately!!!
 
-4. Inside of Annotator, change it to these values:
+# 4. Inside of ~/data/annotator.py, change it to these values:
 
 ```python
 def auto_annotate(
