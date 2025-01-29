@@ -1,7 +1,15 @@
-# How to install YOLOv11 (the easy way)
+# How to install YOLOv11 on Ubuntu 24.04 (the easy way)
 
 # 1. Pull yolov11 from github:
+
 ```python
+pip install ultralytics
+```
+
+Note: this may not work on your terminal. You can
+```
+a) make a python venv and use pip from there
+b) in another existing docker container, run it there. Then, move it to whatever folder you are going to work in.
 ```
 
 # 2. Make a Docker Image - See Docker Image Instructions (Strongly Recommend GPU-enabled)
@@ -94,6 +102,7 @@ You should create your file and put it inside of the data.
 Example is ~/data/bird_project.yaml
 
 These will be the structure of your file:
+
 ```python
 # Dataset configuration for YOLOv5 with manual train/val/test splits
 
@@ -106,15 +115,27 @@ test: /home/Documents/Bird_Project/data/images/test # Path to the test images
 nc: 2  # Number of classes
 names: ['male', 'female']  # List of class names
 ```
+
 # 5. Train!
 Finally, ensure you have the yolos.pt INSIDE of the ~/data/ folder. If not, it will assume yolon.pt as mentioned earlier. Now, run:
 
 ```python
 yolo detect train data= /path/to/your/bird_project.yaml # Replace bird_project with whatever you named your .yaml
 ```
+
 Depending on your GPU, it should only take 5-20 minutes to train on 1800 images with 100 epochs. I recommend upgrading it to 1000 epochs, and adding:
 
 ```python
 ...yaml --patience 100
 ```
+
 To ensure you have as accurate data as you can get without having to train for hours.
+
+# 6. Validate your data:
+Now that you're done training, validate your data by running:
+
+```python
+yolo val model=/path/to/weights/best.pt data=/path/to/data.yaml split=test
+```
+
+This will go back and test on your /test image folder. You can also apply the trained best.pt weight to other images for classification, although for birds, this will not be very accurate without heavy fine-tuning/re-annotating.
