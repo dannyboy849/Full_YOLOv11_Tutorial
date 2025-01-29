@@ -1,9 +1,30 @@
 # How to install YOLOv11 (the easy way)
 
-# 1. Make a Docker Image - See Docker Image Instructions (Strongly Recommend GPU enabled)
-# 2. Make a Docker Container - See Docker Container Instructions
-# 3. Create a clear structure where you will be working in:
+# 1. Pull yolov11 from github:
+```python
+```
 
+# 2. Make a Docker Image - See Docker Image Instructions (Strongly Recommend GPU-enabled)
+
+# 3. Make a Docker Container - See Docker Container Instructions
+
+# 4. Start your docker container
+
+```python
+sudo docker start -ai yolov11_birds
+````
+Simply change "yolov11_birds" to the name of your container.
+
+# How to train your custom dataset
+
+# 1. Create a clear structure where you will be working in:
+```
+In my experience, 60% of images to train, 20% val, and 20% test split is the most optimal. To understand why, you need to understand what its doing:
+Train - trains your data using your labelled data, then adjust the weights to minimize its difference between its prediction vs ground truth (your labels.)
+Val - After each epoch, YOLO evaluates its performance on the validation set. It then uses this to measure its accuracy, precision, recall, and loss. You can adjust the hyperparameters to fine-tune
+Test - Once your training is complete, the best.pt is applied to your test set. The test set contains unseen data to evaluate how well the model generalizes to new images. This phase provides final accuracy metrics but does not influence the training process.
+You can also run detect.py using your weights on any image directory and YOLO will estimate and provide how accurate it is with your custom-trained weights.
+```
 ```
 home/path/your/folder/to/data
 ├── images/
@@ -24,8 +45,8 @@ home/path/your/folder/to/data
 │   |   ├── img3.txt
 │   |   ├── img4.txt
 |   └── test/  
-|   |   ├── img5.png
-|   |   ├── img6.png
+|   |   ├── img5.txt
+|   |   ├── img6.txt
 ```
 
 IMPORTANT:
@@ -33,7 +54,7 @@ IMPORTANT:
 !!! Inside of Data, you may have to create an "Images" and "Labels" Folder
 Inside of Images AND labels, make 3 folders: train, val, test. Ensure you match appropriately!!!
 
-# 4. Inside of ~/data/annotator.py, change it to these values:
+# 2. Inside of ~/data/annotator.py, change it to these values:
 
 ```python
 def auto_annotate(
@@ -56,7 +77,8 @@ def auto_annotate(
 - imgsz=640 is how many images you train, 640 is standard.
 - max_det=100 is the maximum number of detected objects per epoch. We changed it to 100 to not over-annotate.
 ```
-# 5. Inside of ~/data/dataset.py, change it to these values:
+
+# 3. Inside of ~/data/dataset.py, change it to these values:
 ```python
 def __init__(self, root, args, augment=True,prefix=""): #Changed from False
 
@@ -66,3 +88,22 @@ augment=True allows the augmentation to actually augment itself and ensure you h
 Resources: 
 Massive help from: https://medium.com/@estebanuri/training-yolov11-object-detector-on-a-custom-dataset-39bba09530ff
 Documentation: https://docs.ultralytics.com/models/yolo11/#performance-metrics
+
+# 4. Ensure you have your custom .yaml file inside of ~/data/
+You should create your file and put it inside of the data. 
+Example is ~/data/bird_project.yaml
+
+These will be the structure of your file:
+```python
+# Dataset configuration for YOLOv5 with manual train/val/test splits
+
+path: /home/Documents/Bird_Project/data # Base dataset path 
+
+train: /home/Documents/Bird_Project/data/images/train # Path to the train images
+val: /home/Documents/Bird_Project/data/images/val # Path to the validation images
+test: /home/Documents/Bird_Project/data/images/test # Path to the test images
+
+nc: 2  # Number of classes
+names: ['male', 'female']  # List of class names
+```
+# 5. 
