@@ -4,6 +4,7 @@
 # 2. Make a Docker Container - See Docker Container Instructions
 # 3. Create a clear structure where you will be working in:
 
+```
 home/path/your/folder/to/data
 ├── images/
 │   ├── train/
