@@ -48,14 +48,19 @@ def auto_annotate(
     classes=None,
     output_dir=None,
 ):
-```
-```
+
 - det_model will use yolo11s (or which ever .pt you want) so long as the file is inside of the data folder as well. if not, it will assume yolo11n.
 - device="0" ensures you use your GPU (if you have more add "0,1,2,...")
 - conf is confidence threshold, depending on your images, I recommend .7 for 70%
 - iou should be standard at .5, unless you plan on using it for multi-object tracking.
 - imgz is how many images you train, 640 is standard.
 - max_det is the maximum number of detected objects per epoch. We changed it to 100 to not over-annotate.
+```
+# 5. Inside of ~/data/dataset.py
+```python
+def __init__(self, root, args, augment=True,prefix=""): #Changed from False
+
+augment=True allows the augmentation to actually augment itself and ensure you have a fine-tuned model.
 ```
 
 Resources: 
