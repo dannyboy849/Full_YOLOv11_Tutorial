@@ -34,7 +34,7 @@ Test - Once your training is complete, the best.pt is applied to your test set. 
 You can also run detect.py using your weights on any image directory and YOLO will estimate and provide how accurate it is with your custom-trained weights.
 ```
 ```
-home/path/your/folder/to/data
+/path/to/your/folder/data
 ├── images/
 │   ├── train/
 │   │   ├── img1.png
