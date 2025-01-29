@@ -8,7 +8,7 @@ pip install ultralytics
 
 Note: this may not work on your terminal. You can
 ```
-a) make a python venv and use pip from there
+a) make a python venv and use pip from there. Then, move it to whatever folder you are going to work in. 
 b) in another existing docker container, run it there. Then, move it to whatever folder you are going to work in.
 ```
 
