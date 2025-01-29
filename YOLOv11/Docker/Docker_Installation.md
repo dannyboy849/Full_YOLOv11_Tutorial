@@ -31,3 +31,10 @@ sudo docker run --name yolov11_birds -v /home/daniel-airou/Documents/Bird_Projec
 ```
 Again, yolov11_birds is your container name, followed by the directory of your choice. The ":/home/..." is where the container will grab from. Change to the files you want it to access.
 This is based on GPU, so it'll be on your GPU, then shm-size is how many memory you want to use. Mine is 16GB memory out of 32GB possible. Finally, yolov11_birds:latest is your <image_name>:<image_tag>.
+
+# To start your docker container in the future:
+
+```python
+sudo docker start -ai yolov11_birds
+````
+Simply change "yolov11_birds" to the name of your container, and you're ready to go!
