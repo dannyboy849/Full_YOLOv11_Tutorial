@@ -120,16 +120,25 @@ names: ['male', 'female']  # List of class names
 Finally, ensure you have the yolos.pt INSIDE of the ~/data/ folder. If not, it will assume yolon.pt as mentioned earlier. Now, run:
 
 ```python
-yolo detect train data= /path/to/your/bird_project.yaml # Replace bird_project with whatever you named your .yaml
+yolo train model=yolo11s data=/home/Documents/Bird_Project/data/birds_dataset_1.yaml epochs=1000 batch=24 device=0```
+```
+```
+model=yolo11n - your version of yolo you want to train on
+data= path to your .yaml file from previous
+epochs=1000 - adjust to however many epochs you want to train on (Higher the number, greater the accuracy but takes longer to train)
+Batch=24 - how much memory it'll use.
+device=0 - which GPU its training on
 ```
 
-Depending on your GPU, it should only take 5-20 minutes to train on 1800 images with 100 epochs. I recommend upgrading it to 1000 epochs, and adding:
+Depending on your GPU, it should only take 5-20 minutes to train on 1800 images with 100 epochs. I recommend training on 1000 epochs, and adding at the end:
 
 ```python
-...yaml --patience 100
+...yaml --patience=100
 ```
 
-To ensure you have as accurate data as you can get without having to train for hours.
+And ours stopped at 154 epochs training for 18 minutes. 
+
+To ensure you have as accurate data as you can get, but avoid having to train for hours.
 
 # 6. Validate your data:
 Now that you're done training, validate your data by running:
