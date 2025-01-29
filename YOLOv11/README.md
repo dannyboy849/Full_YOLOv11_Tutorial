@@ -106,4 +106,15 @@ test: /home/Documents/Bird_Project/data/images/test # Path to the test images
 nc: 2  # Number of classes
 names: ['male', 'female']  # List of class names
 ```
-# 5. 
+# 5. Train!
+Finally, ensure you have the yolos.pt INSIDE of the ~/data/ folder. If not, it will assume yolon.pt as mentioned earlier. Now, run:
+
+```python
+yolo detect train data= /path/to/your/bird_project.yaml # Replace bird_project with whatever you named your .yaml
+```
+Depending on your GPU, it should only take 5-20 minutes to train on 1800 images with 100 epochs. I recommend upgrading it to 1000 epochs, and adding:
+
+```python
+...yaml --patience 100
+```
+To ensure you have as accurate data as you can get without having to train for hours.
