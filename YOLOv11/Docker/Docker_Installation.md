@@ -21,7 +21,10 @@ sudo docker build -t yolov11_birds .
 ```
 Change "yolov11_birds" with your own image name
 
-# 4. Build your docker container:
+
+# How to create a docker container for YOLOv11
+
+# 1. Build your docker container:
 
 ```python
 sudo docker run --name yolov11_birds -v /home/daniel-airou/Documents/Bird_Project/ultralytics/ultralytics:/home/Documents/Bird_Project --gpus all --shm-size 16G -it yolov11_birds:latest
