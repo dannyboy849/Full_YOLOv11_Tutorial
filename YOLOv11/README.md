@@ -14,7 +14,7 @@ b) in another existing docker container, run it there. Then, move it to whatever
 
 # 2. Make a Docker Image - See Docker Installation Instructions (Strongly Recommend GPU-enabled)
 
-# 3. Make a Docker Container - See Docker Installation Instructions (At Bottom)
+# 3. Make a Docker Container - See Docker Installation Instructions
 
 # 4. Start your docker container
 
