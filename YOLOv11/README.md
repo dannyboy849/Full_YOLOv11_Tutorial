@@ -33,6 +33,7 @@ Inside of Images AND labels, make 3 folders: train, val, test. Ensure you match 
 
 4. Inside of Annotator, change it to these values:
 
+```python
 def auto_annotate(
     data,
     det_model="yolo11s.pt",
@@ -45,6 +46,7 @@ def auto_annotate(
     classes=None,
     output_dir=None,
 ):
+```
 
 This changes the model used to yolo11s (or which ever .pt you want)
 device="0" ensures you use your GPU (if you have more add "0,1,2,...")
