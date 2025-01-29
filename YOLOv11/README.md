@@ -136,7 +136,7 @@ Depending on your GPU, it should only take 5-20 minutes to train on 1800 images 
 ...yaml --patience=100
 ```
 
-And ours stopped at 154 epochs training for 18 minutes. 
+And ours stopped at 154 epochs training for 18 minutes (7 seconds per epoch). 
 
 To ensure you have as accurate data as you can get, but avoid having to train for hours.
 
