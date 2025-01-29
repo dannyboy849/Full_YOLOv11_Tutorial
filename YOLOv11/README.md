@@ -26,6 +26,7 @@ home/path/your/folder/to/data
 |   └── test/  
 |   |   ├── img5.png
 |   |   ├── img6.png
+```
 
 IMPORTANT:
 
