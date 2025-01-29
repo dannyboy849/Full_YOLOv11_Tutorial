@@ -12,9 +12,9 @@ a) make a python venv and use pip from there. Then, move it to whatever folder y
 b) in another existing docker container, run it there. Then, move it to whatever folder you are going to work in.
 ```
 
-# 2. Make a Docker Image - See Docker Image Instructions (Strongly Recommend GPU-enabled)
+# 2. Make a Docker Image - See Docker Installation Instructions (Strongly Recommend GPU-enabled)
 
-# 3. Make a Docker Container - See Docker Container Instructions
+# 3. Make a Docker Container - See Docker Installation Instructions (At Bottom)
 
 # 4. Start your docker container
 
