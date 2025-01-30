@@ -78,7 +78,7 @@ def auto_annotate(
     output_dir=None,
 ):
 
-- det_model will use yolo11s (or which ever .pt you want) so long as the file is inside of the data folder as well. if not, it will assume yolo11n.
+- det_model will use yolo11s (or which ever .pt you want) so long as the file is inside of the data folder as well. Ultralytics provides **n**ano, **s**mall, medium, large, x-large model weights
 - device="0" ensures you use your GPU (if you have more add "0,1,2,...")
 - conf=0.70 is confidence threshold, depending on your images, I recommend .7 for 70%
 - iou=0.5 should be standard, unless you plan on using it for multi-object tracking.
