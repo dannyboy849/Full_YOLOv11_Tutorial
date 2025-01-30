@@ -77,14 +77,14 @@ def auto_annotate(
     classes=None,
     output_dir=None,
 ):
-
-- det_model will use yolo11s (or which ever .pt you want) so long as the file is inside of the data folder as well. Ultralytics provides **n**ano, **s**mall, medium, large, x-large model weights
+```
+- det_model will use yolo11s (or which ever .pt you want) so long as the file is inside of the data folder as well. Ultralytics provides **n**ano, **s**mall, **m**edium, **l**arge, **x**-large model weights
 - device="0" ensures you use your GPU (if you have more add "0,1,2,...")
 - conf=0.70 is confidence threshold, depending on your images, I recommend .7 for 70%
 - iou=0.5 should be standard, unless you plan on using it for multi-object tracking.
 - imgsz=640 is how many images you train, 640 is standard.
 - max_det=100 is the maximum number of detected objects per epoch. We changed it to 100 to not over-annotate.
-```
+
 
 # 3. Inside of ~/data/dataset.py, change it to these values:
 ```python
@@ -120,7 +120,7 @@ names: ['male', 'female']  # List of class names
 Finally, ensure you have the yolos.pt INSIDE of the ~/data/ folder. If not, it will assume yolon.pt as mentioned earlier. Now, run:
 
 ```python
-yolo train model=yolo11s data=/home/Documents/Bird_Project/data/birds_dataset_1.yaml epochs=1000 batch=24 device=0```
+yolo train model=yolo11s data=/home/Documents/Bird_Project/data/birds_dataset_1.yaml epochs=1000 batch=24 device=0
 ```
 ```
 model=yolo11n - your version of yolo you want to train on
