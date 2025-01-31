@@ -1,4 +1,6 @@
 # How to install YOLOv11 on Ubuntu 24.04 (the easy way)
+### Notes:
+On our GeFORCE RTX 4070 SUPER, it took 5 hours 4 minutes for 1000 epochs. This was simply to ensure we had the most data possible, but changing the delta value can aid as well.
 
 # 1. Pull yolov11 from github:
 
