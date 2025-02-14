@@ -64,7 +64,7 @@ IMPORTANT:
 !!! Inside of Data, you may have to create an "Images" and "Labels" Folder
 Inside of Images AND labels, make 3 folders: train, val, test. Ensure you match appropriately!!!
 
-# 2. Inside of ~/data/annotator.py, change it to these values:
+# 2. Inside of ~/data/annotator.py, change it to these values (optional):
 
 ```python
 def auto_annotate(
