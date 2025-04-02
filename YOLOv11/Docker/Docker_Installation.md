@@ -2,7 +2,7 @@
 
 # 1. Pull the latest miniconda3 image:
 
-You can refer to /ultralytics/docker/docker for the image
+You can refer to /ultralytics/docker/docker for their built-in image
 
 ```python
 sudo docker pull continuumio/miniconda3:latest
