@@ -1,6 +1,6 @@
 # How to install YOLOv11 on Ubuntu 24.04 (the easy way)
 ### Notes:
-On our GeFORCE RTX 4070 SUPER, it took 5 hours 4 minutes for 1000 epochs. This was simply to ensure we had the most data possible, but changing the delta value can aid as well.
+On our GeFORCE RTX 4070 SUPER, it took 5 hours 4 minutes for 1000 epochs. You may ask why begin with so many epochs - this is simply to ensure our data had fully converged, but after this we added an early stopping of 250 epochs
 
 # 1. Pull yolov11 from github:
 
@@ -8,7 +8,7 @@ On our GeFORCE RTX 4070 SUPER, it took 5 hours 4 minutes for 1000 epochs. This w
 pip install ultralytics
 ```
 
-Note: this may not work on your terminal. You can
+Note: This may not work on your terminal. You can
 ```
 a) make a python venv and use pip from there. Then, move it to whatever folder you are going to work in. 
 b) in another existing docker container, run it there. Then, move it to whatever folder you are going to work in.
@@ -23,16 +23,16 @@ b) in another existing docker container, run it there. Then, move it to whatever
 ```python
 sudo docker start -ai yolov11_birds
 ````
-Simply change "yolov11_birds" to the name of your container.
+Simply change "yolov11_birds" to the desired name of your container.
 
 # How to train your custom dataset
 
 # 1. Create a clear structure where you will be working in:
 ```
-In my experience, 60% of images to train, 20% val, and 20% test split is the most optimal. To understand why, you need to understand what its doing:
-Train - trains your data using your labelled data, then adjust the weights to minimize its difference between its prediction vs ground truth (your labels.)
-Val - After each epoch, YOLO evaluates its performance on the validation set. It then uses this to measure its accuracy, precision, recall, and loss. You can adjust the hyperparameters to fine-tune
-Test - Once your training is complete, the best.pt is applied to your test set. The test set contains unseen data to evaluate how well the model generalizes to new images. This phase provides final accuracy metrics but does not influence the training process.
+In my experience, 60% of images to train, 20% val, and 20% test split is the most optimal method. To understand why, you need to understand what its doing:
+Train - trains your data using your labelled data, then adjusts the weights to minimize its difference between its prediction vs ground truth (your labels)
+Val - After each epoch, YOLO evaluates its performance on the validation set. It then uses this to measure its current accuracy, precision, recall, and loss. You can adjust the hyperparameters to fine-tune these values. (See Automated Hyperparameterization)
+Test - Once your training is complete, the best.pt is applied to your test set. The test set contains previously-unseen data and uses it to evaluate how well the model generalizes to new images. This phase provides final accuracy metrics but does not influence the training process.
 You can also run detect.py using your weights on any image directory and YOLO will estimate and provide how accurate it is with your custom-trained weights.
 ```
 ```
@@ -61,8 +61,8 @@ You can also run detect.py using your weights on any image directory and YOLO wi
 
 IMPORTANT:
 
-!!! Inside of Data, you may have to create an "Images" and "Labels" Folder
-Inside of Images AND labels, make 3 folders: train, val, test. Ensure you match appropriately!!!
+!!! Inside of Data, you may have to create an "images" and "labels" folder if not already existing
+Inside of images AND labels, make 3 folders: train, val, test. Ensure you match frames appropriately!!!
 
 # 2. Inside of ~/data/annotator.py, change it to these values (optional):
 
@@ -84,7 +84,7 @@ def auto_annotate(
 - device="0" ensures you use your GPU (if you have more add "0,1,2,...")
 - conf=0.70 is confidence threshold, depending on your images, I recommend .7 for 70%
 - iou=0.5 should be standard, unless you plan on using it for multi-object tracking.
-- imgsz=640 is how many images you train, 640 is standard.
+- imgsz=640 resolution of your images, 640 is standard, but can be adjusted to the appropriate resolution (computationally expensive)
 - max_det=100 is the maximum number of detected objects per epoch. We changed it to 100 to not over-annotate.
 
 
@@ -127,8 +127,8 @@ yolo train model=yolo11s data=/home/Documents/Bird_Project/data/birds_dataset_1.
 ```
 model=yolo11n - your version of yolo you want to train on
 data= path to your .yaml file from previous
-epochs=1000 - adjust to however many epochs you want to train on (Higher the number, greater the accuracy but takes longer to train)
-Batch=24 - how much memory it'll use.
+epochs=1000 - training iterations - adjust to desired epochs you want to train on (Higher the number, greater the accuracy, but longer to train)
+Batch=24 - Amount of images per epoch
 device=0 - which GPU its training on
 ```
 
@@ -140,7 +140,7 @@ Depending on your GPU, it should only take 5-20 minutes to train on 1800 images 
 
 And ours stopped at 154 epochs training for 18 minutes (7 seconds per epoch). 
 
-To ensure you have as accurate data as you can get, but avoid having to train for hours.
+To ensure you have as accurate data as you can get after converging and avoid having to train for hours.
 
 # 6. Validate your data:
 Now that you're done training, validate your data by running:
@@ -149,7 +149,8 @@ Now that you're done training, validate your data by running:
 yolo val model=/path/to/weights/best.pt data=/path/to/data.yaml split=test
 ```
 
-This will go back and test on your /test image folder. You can also apply the trained best.pt weight to other images for classification, although for birds, this will not be very accurate without heavy fine-tuning/re-annotating.
+This will go back and test on your /test images folder. You can also apply the trained best.pt weight to other new images for classification, although for birds, this will not be very accurate without heavy fine-tuning/re-annotating (again, see Automated Hyperparameterization).
 
 ### Notes for myself:
-Yolov5: When applying images all together and inserting a divide to allow for yolo to randomly grab images, the model was too precise, with no overfitting. The results were too accurate because they essentially trained all on the same data and when we would test on them, the weights new exactly what gender and where the birds were. This, of course, does not produce valid results and should be rejected. However, when we trained with the appropriate split, the accuracy went from 98% to 48%. A vastly different result, and indicates we change modify some of the values, such as the training model (engine) and attempt to find a more accurate model. As of now, we are using Adam and AdamW, however the results have not been promising. The highest results acheived have been on independent cameras with Camera 3 being the highest at 78% precison. The next action is to continue to find a high model, as with both cameras, we have only achieved a maximum of 63% accuracy (basically guessing.) We may continue to test, but due to deadlines, we may be restricted to limiting to one camera at a time and ensuring we fine-tune to the best of our ability and use the data we attain.
+Yolov5: When applying images all together and inserting a divide to allow for yolo to randomly grab images, the model was too precise, with no overfitting. The results were too accurate because they essentially trained all on the same data and when we would test on them, the weights new exactly what gender and where the birds were. This, of course, does not produce valid results and should be rejected. However, when we trained with the appropriate split, the accuracy went from 98% to 48%. A vastly different result, and indicates we change modify some of the values, such as the training model (engine) and attempt to find a more accurate model. As of now, we are using Adam and AdamW, however the results have not been promising. The highest results acheived have been on independent cameras with Camera 3 being the highest at 78% precison. The next action is to continue to find a higher model, as with both cameras, we have only achieved a maximum of 63% accuracy (basically guessing.) We may continue to test, but due to deadlines, we may be restricted to limiting to one camera at a time and ensuring we fine-tune to the best of our ability and use the data we attain.
+- Update: after using hyperparameter automation, we achieved 72% accuracy!
