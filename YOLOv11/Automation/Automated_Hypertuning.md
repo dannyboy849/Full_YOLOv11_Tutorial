@@ -48,7 +48,7 @@ Now that you have
 
 1. Your data well structured
 2. Your docker container(w/ GPU-enabled)
-3. At least one pretrained dataset with random parameters
+3. At least one custom-trained dataset with random parameters
 4. Hyperparameter ranges set up to your desired range
 5. Your venv set up
 
