@@ -63,3 +63,5 @@ Use the command:
 python3 auto_run_experiments.py
 
 ```
+That's it! Now you just wait for the automation process to complete itself. 
+# *Important Note* The automation process is set automatically to 10 iterations - to adjust this, simply go into the python file and change "" to your desired amount of iterations.
