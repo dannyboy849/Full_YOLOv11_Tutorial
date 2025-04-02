@@ -1,4 +1,4 @@
-# Use Frame_Maker.py to convert your video into the proper .PNG format to feed yolo.
+# Use frame_maker.py to convert your video into the proper .PNG format to feed into YOLO.
 Go to the frame_maker.py file and modify these two lines of code below. Replace the video_file variable with the path to the first camera angle.
 Next, copy the path to your frames directory in the processed_data folder and add /Camera1 to the path.
 
