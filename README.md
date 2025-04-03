@@ -6,4 +6,4 @@ Our best results for Camera 3 are 64% precison and 27.3% accurate in IoU (mAP-50
 
 Will be testing on Yolov11 soon - working on complicated installation. 
 
-- Complicated installation completed! We now have an accuracy using simultaneous tracking-and-classication of 71.4%! BUT, our tracking-THEN-classification acheived 87.5% accuracy! Hooray for StackExchange!
+- Complicated installation completed! We now have an accuracy using simultaneous tracking-and-classification of 71.4%! BUT, our tracking-THEN-classification acheived 87.5% accuracy! Hooray for StackExchange!
