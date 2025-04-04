@@ -141,7 +141,7 @@ names: ['male', 'female']  # List of class names
 ```
 
 # 5. Train!
-Finally, ensure you have the yolos.pt INSIDE of the ~/data/ folder. If not, it will assume yolon.pt as mentioned earlier. Now, run:
+Finally, ensure you have the yolos.pt INSIDE of the ~/data/ folder. If not, it will assume yolon.pt as mentioned earlier. Also, note that you can modify the confidence threshold (%) - in other words, it ignores detections that are below the confidence level you set.  Now, run:
 ```python
 yolo train model=yolo11s.pt data=/home/Documents/Bird_Project/data/birds_dataset_1.yaml epochs=1000 batch=24 device=0
 ```
