@@ -1,4 +1,11 @@
 # This serves as a from-scratch guide from start to finish for YOLO training
+This is all in your bash terminal, but modifying any of the files inside YOLO will be in Python. Good Luck!
+
+### First, I would like to give credit to my co-researcher for their repository that helped tremendously with setting up the Docker Container!
+```bash
+https://github.com/airou-lab/Docker-GPU-Tutorial.git
+```
+
 ## Begin With Getting_Started
 - Installing_Ubuntu24.04
 - Using_Ubuntu24.04
