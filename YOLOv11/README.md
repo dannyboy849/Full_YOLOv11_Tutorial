@@ -131,7 +131,7 @@ Example is ~/data/bird_project.yaml
 
 - This should be what the your structure of *words*.yaml file look like:
 ```python
-# Dataset configuration for YOLOv5 with manual train/val/test splits
+# Dataset configuration for YOLO with manual train/val/test splits
 
 path: /home/Documents/Bird_Project/data # Base dataset path 
 
@@ -178,9 +178,7 @@ This ensures you have as accurate data as you can get after converging and avoid
 
 ## Step 7. Validate your data
 ```python
-
 yolo val model=path/to/your/custom_dataset/best.pt data=/path/to/*words*.yaml split=test imgsz=640 device=0
-
 ```
 
 A note before continuing - All of these can be changed by performing Step #2
