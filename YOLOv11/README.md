@@ -1,38 +1,51 @@
-# How to install YOLOv11 on Ubuntu 24.04 (the easy way)
+# How to install YOLOv11 on Ubuntu 24.04 using a GPU-enabled Docker container(the easy way)
 ### Notes:
-On our GeFORCE RTX 4070 SUPER, it took 5 hours 4 minutes for 1000 epochs. You may ask why begin with so many epochs - this is simply to ensure our data had fully converged, but after this we added an early stopping of 250 epochs
+We used our GPU to train on YOLO. Our GPU is a GeFORCE RTX 4070 SUPER. On our CPU, we used a 12th Gen Intel® Core™ i7-12800H × 20. On the CPU, it took 24 hours and 36 minutes for 1000 epochs. Meanwhile, the GPU reduced that down to 5 hours 4 minutes for the same amount of epochs. You may ask why begin with so many epochs - this is simply to ensure our data had fully converged, but after this we added an early stopping (patience) of 300 epochs to avoid overfitting.
 
-# 1. Pull yolov11 from github:
+# 1. Pull yolov11 from GitHub:
 
 ```python
 pip install ultralytics
 ```
 
-Note: This may not work on your terminal. You can
+Note: This may not work on your terminal. If thats the case, try this:
 ```
-a) make a python venv and use pip from there. Then, move it to whatever folder you are going to work in. 
+The easiest way:
+a) make a python3 venv and use pip from there. Then, move it to whatever folder you are going to work in.
+    i.   Make sure you have python3 installed, check if its already installed:
+python3 --version
+    ii.  If not, run (3.x being current version - its 3.12 as of now):
+sudo apt-get install python3.x
+    iii. To make a venv, run:
+python3 -m venv /path/to/new/virtual/environment
+    iv.  **For future starts**:
+python3 -m venv venv
+
+The more difficult route:
 b) in another existing docker container, run it there. Then, move it to whatever folder you are going to work in.
 ```
 
-# 2. Make a Docker Image - See Docker Installation Instructions (Strongly Recommend GPU-enabled)
+# 2. Before proceeding, make sure you have created your Docker Container (Refer to Docker Installation)
+## Make a Docker Image (Image already provided by Ultralytics- inside of ~/Docker folder)
 
-# 3. Make a Docker Container - See Docker Installation Instructions
+## Make a Docker Container (Strongly Recommend GPU-enabled)
 
-# 4. Start your docker container
+# 4. Start your Docker container
 
 ```python
 sudo docker start -ai yolov11_birds
 ````
-Simply change "yolov11_birds" to the desired name of your container.
+
+Change "yolov11_birds" to the desired name of your container.
 
 # How to train your custom dataset
 
 # 1. Create a clear structure where you will be working in:
 ```
 In my experience, 60% of images to train, 20% val, and 20% test split is the most optimal method. To understand why, you need to understand what its doing:
-Train - trains your data using your labelled data, then adjusts the weights to minimize its difference between its prediction vs ground truth (your labels)
-Val - After each epoch, YOLO evaluates its performance on the validation set. It then uses this to measure its current accuracy, precision, recall, and loss. You can adjust the hyperparameters to fine-tune these values. (See Automated Hyperparameterization)
-Test - Once your training is complete, the best.pt is applied to your test set. The test set contains previously-unseen data and uses it to evaluate how well the model generalizes to new images. This phase provides final accuracy metrics but does not influence the training process.
+Train - trains your data using your labeled data, then adjusts the weights to minimize its difference between its prediction vs ground truth (your labeled data). See Step #5 for more details.
+Val - After each epoch, YOLO evaluates its performance on the validation set. It then uses this to measure its current accuracy, precision, recall, and loss. You can adjust the hyperparameters to fine-tune these values (See Automated Hyperparameterization). See Step #6 for more details.
+Test - Once your training is complete, the best.pt can be applied to your test set. The test set contains previously-unseen data and uses it to evaluate how well the model generalizes to new images. This phase provides final accuracy metrics but does not influence the training process. See Step #7 for more details.
 You can also run detect.py using your weights on any image directory and YOLO will estimate and provide how accurate it is with your custom-trained weights.
 ```
 ```
@@ -64,7 +77,7 @@ IMPORTANT:
 !!! Inside of Data, you may have to create an "images" and "labels" folder if not already existing
 Inside of images AND labels, make 3 folders: train, val, test. Ensure you match frames appropriately!!!
 
-# 2. Inside of ~/data/annotator.py, change it to these values (optional):
+# 2. (Optional) Inside of ~/data/annotator.py, change these values:
 
 ```python
 def auto_annotate(
@@ -88,7 +101,7 @@ def auto_annotate(
 - max_det=100 is the maximum number of detected objects per epoch. We changed it to 100 to not over-annotate.
 
 
-# 3. Inside of ~/data/dataset.py, change it to these values:
+# 3. (Optional) Inside of ~/data/dataset.py, change it to these values:
 ```python
 def __init__(self, root, args, augment=True,prefix=""): #Changed from False
 
@@ -122,35 +135,70 @@ names: ['male', 'female']  # List of class names
 Finally, ensure you have the yolos.pt INSIDE of the ~/data/ folder. If not, it will assume yolon.pt as mentioned earlier. Now, run:
 
 ```python
-yolo train model=yolo11s data=/home/Documents/Bird_Project/data/birds_dataset_1.yaml epochs=1000 batch=24 device=0
+yolo train model=yolo11s.pt data=/home/Documents/Bird_Project/data/birds_dataset_1.yaml epochs=1000 batch=24 device=0
+
+data = where your *words*.yaml is located.  
+epochs = how many iterations of training you want it to train for. As mentioned in the other document, more than 50 epochs is not necessary. 
+Imgsz = Image size for training (adjust based on resolution) 
+batch = number of images per epoch 
+device = your GPU
+
 ```
 ```
-model=yolo11n - your version of yolo you want to train on
-data= path to your .yaml file from previous
-epochs=1000 - training iterations - adjust to desired epochs you want to train on (Higher the number, greater the accuracy, but longer to train)
-Batch=24 - Amount of images per epoch
-device=0 - which GPU its training on
+A note before continuing - All of these can be changed by performing Step #2
+
+model = yolo11s - your version of yolo you want to train on
+data = path to your .yaml file from previous
+epochs = 1000 - training iterations - adjust to desired epochs you want to train on (Higher the number, greater the accuracy, but longer training)
+Batch = 24 - Amount of images per epoch
+Imgsz = Image resolution of each image (can be adjusted at a higher computational expense)
+device = 0 - which GPU its training on
 ```
 
-Depending on your GPU, it should only take 5-20 minutes to train on 1800 images with 100 epochs. I recommend training on 1000 epochs, and adding at the end:
+Depending on your GPU, it should only take 5-20 minutes to train on 1800 images with 100 epochs. I recommend training on 1000 epochs, and adding an early stop at the end:
 
 ```python
-...yaml --patience=100
+...*word*.yaml patience=100
 ```
 
-And ours stopped at 154 epochs training for 18 minutes (7 seconds per epoch). 
+Our training session stopped at 154 epochs, training for 18 minutes (7 seconds per epoch). 
 
-To ensure you have as accurate data as you can get after converging and avoid having to train for hours.
+This ensures you have as accurate data as you can get after converging and avoid having to train for hours - but stopping too early (like this example) most likely will not converge. We recommend adjusting early stop (patience) to at least 500.
 
-# 6. Validate your data:
-Now that you're done training, validate your data by running:
+# 6. Validate your data
+
+```
+
+yolo val model=path/to/your/custom_dataset/best.pt data=/path/to/*words*.yaml split=test imgsz=640 device=0
+
+```
+```
+A note before continuing - All of these can be changed by performing Step #2
+
+yolo val - tests the accuracy of your data
+model = for val, this is your custom-trained dataset (best.pt)
+data = path to your .yaml file from previous
+split = which set of images it will grab images (assuming you divided files properly as instructed previously)
+Imgsz = Image resolution of each image (can be adjusted at a higher computational expense)
+device = 0 - which GPU its training on
+
+```
+
+# 7. Test your data:
+Now that you're done training, you can test the accuracy of your trained model by testing on your images/test data on the previously unseen images. You can do this by running:
 
 ```python
-yolo val model=/path/to/weights/best.pt data=/path/to/data.yaml split=test
+yolo test model=/path/to/weights/best.pt data=/path/to/data.yaml split=test
+```
+
+```
+model = for val, this is your custom-trained dataset (best.pt)
+data = path to your .yaml file from previous
+split = which set of images it will grab images (assuming you divided files properly as instructed previously)**
 ```
 
 This will go back and test on your /test images folder. You can also apply the trained best.pt weight to other new images for classification, although for birds, this will not be very accurate without heavy fine-tuning/re-annotating (again, see Automated Hyperparameterization).
 
 ### Notes for myself:
 Yolov5: When applying images all together and inserting a divide to allow for yolo to randomly grab images, the model was too precise, with no overfitting. The results were too accurate because they essentially trained all on the same data and when we would test on them, the weights new exactly what gender and where the birds were. This, of course, does not produce valid results and should be rejected. However, when we trained with the appropriate split, the accuracy went from 98% to 48%. A vastly different result, and indicates we change modify some of the values, such as the training model (engine) and attempt to find a more accurate model. As of now, we are using Adam and AdamW, however the results have not been promising. The highest results acheived have been on independent cameras with Camera 3 being the highest at 78% precison. The next action is to continue to find a higher model, as with both cameras, we have only achieved a maximum of 63% accuracy (basically guessing.) We may continue to test, but due to deadlines, we may be restricted to limiting to one camera at a time and ensuring we fine-tune to the best of our ability and use the data we attain.
-- Update: after using hyperparameter automation, we achieved 72% accuracy!
+- Update: after using hyperparameter automation in YOLOv11, we achieved 72% accuracy!
