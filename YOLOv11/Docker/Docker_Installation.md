@@ -12,7 +12,7 @@ sudo docker pull continuumio/miniconda3:latest
 
 Simply find the folder with the Docker Image (inside of ultralytics folder) and skip to Step 4.
 
-# 3. (Optional)Create your image:
+# 3. (Optional) Create your image:
 ```python
 sudo docker build -t yolov11_birds:latest .
 ```
@@ -44,3 +44,4 @@ This is based on GPU, so it'll be on your GPU, then shm-size is how many memory 
 sudo docker start -ai yolov11_birds
 ````
 Simply change "yolov11_birds" to the name of your container, and you're ready to go!
+# Good Luck!
