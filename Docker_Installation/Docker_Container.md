@@ -2,7 +2,7 @@
 
 ## Run your Docker container:
 - Recommended to make a folder for your Project (Bird_Project) in Documents, then refer below:
-```python
+```bash
 sudo docker run --name yolov11_birds -v /home/daniel-airou/Documents/Bird_Project/ultralytics/ultralytics:/home/Documents/Bird_Project --gpus all --shm-size 16G -it yolov11_birds:latest
 ```
 - gpus all: enables your Docker Container the ability to access all of your GPUS
@@ -18,7 +18,7 @@ sudo docker run --name yolov11_birds -v /home/daniel-airou/Documents/Bird_Projec
 
 ## To start your docker container in the future:
 
-```python
+```bash
 sudo docker start -ai yolov11_birds
 ````
 - Simply change "yolov11_birds" to the name of your container, and you're ready to go!
