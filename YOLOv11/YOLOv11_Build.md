@@ -9,7 +9,7 @@
 
 
 ## Step 1. Pull yolov11 from GitHub:
-```python
+```bash
 pip install ultralytics
 ```
 
@@ -19,29 +19,29 @@ The easiest way:
 - option a) make a python3 venv and use pip from there. Then, move it to whatever folder you are going to work in. You can do this either in a terminal or in VSCOde (see Docker_Installation)
 
 - Make sure you have python3 installed, check if its already installed:
-```python
+```bash
 python3 --version
 ```
  
 - If not, run (3.x being current version - its 3.12 as of now):
-```python
+```bash
 sudo apt-get install python3.x
 ```
 
 - To make a venv, run:
-```python
+```bash
 python3 -m venv venv
 ```
 
 - **For future activation**:
-```
+```bash
 source venv/bin/activate
 ```
 
 The more difficult route:
 - option b) In another existing docker container you have, run it there. Then, move it to whatever folder you are going to work in.
 Or you can run this command to create a temporary container:
-```python
+```bash
 docker run --rm -it ubuntu bash
 ```
 
@@ -54,7 +54,7 @@ docker run --rm -it ubuntu bash
 
 
 ## Step 3. Start Your Docker Container
-```python
+```bash
 sudo docker start -ai yolov11_birds
 ```
 Change "yolov11_birds" to the desired name of your container.
@@ -69,7 +69,7 @@ In my novice experience, 60% of images to train, 20% val, and 20% test split is 
 - Test - Once your training is complete, the best.pt can be applied to your test set. The test set contains previously-unseen data and uses it to evaluate how well the model generalizes to new images. This phase provides final accuracy metrics but does not influence the training process. See Step #7 for more details.
 You can also run detect.py using your weights on any image directory and YOLO will estimate and provide how accurate it is with your custom-trained weights.
 
-```
+```bash
 /path/to/your/folder/data
 ├── images/
 │   ├── train/
@@ -100,7 +100,7 @@ Inside of images AND labels, make 3 folders: train, val, test. Ensure you match 
 
 
 ## Step 2. (Optional) Inside of ~/data/annotator.py, you can modify these parameters:
-```python
+```bash
 def auto_annotate(
     data,
     det_model="yolo11s.pt",
@@ -124,7 +124,7 @@ def auto_annotate(
 
 
 ## Step 3. (Optional) Inside of ~/data/dataset.py, change it to these values:
-```python
+```bash
 def __init__(self, root, args, augment=True,prefix=""): # Changed from False
 
 augment=True allows the augmentation to actually augment itself and ensure you have a fine-tuned model.
@@ -144,7 +144,7 @@ Ensure your custom .yaml file is inside of your ~/data/ follder.
 Example: ~/ultralytics/ultralytics/data/bird_project.yaml
 
 - This should be what the your structure of *words*.yaml file look like:
-```python
+```bash
 # Dataset configuration for YOLO with manual train/val/test splits
 
 path: /home/Documents/Bird_Project/data # Base dataset path 
@@ -160,7 +160,7 @@ names: ['male', 'female']  # List of class names
 
 ## Step 6. Train You Model!
 Finally, ensure you have the yolos.pt INSIDE of the ~/data/ folder. If not, it will assume yolon.pt as mentioned earlier. Also, note that you can modify the confidence threshold (%) - in other words, it ignores detections that are below the confidence level you set.  Now, run:
-```python
+```bash
 yolo train model=yolo11s.pt data=/home/Documents/Bird_Project/data/birds_dataset_1.yaml epochs=1000 batch=24 device=0
 ```
 - data = where your *words*.yaml is located.  
@@ -184,7 +184,7 @@ yolo train model=yolo11s.pt data=/home/Documents/Bird_Project/data/birds_dataset
 - If your training sessions demands more computaional power than capable, your computer will crash! **Lowering the batch size** (since it consumes all of your dedicated VRAM) is the best solution I have found. Avoid going higher than **XGB-4GB** (X is your total available).
 
 Now, depending on your GPU, it should only take 5-20 minutes to train on 1800 (out of 3000) images with 100 epochs. I recommend training on 1000 epochs, and adding an early stop at the end:
-```python
+```bash
 ...*words*.yaml patience=100
 ```
 
@@ -194,7 +194,7 @@ This ensures you have as accurate data as you can get after converging and avoid
 
 
 ## Step 7. Validate your data
-```python
+```bash
 yolo val model=path/to/your/custom_dataset/best.pt data=/path/to/*words*.yaml split=test imgsz=640 device=0
 ```
 
@@ -209,7 +209,7 @@ A note before continuing - All of these can be changed by performing Step #2
 
 ## Step 8. Test your data:
 Now that you're done training, you can test the accuracy of your trained model by testing on your images/test data on the previously unseen images (that were not in your images folder from earlier). You can do this by running:
-```python
+```bash
     yolo predict model=runs/detect/train/weights/best.pt source=/path/to/new/images device=0 save=True 
 ```
 
