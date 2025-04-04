@@ -11,7 +11,6 @@ sudo docker run --name yolov11_birds -v /home/daniel-airou/Documents/Bird_Projec
 - it: makes it interactive
 - yolov11_birds:latest is your <image_name>:<image_tag>.
 
-- Again, yolov11_birds is your container name, followed by the directory of your choice.
 - Everything inside /home/daniel-airou/Documents/Bird_Project/ultralytics/ultralytics (on your host) will be available inside the container at /home/Documents/Bird_Project
 - In other words, this is where the container will grab from and allow access (otherwise you will be restricted to the folder you mounted it in). Change to the files you want it to access.
 
