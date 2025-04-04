@@ -13,26 +13,22 @@ Note: This may not work on your terminal. If thats the case, try this:
 The easiest way:
 a) make a python3 venv and use pip from there. Then, move it to whatever folder you are going to work in.
 
-i.   Make sure you have python3 installed, check if its already installed:
-
+- Make sure you have python3 installed, check if its already installed:
 ```python
 python3 --version
 ```
  
-ii.  If not, run (3.x being current version - its 3.12 as of now):
-
+- If not, run (3.x being current version - its 3.12 as of now):
 ```python
 sudo apt-get install python3.x
 ```
 
-iii. To make a venv, run:
-
+- To make a venv, run:
 ```python
 python3 -m venv venv
 ```
 
-iv.  **For future starts**:
-
+- **For future starts**:
 ```
 source venv/bin/activate
 ```
@@ -48,7 +44,6 @@ b) In another existing docker container, run it there. Then, move it to whatever
 ### Make a Docker Container (Strongly Recommend GPU-enabled)
 
 ## Step 3. Start your Docker container
-
 ```python
 sudo docker start -ai yolov11_birds
 ````
@@ -56,7 +51,6 @@ sudo docker start -ai yolov11_birds
 Change "yolov11_birds" to the desired name of your container.
 
 # How to train your custom dataset
-
 ## Step 1. Create a clear structure where you will be working in:
 In my novice experience, 60% of images to train, 20% val, and 20% test split is the most optimal method. To understand why, you need to understand what its doing:
 - Train - trains your data using your labeled data, then adjusts the weights to minimize its difference between its prediction vs ground truth (your labeled data). See Step #5 for more details.
@@ -94,7 +88,6 @@ IMPORTANT:
 Inside of images AND labels, make 3 folders: train, val, test. Ensure you match frames appropriately!!!
 
 ## Step 2. (Optional) Inside of ~/data/annotator.py, change these values:
-
 ```python
 def auto_annotate(
     data,
@@ -133,8 +126,7 @@ Documentation: https://docs.ultralytics.com/models/yolo11/#performance-metrics
 You should create your file and put it inside of the data. 
 Example is ~/data/bird_project.yaml
 
-These will be the structure of your file:
-
+- This should be what the your structure of *words*.yaml file look like:
 ```python
 # Dataset configuration for YOLOv5 with manual train/val/test splits
 
