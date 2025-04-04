@@ -100,7 +100,7 @@ def auto_annotate(
     max_det=100,
     classes=None,
     output_dir=None,
-):
+)
 ```
 
 - det_model will use yolo11s (or which ever .pt you want) so long as the file is inside of the data folder as well. Ultralytics provides **n**ano, **s**mall, **m**edium, **l**arge, **x**-large model weights
@@ -142,11 +142,9 @@ names: ['male', 'female']  # List of class names
 
 # 5. Train!
 Finally, ensure you have the yolos.pt INSIDE of the ~/data/ folder. If not, it will assume yolon.pt as mentioned earlier. Now, run:
-
 ```python
 yolo train model=yolo11s.pt data=/home/Documents/Bird_Project/data/birds_dataset_1.yaml epochs=1000 batch=24 device=0
 ```
-
 - data = where your *words*.yaml is located.  
 - epochs = 1000 - how many iterations of training you want it to train for. As mentioned in the other document, more than 50 epochs is not necessary. 
 - Imgsz = Image size for training (adjust based on resolution) 
@@ -154,7 +152,7 @@ yolo train model=yolo11s.pt data=/home/Documents/Bird_Project/data/birds_dataset
 - device = 0 - your GPU
 
 
-A note before continuing - All of these can be changed by performing Step #2
+**A note before continuing - All of these can be changed by performing Step #2**
 
 - model = yolo11s - your version of yolo you want to train on
 - data = path to your .yaml file from previous
