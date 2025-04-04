@@ -75,100 +75,156 @@ Install
 
 Now that you’ve installed Ubuntu, you essentially have to relearn how to use a computer! Fortunately, Ubuntu automatically installs Firefox and pins it to your toolbar. “How to install *anything* on Linux” will become your catchphrase. Ubuntu also includes “Text Editor”, an “App Center” that is terribly optimized, and “Software Updater” which is known to crash computers! Instead of using these, you will now become a fully pledged programmer. The infamous “Terminal” will become your best friend. We will now go into the basics and some commands of how to use the terminal. 
 
-Note that every time I say “type *something” I am referring to inside of your terminal. Also, it’s vital you understand everything in Linux is case-sensitive (ie, cd = good, Cd = will NOT work” 
+Note from now on: every time I say “type *something*” I am referring to inside of your terminal. Also, it’s vital you understand everything in Linux is case-sensitive 
+(ie, 
+- cd = good,
+- Cd = will NOT work
 
-    Either you can click on your terminal, or you can shortcut using “ctrl+alt+t” 
+## Open a terminal
+- Either you can click on your terminal on the taskbar, or you can shortcut using “ctrl+alt+t” on your keyboard
 
-    You will see your username alongside the name you gave your computer and $ 
+## Confirm you're using the correct directory
+- You will see your username alongside the name you gave your computer and *your_name*:~$ 
+- ~ means you're in your "home" directory.
 
-    Always update your computer! 
+## Always update your computer! 
+- Check available updates:
+```python
+sudo apt-get update
+```
 
-    Type “sudo apt update” to check available updates 
+- Download upgrades:
+```python
+sudo apt-get upgrade
+```
 
-    Type “sudo apt upgrade” to download these updates 
+## Check if your GPU was successfully
+- Confirm Ubuntus identification of GPU:
+```python
+nvidia-smi
+```
+- You should now see your GPU listed 
 
-    To check if your GPU was successfully, type “nvidia-smi” to confirm 
+## Your IP address
+- If you want to know your IP address, you can type “ifconfig” 
 
-    You should now see your GPU listed 
+## Listing Folders/Files Inside of Current Folder
+- To find out which folders/files are under the directory you are in, type “ls” --> lower-case L:
+```python
+ls
+```
 
-    If you want to know your IP address, you can type “ifconfig” 
+## Changing Directory's
+- To change which current directory you are in, type “cd *directory_name*
+- To go back to the previous directory, type:
+```python
+cd ..
+```
 
-    To find which current directory you are in, type “ls” --> lower-case L 
+## To Find a Specfic Folder
+To find a specfic folder, type: 
 
-    To change which current directory you are in, type “cd *directory_name* 
+```python
+~/*directory_name*
+``` 
 
-    To go back to the previous directory, type “cd ..” 
+- To go back to your home directory, just type:
+```python
+cd
+```
 
-    To go back to your home directory, just type “cd” 
+## If you want to create a new directory, type “mkdir *name*” 
+- For your own sanity, always use *some_name* with a “_” instead of a space with every folder/file. 
 
-    To know which directory you are currently in, you’ll see this after your name: 
+## To make a simple file, such as for notes (if you don’t want to open the Text Editor) 
+- Note that you will need to download these packages.
+- Inside of your desired directory, type:
+```python
+touch *name*
+```
 
-    ~/*directory_name* 
+or
 
-    If you want to create a new directory, type “mkdir *name*” 
+```python
+gedit *name*
+```
 
-    For your own sanity, always use *some_name* with a “_” instead of a space. 
+- To open and modify these files:
+```python
+nano *name* 
+```
 
-    To make a simple file, such as for notes if you don’t want to open the Text Editor 
+- You can now add your notes and things of the sort. Make sure you constantly save “ctrl+s”. To exit: “ctrl+x” 
 
-    Inside of your desired directory, type: 
+## This also works to create specfic file types! 
+- For example, to create a python file:
+```python
+touch *name*.py
+```
 
-    touch *name* or gedit *name* 
+## To move files to another folder: 
+```python
+mv *name* *directory_name* 
+```
+## To move folders into another folder: 
+```python
+sudo mv ~/current_directory ~/desired_directory 
+```
+  
+## To delete a file:
+```python
+rm *name*”
+```
 
-    nano *name* 
-
-    You can now add your notes and things of the sort. Make sure you constantly save “ctrl+s”. To exit: “ctrl+x” 
-
-    This also works to create specfic file types! 
-
-    Type “touch *name*.py” for example, to create a python file 
-
-    To move files to another folder: 
-
-    mv *name* *directory_name* 
-
-    To move folders into another folder: 
-
-    sudo mv ~/current_directory ~/desired_directory 
-
-    To delete a file, type “rm *name*” 
-
-    To delete a folder: rm –r *name* 
+## To delete a folder:
+```python
+rm –r *name* 
+```
 
 To find more advanced guidance, I strongly recommend simply searching for them on Firefox, and following reliable sources such as StackExchange, official websites, or community forums. 
 
  
 
-I STRONGLY recommend using VSCode for all your programming. Below is a guide: 
+**I STRONGLY recommend using VSCode for all your programming.** Below is a guide: 
 
-    Download Debian  
+## Step 1. Download Debian  
 
-    sudo apt install ./<file>.deb 
+```python
+sudo apt install ./<file>.deb 
+```
+  
+# Step 2: Run this and it should automatically do the rest of the work: 
 
-    Run this and it should automatically do the rest of the work: 
+```python
+echo "code code/add-microsoft-repo boolean true" | sudo debconf-set-selections 
+```
+- If not, you will manually have to do it: 
+```python
+sudo apt-get install wget gpg
 
-    echo "code code/add-microsoft-repo boolean true" | sudo debconf-set-selections 
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 
-    If not, you will manually have to do it: 
+sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
 
-    sudo apt-get install wget gpg 
+echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" |sudo tee /etc/apt/sources.list.d/vscode.list > /dev/null 
 
-    wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg 
+rm -f packages.microsoft.gpg 
+```
 
-    sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg 
+## Step 3: Update 
+```python
+sudo apt install apt-transport-https 
 
-    echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" |sudo tee /etc/apt/sources.list.d/vscode.list > /dev/null 
+sudo apt update 
 
-    rm -f packages.microsoft.gpg 
+sudo apt install code # or code-insiders
+```
 
-    Update 
+## Step 4: Sign in!
 
-    sudo apt install apt-transport-https 
-
-    sudo apt update 
-
-    sudo apt install code # or code-insiders 
-
-Done! This is FAR better than the code editors mentioned earlier. Below is what your workstation address will look like (after making docker container and downloading YOLO)  
+**Done! This is FAR better than the small code editors mentioned earlier.**
+Make a note that your workstation will be where your YOLO is located in your files.
 
 Fun fact: you don’t have to activate your docker container unless you want to train! Just make sure to constantly save in VSCode so that it updates the file for everything. 
+
+# Thats it! Onto the next step.
