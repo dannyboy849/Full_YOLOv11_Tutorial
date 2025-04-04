@@ -9,21 +9,26 @@ so long you do not download unsecure items from online (although Ubuntu will imm
 attempt to block these actions anyways)  
   
 
+
 # How to dual boot a computer with Ubuntu (24.04) 
 
 If you already have the flashdrive ready, review Steps 3 & 4 then Skip to step 7! 
 
+
 ## Step 1. Backup Your Files
-Before anything else, we strongly recommend backing up your files into an external SSD/flashdrive/in the cloud. 
+Before anything else, I strongly recommend backing up your files into an external SSD/flashdrive/in the cloud. 
+
 
 ## Step 2. Flashdrive Requirements
 The first thing you will need is a flashdrive (at least 8GB) 
 
+
 ## Step 3. Computer Storage Requirements
 Ensure you have at least 256 GB to allocate to the computer/laptop you wish to dual boot. 
 (it's a lot, but the files you will be using will be heavy 
-(we allocated 512GB and we’ve used 85% for 2 projects)) 
-Look below **Step 4** for an important note! 
+(we allocated 512GB and we’ve alredy used 85% for 2 projects!)) 
+Refer below **Step 4** for an important note! 
+
 
 ## Step 4. Partitioning 
 
@@ -34,9 +39,12 @@ Look below **Step 4** for an important note!
 - Right click and select “New Simple Volume”
 - Select “Assign letter” and select your favorite letter (ex M:)
 - To ensure correct drive creation, it should appear in your files under your local disk (C:)
-**If you have more than 1 disk (SSD) you have the preferred method – You can allocate a full disk to Ubuntu! Ensure all your Windows's files are on Disk 0 (C:) then skip to 3b, but instead you’ll shrink Disk 1 to the total volume available (your other SSD that is NOT C:) **
+
+- **If you have more than 1 disk (SSD) you have the preferred method – You can allocate a full SSD to Ubuntu! Ensure all your Windows's files are on Disk 0 (C:) then skip to step 7, but instead you’ll shrink Disk 1 to the total volume available (your other SSD that is NOT C:)**
+
 
 ## Step 5. Download balenaEtcher [3] for Windows x86|64 (Installer) 
+
 
 ## Step 6. Download the official Ubuntu 24.04 [4] ISO onto your main SSD 
 
@@ -44,16 +52,21 @@ Look below **Step 4** for an important note!
 - Open balenaEtcher
 - Select your ISO (Ubuntu 24.04), then your flashdrive, and finally just click flash! 
 
+
 ## Step 7. Insert your flashdrive if you haven’t already 
+
 
 ## Step 8. Restart your computer – The Ubuntu installer should immediately show up
 - If it does not, restart and hold F12 throughout the reboot until it appears
 
+
 ## Step 9. Fill all of your preferences
 
-## Step 10. When you reach the “What do you want to do” section, click install Ubuntu. 
-**If you accidentally click “Try Ubuntu” you will need to delete all files associated with Ubuntu on your Windows and restart from Step 8**
-Install
+
+## Step 10. "What do you want to do” Section, 
+- Click "Install Ubuntu"
+- **If you accidentally click “Try Ubuntu” you will need to delete all files associated with Ubuntu on your Windows and restart from Step 8**
+
 
 ## Step 11. Installation  
 - On “Type of Installation” click “Interactive Install”
@@ -71,5 +84,4 @@ Install
 
   
 
-
-# Thats it! I recommend checking out "Using_Ubuntu24.04"
+# Thats it! Next, I recommend checking out "Using_Ubuntu24.04"!
