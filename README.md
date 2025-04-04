@@ -1,4 +1,4 @@
-# This serves as a from-scratch guide from start to finish for YOLO training
+# This serves as a start-from-finish guide for YOLO training
 This is all in your bash terminal, but modifying any of the files inside YOLO will be in Python. Good Luck!
 
 ### First, I would like to give credit to my co-researcher, Mathis Morales, for their repository that helped tremendously with setting up the Docker Container!
@@ -23,13 +23,16 @@ You only have to do this if your images are in video format.
 
 # Done! Congratulations, and good luck!
 
+
 # Bird_Project_Daniel
-This is also my repository where I upload all of my files mainly as a backup, but also to be easily accessible for anyone who wants to work on it/borrow my data. If there is anything missing or needs clarification, please feel free to reach out to me here, or preferably at dvargas88@ou.edu. Hope this helps!!
+This is also my repository where I upload all of my experimental results. I will mainly use this as a backup for my files, but also as a free dataset for anyone who wants to work with my datasets. If there is anything missing or that needs clarification, please feel free to reach out to me at dvargas88@ou.edu. Hope this helps!!
 
-# Results
-As of now, our best results for Camera 1 are 54% precison and 23.4% accurate in IoU. This, of course, is without the aid of semantic segmentation which is likely to boost the accuracy to ~70% or higher.
-Our best results for Camera 3 are 64% precison and 27.3% accurate in IoU (mAP-50-95)
 
-Will be testing on Yolov11 soon - working on complicated installation. 
+# Summary Results
+For YOLOv5, our results of Camera 1 was 54% precison and 23.4% accurate in IoU (mAP-95)
 
-- Complicated installation completed! We now have an accuracy using simultaneous tracking-and-classification of 71.4%! BUT, our tracking-THEN-classification acheived 87.5% accuracy! Hooray for StackExchange!
+For the results of Camera 3, our accuracy was 64% and 27.3% accurate in IoU (mAP-95)
+
+I will be testing on YOLOv11 soon - working on complicated installation. 
+
+- Complicated installation completed! We now have an accuracy using simultaneous tracking-and-classification of 71.4% for both camera angles! BUT, our tracking-THEN-classification acheived 87.5% accuracy! Hooray for StackExchange!
