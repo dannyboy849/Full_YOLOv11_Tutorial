@@ -10,7 +10,7 @@ attempt to block these actions anyways)
   
 
 
-# How to dual boot a computer with Ubuntu (24.04) 
+# How To Dual-Boot A Computer With Ubuntu (24.04) 
 
 If you already have the flashdrive ready, review Steps 3 & 4 then Skip to step 7! 
 
@@ -43,24 +43,25 @@ Refer below **Step 4** for an important note!
 - **If you have more than 1 disk (SSD) you have the preferred method – You can allocate a full SSD to Ubuntu! Ensure all your Windows's files are on Disk 0 (C:) then skip to step 7, but instead you’ll shrink Disk 1 to the total volume available (your other SSD that is NOT C:)**
 
 
-## Step 5. Download balenaEtcher [3] for Windows x86|64 (Installer) 
+## Step 5. Download balenaEtcher For Windows x86|64 (Installer) 
 
 
-## Step 6. Download the official Ubuntu 24.04 [4] ISO onto your main SSD 
-
+## Step 6. Download Ubuntu
+- Ensure you're at the official Ubuntu 24.04 ISO, then download it onto your main SSD 
 - Insert your flashdrive
 - Open balenaEtcher
 - Select your ISO (Ubuntu 24.04), then your flashdrive, and finally just click flash! 
 
 
-## Step 7. Insert your flashdrive if you haven’t already 
+## Step 7. Insert Your Flashdrive If You Haven’t Already 
 
 
-## Step 8. Restart your computer – The Ubuntu installer should immediately show up
+## Step 8. Restart Your Computer
+- The Ubuntu installer should immediately show up
 - If it does not, restart and hold F12 throughout the reboot until it appears
 
 
-## Step 9. Fill all of your preferences
+## Step 9. Fill All Preferences
 
 
 ## Step 10. "What do you want to do” Section, 
