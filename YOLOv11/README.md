@@ -28,13 +28,13 @@ sudo apt-get install python3.x
 iii. To make a venv, run:
 
 ```python
-python3 -m venv /path/to/new/virtual/environment
+python3 -m venv venv
 ```
 
 iv.  **For future starts**:
 
 ```
-python3 -m venv venv
+source venv/bin/activate
 ```
 
 The more difficult route:
