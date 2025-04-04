@@ -16,18 +16,18 @@ Note from now on: every time I say “type *something*” I am referring to insi
 
 ## Always update your computer! 
 - Check available updates:
-```python
+```bash
 sudo apt-get update
 ```
 
 - Download upgrades:
-```python
+```bash
 sudo apt-get upgrade
 ```
 
 ## Check if your GPU was successfully
 - Confirm Ubuntus identification of GPU:
-```python
+```bash
 nvidia-smi
 ```
 - You should now see your GPU listed 
@@ -37,26 +37,25 @@ nvidia-smi
 
 ## Listing Folders/Files Inside of Current Folder
 - To find out which folders/files are under the directory you are in, type “ls” --> lower-case L:
-```python
+```bash
 ls
 ```
 
 ## Changing Directory's
 - To change which current directory you are in, type “cd *directory_name*
 - To go back to the previous directory, type:
-```python
+```bash
 cd ..
 ```
 
 ## To Find a Specfic Folder
 To find a specfic folder, type: 
-
-```python
+```bash
 ~/*directory_name*
 ``` 
 
 - To go back to your home directory, just type:
-```python
+```bash
 cd
 ```
 
@@ -66,18 +65,18 @@ cd
 ## To make a simple file, such as for notes (if you don’t want to open the Text Editor) 
 - Note that you will need to download these packages.
 - Inside of your desired directory, type:
-```python
+```bash
 touch *name*
 ```
 
 or
 
-```python
+```bash
 gedit *name*
 ```
 
 - To open and modify these files:
-```python
+```bash
 nano *name* 
 ```
 
@@ -85,26 +84,26 @@ nano *name*
 
 ## This also works to create specfic file types! 
 - For example, to create a python file:
-```python
+```bash
 touch *name*.py
 ```
 
 ## To move files to another folder: 
-```python
+```bash
 mv *name* *directory_name* 
 ```
 ## To move folders into another folder: 
-```python
+```bash
 sudo mv ~/current_directory ~/desired_directory 
 ```
   
 ## To delete a file:
-```python
+```bash
 rm *name*”
 ```
 
 ## To delete a folder:
-```python
+```bash
 rm –r *name* 
 ```
 
@@ -115,17 +114,18 @@ To find more advanced guidance, I strongly recommend simply searching for them o
 **I STRONGLY recommend using VSCode for all your programming.** Below is a guide: 
 # Downloading VSCode
 ## Step 1. Download Debian  
-```python
+```bash
 sudo apt install ./<file>.deb 
 ```
+
   
 # Step 2: Run this and it should automatically do the rest of the work: 
-```python
+```bash
 echo "code code/add-microsoft-repo boolean true" | sudo debconf-set-selections 
 ```
 
 - If this doesn't work, you will manually have to do it: 
-```python
+```bash
 sudo apt-get install wget gpg
 
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
@@ -137,8 +137,9 @@ echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft
 rm -f packages.microsoft.gpg 
 ```
 
-## Step 3: Update 
-```python
+
+## Step 3: Updates
+```bash
 sudo apt install apt-transport-https 
 
 sudo apt update 
@@ -151,4 +152,7 @@ sudo apt install code # or code-insiders
 Make a note that your workstation will be where your YOLO is located in your files.
 
 Fun fact: you don’t have to activate your docker container unless you want to train! Just make sure to constantly save in VSCode so that it updates the file for everything. 
+
+
+
 # That's it! Now, onto building our Docker Container! 
