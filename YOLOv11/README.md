@@ -13,25 +13,25 @@ Note: This may not work on your terminal. If thats the case, try this:
 The easiest way:
 a) make a python3 venv and use pip from there. Then, move it to whatever folder you are going to work in.
 
-    i.   Make sure you have python3 installed, check if its already installed:
+i.   Make sure you have python3 installed, check if its already installed:
 
 ```python
 python3 --version
 ```
-
-    ii.  If not, run (3.x being current version - its 3.12 as of now):
+ 
+ii.  If not, run (3.x being current version - its 3.12 as of now):
 
 ```python
 sudo apt-get install python3.x
 ```
 
-    iii. To make a venv, run:
+iii. To make a venv, run:
 
 ```python
 python3 -m venv /path/to/new/virtual/environment
 ```
 
-    iv.  **For future starts**:
+iv.  **For future starts**:
 
 ```
 python3 -m venv venv
