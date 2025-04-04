@@ -189,14 +189,14 @@ device = 0 - which GPU its training on
 Now that you're done training, you can test the accuracy of your trained model by testing on your images/test data on the previously unseen images. You can do this by running:
 
 ```python
-yolo test model=/path/to/weights/best.pt data=/path/to/data.yaml split=test
+    yolo predict model=runs/detect/train/weights/best.pt source=/path/to/new/images device=0 save=True 
 ```
 
-```
-model = for val, this is your custom-trained dataset (best.pt)
-data = path to your .yaml file from previous
-split = which set of images it will grab images (assuming you divided files properly as instructed previously)**
-```
+- model = predict - for testing your model, this is your custom-trained dataset (best.pt)
+- source = path to your images /test images folder
+- split = which set of images it will grab images (assuming you divided files properly as instructed previously)**
+- save = saves your results (mAP, mAP-50, etc) 
+
 
 This will go back and test on your /test images folder. You can also apply the trained best.pt weight to other new images for classification, although for birds, this will not be very accurate without heavy fine-tuning/re-annotating (again, see Automated Hyperparameterization).
 
