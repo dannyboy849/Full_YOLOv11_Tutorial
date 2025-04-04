@@ -207,6 +207,7 @@ A note before continuing - All of these can be changed by performing Step #2
 - Imgsz = Image resolution of each image (can be adjusted at a higher computational expense)
 - device = 0 - which GPU its training on
 
+
 ## Step 8. Test your data:
 Now that you're done training, you can test the accuracy of your trained model by testing on your images/test data on the previously unseen images (that were not in your images folder from earlier). You can do this by running:
 ```bash
@@ -219,7 +220,7 @@ Now that you're done training, you can test the accuracy of your trained model b
 - save = saves your results (mAP, mAP-50, etc) 
 
 
-This will go back and test on your /test images folder. You can also apply the trained best.pt weight to other new images for classification, although for birds, this will not be very accurate without heavy fine-tuning/re-annotating (again, see Automated Hyperparameterization).
+This will go back and test on your /test images folder. You can also apply the trained best.pt weight to other new images for classification, although for birds, this will not be very accurate without heavy fine-tuning/re-annotating (again, see Automatation).
 
 
 # **You now have a fully custom-trained CNN model you can apply to all of your data! Congratulations and good luck!** 
