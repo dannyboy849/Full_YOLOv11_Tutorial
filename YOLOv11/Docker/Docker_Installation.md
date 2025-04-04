@@ -1,3 +1,12 @@
+# Download Docker
+
+# 1. Remove any conflicting files
+Run this command to remove and conflicting files for a smooth installation:
+```python
+for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
+```
+
+#fdfdfdfdfdfdsafsdafd
 # How to create a Docker image for YOLOv11
 
 # 1. Pull the latest miniconda3 image:
