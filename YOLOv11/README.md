@@ -161,9 +161,10 @@ yolo train model=yolo11s.pt data=/home/Documents/Bird_Project/data/birds_dataset
 - Imgsz = Image resolution of each image (can be adjusted at a higher computational expense)
 - device = 0 - which GPU its training on
 
+### Monitor GPU Usage
+- If your training sessions demands more computaional power than capable, your computer will crash! Lowering the batch size is the best solution I have found. Avoid going higher than XGB-4GB (X is your total available).
 
 Now, depending on your GPU, it should only take 5-20 minutes to train on 1800 (out of 3000) images with 100 epochs. I recommend training on 1000 epochs, and adding an early stop at the end:
-
 ```python
 ...*words*.yaml patience=100
 ```
@@ -173,7 +174,6 @@ Our training session stopped at 154 epochs, training for 18 minutes (7 seconds p
 This ensures you have as accurate data as you can get after converging and avoid having to train for hours - but stopping too early (like this example) most likely will not converge. We recommend adjusting early stop (patience) to at least 500.
 
 # 6. Validate your data
-
 ```python
 
 yolo val model=path/to/your/custom_dataset/best.pt data=/path/to/*words*.yaml split=test imgsz=640 device=0
@@ -191,7 +191,6 @@ A note before continuing - All of these can be changed by performing Step #2
 
 # 7. Test your data:
 Now that you're done training, you can test the accuracy of your trained model by testing on your images/test data on the previously unseen images. You can do this by running:
-
 ```python
     yolo predict model=runs/detect/train/weights/best.pt source=/path/to/new/images device=0 save=True 
 ```
@@ -204,6 +203,6 @@ Now that you're done training, you can test the accuracy of your trained model b
 
 This will go back and test on your /test images folder. You can also apply the trained best.pt weight to other new images for classification, although for birds, this will not be very accurate without heavy fine-tuning/re-annotating (again, see Automated Hyperparameterization).
 
-### Notes for myself:
+### Notes for myself (Ignore):
 Yolov5: When applying images all together and inserting a divide to allow for yolo to randomly grab images, the model was too precise, with no overfitting. The results were too accurate because they essentially trained all on the same data and when we would test on them, the weights new exactly what gender and where the birds were. This, of course, does not produce valid results and should be rejected. However, when we trained with the appropriate split, the accuracy went from 98% to 48%. A vastly different result, and indicates we change modify some of the values, such as the training model (engine) and attempt to find a more accurate model. As of now, we are using Adam and AdamW, however the results have not been promising. The highest results acheived have been on independent cameras with Camera 3 being the highest at 78% precison. The next action is to continue to find a higher model, as with both cameras, we have only achieved a maximum of 63% accuracy (basically guessing.) We may continue to test, but due to deadlines, we may be restricted to limiting to one camera at a time and ensuring we fine-tune to the best of our ability and use the data we attain.
 - Update: after using hyperparameter automation in YOLOv11, we achieved 72% accuracy!
