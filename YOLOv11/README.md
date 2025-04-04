@@ -26,11 +26,12 @@ b) in another existing docker container, run it there. Then, move it to whatever
 ```
 
 # 2. Before proceeding, make sure you have created your Docker Container (Refer to Docker Installation)
-## Make a Docker Image (Image already provided by Ultralytics- inside of ~/Docker folder)
+
+## Make a Docker Image (Image already provided by /Ultralytics- inside of ~/Docker folder)
 
 ## Make a Docker Container (Strongly Recommend GPU-enabled)
 
-# 4. Start your Docker container
+# 3. Start your Docker container
 
 ```python
 sudo docker start -ai yolov11_birds
@@ -42,7 +43,7 @@ Change "yolov11_birds" to the desired name of your container.
 
 # 1. Create a clear structure where you will be working in:
 ```
-In my experience, 60% of images to train, 20% val, and 20% test split is the most optimal method. To understand why, you need to understand what its doing:
+In my novice experience, 60% of images to train, 20% val, and 20% test split is the most optimal method. To understand why, you need to understand what its doing:
 Train - trains your data using your labeled data, then adjusts the weights to minimize its difference between its prediction vs ground truth (your labeled data). See Step #5 for more details.
 Val - After each epoch, YOLO evaluates its performance on the validation set. It then uses this to measure its current accuracy, precision, recall, and loss. You can adjust the hyperparameters to fine-tune these values (See Automated Hyperparameterization). See Step #6 for more details.
 Test - Once your training is complete, the best.pt can be applied to your test set. The test set contains previously-unseen data and uses it to evaluate how well the model generalizes to new images. This phase provides final accuracy metrics but does not influence the training process. See Step #7 for more details.
@@ -93,6 +94,7 @@ def auto_annotate(
     output_dir=None,
 ):
 ```
+
 - det_model will use yolo11s (or which ever .pt you want) so long as the file is inside of the data folder as well. Ultralytics provides **n**ano, **s**mall, **m**edium, **l**arge, **x**-large model weights
 - device="0" ensures you use your GPU (if you have more add "0,1,2,...")
 - conf=0.70 is confidence threshold, depending on your images, I recommend .7 for 70%
@@ -137,25 +139,24 @@ Finally, ensure you have the yolos.pt INSIDE of the ~/data/ folder. If not, it w
 ```python
 yolo train model=yolo11s.pt data=/home/Documents/Bird_Project/data/birds_dataset_1.yaml epochs=1000 batch=24 device=0
 
-data = where your *words*.yaml is located.  
-epochs = how many iterations of training you want it to train for. As mentioned in the other document, more than 50 epochs is not necessary. 
-Imgsz = Image size for training (adjust based on resolution) 
-batch = number of images per epoch 
-device = your GPU
+- data = where your *words*.yaml is located.  
+- epochs = 1000 - how many iterations of training you want it to train for. As mentioned in the other document, more than 50 epochs is not necessary. 
+- Imgsz = Image size for training (adjust based on resolution) 
+- batch = 24 - number of images per epoch 
+- device = 0 - your GPU
 
-```
 ```
 A note before continuing - All of these can be changed by performing Step #2
 
-model = yolo11s - your version of yolo you want to train on
-data = path to your .yaml file from previous
-epochs = 1000 - training iterations - adjust to desired epochs you want to train on (Higher the number, greater the accuracy, but longer training)
-Batch = 24 - Amount of images per epoch
-Imgsz = Image resolution of each image (can be adjusted at a higher computational expense)
-device = 0 - which GPU its training on
-```
+- model = yolo11s - your version of yolo you want to train on
+- data = path to your .yaml file from previous
+- epochs = 1000 - training iterations - adjust to desired epochs you want to train on (Higher the number, greater the accuracy, but longer training)
+- Batch = 24 - Amount of images per epoch
+- Imgsz = Image resolution of each image (can be adjusted at a higher computational expense)
+- device = 0 - which GPU its training on
 
-Depending on your GPU, it should only take 5-20 minutes to train on 1800 images with 100 epochs. I recommend training on 1000 epochs, and adding an early stop at the end:
+
+Now, depending on your GPU, it should only take 5-20 minutes to train on 1800 (out of 3000) images with 100 epochs. I recommend training on 1000 epochs, and adding an early stop at the end:
 
 ```python
 ...*word*.yaml patience=100
