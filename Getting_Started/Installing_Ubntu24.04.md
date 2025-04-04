@@ -186,19 +186,18 @@ To find more advanced guidance, I strongly recommend simply searching for them o
  
 
 **I STRONGLY recommend using VSCode for all your programming.** Below is a guide: 
-
+# Downloading VSCode
 ## Step 1. Download Debian  
-
 ```python
 sudo apt install ./<file>.deb 
 ```
   
 # Step 2: Run this and it should automatically do the rest of the work: 
-
 ```python
 echo "code code/add-microsoft-repo boolean true" | sudo debconf-set-selections 
 ```
-- If not, you will manually have to do it: 
+
+- If this doesn't work, you will manually have to do it: 
 ```python
 sudo apt-get install wget gpg
 
@@ -221,7 +220,6 @@ sudo apt install code # or code-insiders
 ```
 
 ## Step 4: Sign in!
-
 **Done! This is FAR better than the small code editors mentioned earlier.**
 Make a note that your workstation will be where your YOLO is located in your files.
 
