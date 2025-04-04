@@ -1,12 +1,20 @@
 # How to create a Docker container for YOLOv11
 
-## Step 1. Build your Docker container:
-
+## Step 1. Run your Docker container:
+- Recommended to make a folder for your Project (Bird_Project) in Documents, then refer below:
 ```python
 sudo docker run --name yolov11_birds -v /home/daniel-airou/Documents/Bird_Project/ultralytics/ultralytics:/home/Documents/Bird_Project --gpus all --shm-size 16G -it yolov11_birds:latest
 ```
-Again, yolov11_birds is your container name, followed by the directory of your choice. The ":/home/..." is where the container will grab from. Change to the files you want it to access.
-This is based on GPU, so it'll be on your GPU, then shm-size is how many memory you want to use. Mine is 16GB memory out of 32GB possible. Finally, yolov11_birds:latest is your <image_name>:<image_tag>.
+- gpus all: enables your Docker Container the ability to access all of your GPUS
+- shm-size 16G: amount of shared memory (prevents memory-related errors)
+- v: mounts your container in whichever directory you are in
+- it: makes it interactive
+- yolov11_birds:latest is your <image_name>:<image_tag>.
+
+- Again, yolov11_birds is your container name, followed by the directory of your choice.
+- Everything inside /home/daniel-airou/Documents/Bird_Project/ultralytics/ultralytics (on your host) will be available inside the container at /home/Documents/Bird_Project
+- In other words, this is where the container will grab from and allow access (otherwise you will be restricted to the folder you mounted it in). Change to the files you want it to access.
+
 
 ## Step 2. Ensure your Docker Container
 
