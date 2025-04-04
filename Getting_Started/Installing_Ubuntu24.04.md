@@ -72,4 +72,4 @@ Install
   
 
 
-# Thats it! Onto the next step.
+# Thats it! I recommend checking out "Using_Ubuntu24.04"
