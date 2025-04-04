@@ -6,7 +6,7 @@ Repeat this step for the second camera angle and make sure to add /Camera2 to th
 
 Running the script should create the frames in the respective folder.
 
-```python
+```bash
 # Define the path to your video file
 video_file = '/path/to/file/your_video.MP4'
 
