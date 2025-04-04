@@ -64,6 +64,7 @@ Simply find the folder with the Docker Image (inside of ~/ultralytics folder) an
 sudo docker build -t yolov11_birds .
 ```
 - Change "yolov11_birds" with your own image name
+- **To leave the container, type "exit" or "ctrl+c"**
 
 ## Step 4. Download NVIDIA-ToolKit
 ```bash
