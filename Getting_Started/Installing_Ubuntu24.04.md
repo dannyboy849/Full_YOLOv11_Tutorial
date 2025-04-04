@@ -47,8 +47,8 @@ Look below **Step 4** for an important note!
 ## Step 7. Insert your flashdrive if you haven’t already 
 
 ## Step 8. Restart your computer – The Ubuntu installer should immediately show up
-- If it does not, restart and hold F12 throughout shows up up
-- 
+- If it does not, restart and hold F12 throughout the reboot until it appears
+
 ## Step 9. Fill all of your preferences
 
 ## Step 10. When you reach the “What do you want to do” section, click install Ubuntu. 
