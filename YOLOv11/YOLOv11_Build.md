@@ -1,17 +1,22 @@
 # How to install YOLOv11 on Ubuntu 24.04 using a GPU-enabled Docker container (the easy way)
 ### Notes:
-We used our GPU to train on YOLO. Our GPU is a GeFORCE RTX 4070 SUPER. On our CPU, we used a 12th Gen Intel® Core™ i7-12800H × 20. On the CPU, it took 24 hours and 36 minutes for 1000 epochs. Meanwhile, the GPU reduced that down to 5 hours 4 minutes for the same amount of epochs. You may ask why begin with so many epochs - this is simply to ensure our data had fully converged, but after this we added an early stopping (patience) of 300 epochs to avoid overfitting.
+
+- We used our GeForce RTX 4070 SUPER (12 GB VRAM) and an Intel® Core™ i7-14700KF (28 threads) to train YOLO. On the CPU, training for 1000 epochs took 20 hours 36 minutes, while on the GPU it took 4 hours 4 minutes.
+
+- Why is GPU better? Simple — it's designed to process images in parallel (it’s a graphics processing unit).
+
+- Why 1000 epochs? We wanted to ensure full convergence of our model. Later, we added early stopping with a patience of 300 epochs to avoid overfitting.
+
 
 ## Step 1. Pull yolov11 from GitHub:
-
 ```python
 pip install ultralytics
 ```
 
-Note: This may not work on your terminal. If thats the case, try this:
+Note: This may not work on your terminal. If this is the case, try either of these methods:
 
 The easiest way:
-a) make a python3 venv and use pip from there. Then, move it to whatever folder you are going to work in.
+- option a) make a python3 venv and use pip from there. Then, move it to whatever folder you are going to work in. You can do this either in a terminal or in VSCOde (see Docker_Installation)
 
 - Make sure you have python3 installed, check if its already installed:
 ```python
@@ -28,30 +33,36 @@ sudo apt-get install python3.x
 python3 -m venv venv
 ```
 
-- **For future starts**:
+- **For future activation**:
 ```
 source venv/bin/activate
 ```
 
 The more difficult route:
-b) In another existing docker container, run it there. Then, move it to whatever folder you are going to work in.
+- option b) In another existing docker container you have, run it there. Then, move it to whatever folder you are going to work in.
+Or you can run this command to create a temporary container:
+```python
+docker run --rm -it ubuntu bash
+```
 
 
-## Step 2. Before proceeding, make sure you have created your Docker Container (Refer to Docker Installation)
+## Step 2. Before proceeding, ensure you have created your Docker Container (Refer to Docker Installation)
 
 ### Make a Docker Image (Image already provided by /Ultralytics- inside of ~/Docker folder)
 
-### Make a Docker Container (Strongly Recommend GPU-enabled)
+### Make A Docker Container (Strongly Recommend GPU-enabled)
 
-## Step 3. Start your Docker container
+
+## Step 3. Start Your Docker Container
 ```python
 sudo docker start -ai yolov11_birds
-````
-
+```
 Change "yolov11_birds" to the desired name of your container.
 
+
 # How to train your custom dataset
-## Step 1. Create a clear structure where you will be working in:
+
+## Step 1. Organize Your Dataset
 In my novice experience, 60% of images to train, 20% val, and 20% test split is the most optimal method. To understand why, you need to understand what its doing:
 - Train - trains your data using your labeled data, then adjusts the weights to minimize its difference between its prediction vs ground truth (your labeled data). See Step #5 for more details.
 - Val - After each epoch, YOLO evaluates its performance on the validation set. It then uses this to measure its current accuracy, precision, recall, and loss. You can adjust the hyperparameters to fine-tune these values (See Automated Hyperparameterization). See Step #6 for more details.
@@ -87,7 +98,8 @@ IMPORTANT:
 !!! Inside of Data, you may have to create an "images" and "labels" folder if not already existing
 Inside of images AND labels, make 3 folders: train, val, test. Ensure you match frames appropriately!!!
 
-## Step 2. (Optional) Inside of ~/data/annotator.py, change these values:
+
+## Step 2. (Optional) Inside of ~/data/annotator.py, you can modify these parameters:
 ```python
 def auto_annotate(
     data,
@@ -113,7 +125,7 @@ def auto_annotate(
 
 ## Step 3. (Optional) Inside of ~/data/dataset.py, change it to these values:
 ```python
-def __init__(self, root, args, augment=True,prefix=""): #Changed from False
+def __init__(self, root, args, augment=True,prefix=""): # Changed from False
 
 augment=True allows the augmentation to actually augment itself and ensure you have a fine-tuned model.
 ```
@@ -122,12 +134,14 @@ Resources:
 Massive help from: https://medium.com/@estebanuri/training-yolov11-object-detector-on-a-custom-dataset-39bba09530ff
 Documentation: https://docs.ultralytics.com/models/yolo11/#performance-metrics
 
-## Step 4. Manually Annotate Data
-Refer the instructions inside of the /Data_Annotation folder. Then, come back and continue to Step 5.
 
-## Step 5. Ensure you have your custom .yaml file inside of ~/data/
-You should create your file and put it inside of the data. 
-Example is ~/data/bird_project.yaml
+## Step 4. Manually Annotate Data
+Refer to instructions inside the /Data_Annotation folder. Return here for Step 5.
+
+
+## Step 5. Create Your Custom .yaml
+Ensure your custom .yaml file is inside of your ~/data/ follder.
+Example: ~/ultralytics/ultralytics/data/bird_project.yaml
 
 - This should be what the your structure of *words*.yaml file look like:
 ```python
@@ -143,7 +157,8 @@ nc: 2  # Number of classes
 names: ['male', 'female']  # List of class names
 ```
 
-## Step 6. Train!
+
+## Step 6. Train You Model!
 Finally, ensure you have the yolos.pt INSIDE of the ~/data/ folder. If not, it will assume yolon.pt as mentioned earlier. Also, note that you can modify the confidence threshold (%) - in other words, it ignores detections that are below the confidence level you set.  Now, run:
 ```python
 yolo train model=yolo11s.pt data=/home/Documents/Bird_Project/data/birds_dataset_1.yaml epochs=1000 batch=24 device=0
@@ -155,7 +170,7 @@ yolo train model=yolo11s.pt data=/home/Documents/Bird_Project/data/birds_dataset
 - device = 0 - your GPU
 
 
-**A note before continuing - All of these can be changed by performing Step #2**
+**A note before continuing: All of these can be changed by performing Step #2**
 
 - model = yolo11s - your version of yolo you want to train on
 - data = path to your .yaml file from previous
@@ -164,8 +179,9 @@ yolo train model=yolo11s.pt data=/home/Documents/Bird_Project/data/birds_dataset
 - Imgsz = Image resolution of each image (can be adjusted at a higher computational expense)
 - device = 0 - which GPU its training on
 
+
 ### Monitor GPU Usage
-- If your training sessions demands more computaional power than capable, your computer will crash! Lowering the batch size is the best solution I have found. Avoid going higher than XGB-4GB (X is your total available).
+- If your training sessions demands more computaional power than capable, your computer will crash! **Lowering the batch size** (since it consumes all of your dedicated VRAM) is the best solution I have found. Avoid going higher than **XGB-4GB** (X is your total available).
 
 Now, depending on your GPU, it should only take 5-20 minutes to train on 1800 (out of 3000) images with 100 epochs. I recommend training on 1000 epochs, and adding an early stop at the end:
 ```python
@@ -175,6 +191,7 @@ Now, depending on your GPU, it should only take 5-20 minutes to train on 1800 (o
 Our training session stopped at 154 epochs, training for 18 minutes (7 seconds per epoch). 
 
 This ensures you have as accurate data as you can get after converging and avoid having to train for hours - but stopping too early (like this example) most likely will not converge. We recommend adjusting early stop (patience) to at least 500.
+
 
 ## Step 7. Validate your data
 ```python
@@ -191,7 +208,7 @@ A note before continuing - All of these can be changed by performing Step #2
 - device = 0 - which GPU its training on
 
 ## Step 8. Test your data:
-Now that you're done training, you can test the accuracy of your trained model by testing on your images/test data on the previously unseen images. You can do this by running:
+Now that you're done training, you can test the accuracy of your trained model by testing on your images/test data on the previously unseen images (that were not in your images folder from earlier). You can do this by running:
 ```python
     yolo predict model=runs/detect/train/weights/best.pt source=/path/to/new/images device=0 save=True 
 ```
@@ -203,6 +220,7 @@ Now that you're done training, you can test the accuracy of your trained model b
 
 
 This will go back and test on your /test images folder. You can also apply the trained best.pt weight to other new images for classification, although for birds, this will not be very accurate without heavy fine-tuning/re-annotating (again, see Automated Hyperparameterization).
+
 
 # **You now have a fully custom-trained CNN model you can apply to all of your data! Congratulations and good luck!** 
 
