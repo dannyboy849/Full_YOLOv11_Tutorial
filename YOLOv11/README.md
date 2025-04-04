@@ -138,13 +138,14 @@ Finally, ensure you have the yolos.pt INSIDE of the ~/data/ folder. If not, it w
 
 ```python
 yolo train model=yolo11s.pt data=/home/Documents/Bird_Project/data/birds_dataset_1.yaml epochs=1000 batch=24 device=0
+```
 
 - data = where your *words*.yaml is located.  
 - epochs = 1000 - how many iterations of training you want it to train for. As mentioned in the other document, more than 50 epochs is not necessary. 
 - Imgsz = Image size for training (adjust based on resolution) 
 - batch = 24 - number of images per epoch 
 - device = 0 - your GPU
-```
+
 
 A note before continuing - All of these can be changed by performing Step #2
 
