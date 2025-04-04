@@ -1,8 +1,8 @@
-# How to install YOLOv11 on Ubuntu 24.04 using a GPU-enabled Docker container(the easy way)
+# How to install YOLOv11 on Ubuntu 24.04 using a GPU-enabled Docker container (the easy way)
 ### Notes:
 We used our GPU to train on YOLO. Our GPU is a GeFORCE RTX 4070 SUPER. On our CPU, we used a 12th Gen Intel® Core™ i7-12800H × 20. On the CPU, it took 24 hours and 36 minutes for 1000 epochs. Meanwhile, the GPU reduced that down to 5 hours 4 minutes for the same amount of epochs. You may ask why begin with so many epochs - this is simply to ensure our data had fully converged, but after this we added an early stopping (patience) of 300 epochs to avoid overfitting.
 
-# 1. Pull yolov11 from GitHub:
+## Step 1. Pull yolov11 from GitHub:
 
 ```python
 pip install ultralytics
@@ -41,13 +41,13 @@ The more difficult route:
 b) In another existing docker container, run it there. Then, move it to whatever folder you are going to work in.
 
 
-# 2. Before proceeding, make sure you have created your Docker Container (Refer to Docker Installation)
+## Step 2. Before proceeding, make sure you have created your Docker Container (Refer to Docker Installation)
 
-## Make a Docker Image (Image already provided by /Ultralytics- inside of ~/Docker folder)
+### Make a Docker Image (Image already provided by /Ultralytics- inside of ~/Docker folder)
 
-## Make a Docker Container (Strongly Recommend GPU-enabled)
+### Make a Docker Container (Strongly Recommend GPU-enabled)
 
-# 3. Start your Docker container
+## Step 3. Start your Docker container
 
 ```python
 sudo docker start -ai yolov11_birds
@@ -57,7 +57,7 @@ Change "yolov11_birds" to the desired name of your container.
 
 # How to train your custom dataset
 
-# 1. Create a clear structure where you will be working in:
+## Step 1. Create a clear structure where you will be working in:
 ```
 In my novice experience, 60% of images to train, 20% val, and 20% test split is the most optimal method. To understand why, you need to understand what its doing:
 Train - trains your data using your labeled data, then adjusts the weights to minimize its difference between its prediction vs ground truth (your labeled data). See Step #5 for more details.
@@ -94,7 +94,7 @@ IMPORTANT:
 !!! Inside of Data, you may have to create an "images" and "labels" folder if not already existing
 Inside of images AND labels, make 3 folders: train, val, test. Ensure you match frames appropriately!!!
 
-# 2. (Optional) Inside of ~/data/annotator.py, change these values:
+## Step 2. (Optional) Inside of ~/data/annotator.py, change these values:
 
 ```python
 def auto_annotate(
@@ -119,7 +119,7 @@ def auto_annotate(
 - max_det=100 is the maximum number of detected objects per epoch. We changed it to 100 to not over-annotate.
 
 
-# 3. (Optional) Inside of ~/data/dataset.py, change it to these values:
+## Step 3. (Optional) Inside of ~/data/dataset.py, change it to these values:
 ```python
 def __init__(self, root, args, augment=True,prefix=""): #Changed from False
 
@@ -130,7 +130,7 @@ Resources:
 Massive help from: https://medium.com/@estebanuri/training-yolov11-object-detector-on-a-custom-dataset-39bba09530ff
 Documentation: https://docs.ultralytics.com/models/yolo11/#performance-metrics
 
-# 4. Ensure you have your custom .yaml file inside of ~/data/
+## Step 4. Ensure you have your custom .yaml file inside of ~/data/
 You should create your file and put it inside of the data. 
 Example is ~/data/bird_project.yaml
 
