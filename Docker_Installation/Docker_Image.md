@@ -1,6 +1,5 @@
 # Download Docker
 
-
 ## 1. Remove any conflicting files
 Run this command to remove and conflicting files for a smooth installation:
 ```bash
@@ -26,10 +25,12 @@ echo \
 sudo apt-get update
 ```
 
+
 ## 3. Install Latest Docker Packages
 ```bash
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
+
 
 ## 4. Verify Docker was successfully installed
 ```bash
@@ -39,7 +40,6 @@ sudo docker run hello-world
 
 
 # How to create a Docker image for YOLOv11
-
 
 ## Step 1. Pull The Latest Miniconda3 Image:
 You can refer to /ultralytics/docker/docker for their built-in image
@@ -64,7 +64,8 @@ Simply find the folder with the Docker Image (inside of ~/ultralytics folder) an
 sudo docker build -t yolov11_birds .
 ```
 - Change "yolov11_birds" with your own image name
-- **To leave the container, type "exit" or "ctrl+c"**
+- **To leave the container, type "exit" or "ctrl+d"**
+
 
 ## Step 4. Download NVIDIA-ToolKit
 ```bash
@@ -76,6 +77,7 @@ sudo systemctl restart docker
 ```bash
 sudo docker run --gpus all nvidia/cuda:12.0-base nvidia-smi
 ```
+
 
 
 # Good work! Next, we move onto the Docker Container!
