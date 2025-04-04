@@ -11,7 +11,7 @@ attempt to block these actions anyways)
 
 # How to dual boot a computer with Ubuntu (24.04) 
 
-Review Steps 3 & 4 then Skip to step 7 if you already have the flashdrive ready! 
+If you already have the flashdrive ready, review Steps 3 & 4 then Skip to step 7! 
 
 ## Step 1. Backup Your Files
 Before anything else, we strongly recommend backing up your files into an external SSD/flashdrive/in the cloud. 
@@ -23,7 +23,7 @@ The first thing you will need is a flashdrive (at least 8GB)
 Ensure you have at least 256 GB to allocate to the computer/laptop you wish to dual boot. 
 (it's a lot, but the files you will be using will be heavy 
 (we allocated 512GB and we’ve used 85% for 2 projects)) 
-Look below **Step 4.** for an important note! 
+Look below **Step 4** for an important note! 
 
 ## Step 4. Partitioning 
 
@@ -32,60 +32,46 @@ Look below **Step 4.** for an important note!
 - Shrink your C: drive to the 64 GB below half of your total available storage
 - There will be a section at the bottom in “Disk 0” labelled “Unallocated”
 - Right click and select “New Simple Volume”
-- Select “Assign letter” and select your favorite letter (ex M:) 
+- Select “Assign letter” and select your favorite letter (ex M:)
+- To ensure correct drive creation, it should appear in your files under your local disk (C:)
+**If you have more than 1 disk (SSD) you have the preferred method – You can allocate a full disk to Ubuntu! Ensure all your Windows's files are on Disk 0 (C:) then skip to 3b, but instead you’ll shrink Disk 1 to the total volume available (your other SSD that is NOT C:) **
 
-To ensure correct drive creation, it should appear in your files under your local disk (C:) 
-- If you have more than 1 disk (SSD) you have the preferred method – You can allocate a full disk to Ubuntu! Ensure all your Windows's files are on Disk 0 (C:) then skip to 3b, but instead you’ll shrink Disk 1 to the total volume available (your other SSD that is NOT C: ) 
+## Step 5. Download balenaEtcher [3] for Windows x86|64 (Installer) 
 
-    Download balenaEtcher [3] for Windows x86|64 (Installer) 
+## Step 6. Download the official Ubuntu 24.04 [4] ISO onto your main SSD 
 
-    Download the official Ubuntu 24.04 [4] ISO onto your main SSD 
+- Insert your flashdrive
+- Open balenaEtcher
+- Select your ISO (Ubuntu 24.04), then your flashdrive, and finally just click flash! 
 
-    Insert your flashdrive 
+## Step 7. Insert your flashdrive if you haven’t already 
 
-    Open balenaEtcher 
+## Step 8. Restart your computer – The Ubuntu installer should immediately show up
+- If it does not, restart and hold F12 throughout shows up up
+- 
+## Step 9. Fill all of your preferences
 
-    Select your ISO (Ubuntu 24.04), then your flashdrive, and finally just click flash! 
+## Step 10. When you reach the “What do you want to do” section, click install Ubuntu. 
+**If you accidentally click “Try Ubuntu” you will need to delete all files associated with Ubuntu on your Windows and restart from Step 8**
+Install
 
-    Insert your flashdrive if you haven’t already 
+## Step 11. Installation  
+- On “Type of Installation” click “Interactive Install”
+- In “Applications” select Default selection
+- For “Optimize” enable both options (Install 3rd party and Download support...)
+- Select “Install Ubuntu alongside Windows Boot Manager”
+- Select the partition you made earlier (ex M:)
+- Allocate the full space
+- Install!
+- Create Password and Sign-in information (**STRONGLY recommend writing it down**)
+- Remove Flash drive after instructed and restart computer
+- You now will have the option of Ubuntu or Windows! 
 
-    Restart your computer – The Ubuntu installer should immediately show up 
-
-    If it does not, restart and hold F12 throughout shows up up 
-
-    Fill all of your preferences 
-
-    When you reach the “What do you want to do” section, click install Ubuntu. 
-
-    If you accidentally click “Try Ubuntu” you will need to delete all files associated with Ubuntu on your Windows and restart from step 8 
-
-    Installation  
-
-    On “Type of Installation” click “Interactive Install” 
-
-    In “Applications” select Default selection 
-
-    For “Optimize” enable both options (Install 3rd party and Download support...) 
-
-    Select “Install Ubuntu alongside Windows Boot Manager” 
-
-    Select the partition you made earlier (ex M:) 
-
-    Allocate the full space 
-
-    Install! 
-
-    Create Password and Sign-in information (STRONGLY recommend writing it down) 
-
-    Remove Flash drive after instructed and restart computer 
-
-    You now will have the option of Ubuntu or Windows! 
-
-You’ve successfully dual booted Windows and Ubuntu! Congratulations! 
+**You’ve successfully dual booted Windows and Ubuntu! Congratulations!**
 
   
 
-Using Ubuntu 24.04 
+# Using Ubuntu 24.04 
 
 Now that you’ve installed Ubuntu, you essentially have to relearn how to use a computer! Fortunately, Ubuntu automatically installs Firefox and pins it to your toolbar. “How to install *anything* on Linux” will become your catchphrase. Ubuntu also includes “Text Editor”, an “App Center” that is terribly optimized, and “Software Updater” which is known to crash computers! Instead of using these, you will now become a fully pledged programmer. The infamous “Terminal” will become your best friend. We will now go into the basics and some commands of how to use the terminal. 
 
