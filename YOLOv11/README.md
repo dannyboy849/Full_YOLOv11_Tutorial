@@ -122,7 +122,10 @@ Resources:
 Massive help from: https://medium.com/@estebanuri/training-yolov11-object-detector-on-a-custom-dataset-39bba09530ff
 Documentation: https://docs.ultralytics.com/models/yolo11/#performance-metrics
 
-## Step 4. Ensure you have your custom .yaml file inside of ~/data/
+## Step 4. Manually Annotate Data
+Refer the instructions inside of the /Data_Annotation folder. Then, come back and continue to Step 5.
+
+## Step 5. Ensure you have your custom .yaml file inside of ~/data/
 You should create your file and put it inside of the data. 
 Example is ~/data/bird_project.yaml
 
@@ -140,7 +143,7 @@ nc: 2  # Number of classes
 names: ['male', 'female']  # List of class names
 ```
 
-# 5. Train!
+## Step 6. Train!
 Finally, ensure you have the yolos.pt INSIDE of the ~/data/ folder. If not, it will assume yolon.pt as mentioned earlier. Also, note that you can modify the confidence threshold (%) - in other words, it ignores detections that are below the confidence level you set.  Now, run:
 ```python
 yolo train model=yolo11s.pt data=/home/Documents/Bird_Project/data/birds_dataset_1.yaml epochs=1000 batch=24 device=0
@@ -173,7 +176,7 @@ Our training session stopped at 154 epochs, training for 18 minutes (7 seconds p
 
 This ensures you have as accurate data as you can get after converging and avoid having to train for hours - but stopping too early (like this example) most likely will not converge. We recommend adjusting early stop (patience) to at least 500.
 
-# 6. Validate your data
+## Step 7. Validate your data
 ```python
 
 yolo val model=path/to/your/custom_dataset/best.pt data=/path/to/*words*.yaml split=test imgsz=640 device=0
@@ -189,7 +192,7 @@ A note before continuing - All of these can be changed by performing Step #2
 - Imgsz = Image resolution of each image (can be adjusted at a higher computational expense)
 - device = 0 - which GPU its training on
 
-# 7. Test your data:
+## Step 8. Test your data:
 Now that you're done training, you can test the accuracy of your trained model by testing on your images/test data on the previously unseen images. You can do this by running:
 ```python
     yolo predict model=runs/detect/train/weights/best.pt source=/path/to/new/images device=0 save=True 
