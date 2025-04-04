@@ -144,8 +144,8 @@ yolo train model=yolo11s.pt data=/home/Documents/Bird_Project/data/birds_dataset
 - Imgsz = Image size for training (adjust based on resolution) 
 - batch = 24 - number of images per epoch 
 - device = 0 - your GPU
-
 ```
+
 A note before continuing - All of these can be changed by performing Step #2
 
 - model = yolo11s - your version of yolo you want to train on
@@ -159,7 +159,7 @@ A note before continuing - All of these can be changed by performing Step #2
 Now, depending on your GPU, it should only take 5-20 minutes to train on 1800 (out of 3000) images with 100 epochs. I recommend training on 1000 epochs, and adding an early stop at the end:
 
 ```python
-...*word*.yaml patience=100
+...*words*.yaml patience=100
 ```
 
 Our training session stopped at 154 epochs, training for 18 minutes (7 seconds per epoch). 
@@ -168,22 +168,20 @@ This ensures you have as accurate data as you can get after converging and avoid
 
 # 6. Validate your data
 
-```
+```python
 
 yolo val model=path/to/your/custom_dataset/best.pt data=/path/to/*words*.yaml split=test imgsz=640 device=0
 
 ```
-```
+
 A note before continuing - All of these can be changed by performing Step #2
 
-yolo val - tests the accuracy of your data
-model = for val, this is your custom-trained dataset (best.pt)
-data = path to your .yaml file from previous
-split = which set of images it will grab images (assuming you divided files properly as instructed previously)
-Imgsz = Image resolution of each image (can be adjusted at a higher computational expense)
-device = 0 - which GPU its training on
-
-```
+- yolo val - tests the accuracy of your data
+- model = for val, this is your custom-trained dataset (best.pt)
+- data = path to your .yaml file from previous
+- split = which set of images it will grab images (assuming you divided files properly as - instructed previously)
+- Imgsz = Image resolution of each image (can be adjusted at a higher computational expense)
+- device = 0 - which GPU its training on
 
 # 7. Test your data:
 Now that you're done training, you can test the accuracy of your trained model by testing on your images/test data on the previously unseen images. You can do this by running:
