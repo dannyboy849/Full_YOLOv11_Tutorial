@@ -156,3 +156,7 @@ Fun fact: you don’t have to activate your docker container unless you want to 
 
 
 # That's it! Now, onto building our Docker Container! 
+
+
+# References:
+- B. Marijan, “Bash Commands: The Ultimate Cheat Sheet + Downloadable PDF,” Knowledge Base by phoenixNAP, Aug. 24, 2023. Available: https://phoenixnap.com/kb/bash-commands
