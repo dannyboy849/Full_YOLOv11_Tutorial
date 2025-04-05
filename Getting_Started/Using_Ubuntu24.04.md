@@ -27,12 +27,12 @@ sudo apt-get update
 sudo apt-get upgrade
 ```
 
-## Check if your GPU was successfully
-- Confirm Ubuntus identification of GPU:
+## Check if your GPU is successfully identified
+- Confirm Ubuntu is able to identify your GPU:
 ```bash
 nvidia-smi
 ```
-- You should now see your GPU listed 
+- You should see your GPU listed 
 
 ## Your IP address
 - If you want to know your IP address, you can type “ifconfig” 
@@ -49,8 +49,20 @@ NAME_Project  Documents
 ```
 
 ## Changing Directory's
-- To change which current directory you are in, type “cd *directory_name*
-- To go back to the previous directory, type:
+- To change which current directory you are in:
+```bash
+cd *directory_name*
+```
+Example:
+```bash
+danny_boy@dannys-labtop:~$ ls
+NAME_Project  Documents  Work-Tin
+danny_boy@dannys-labtop:~$ cd Worn-Tin/
+danny_boy@dannys-labtop:~/Worn-Tin$ ls
+Rosemary
+```
+ 
+- To go back to the previous directory:
 ```bash
 cd ..
 ```
@@ -67,7 +79,7 @@ cd
 Example:
 ```bash
 danny_boy@dannys-labtop:~/NAME_Project/yolov5$ cd
-danny_boy@dannys-labtop:~$ 
+danny_boy@dannys-labtop:~$
 ```
 
 ## To Find A Specfic Directory
@@ -85,6 +97,8 @@ bash: /home/danny_boy/NAME_Project/: Is a directory
 - For your own sanity, always use *some_name* with a “_” instead of a space with every folder/file.
 Example:
 ```bash
+danny_boy@dannys-labtop:~$ ls
+NAME_Project  Desktop
 danny_boy@dannys-labtop:~$ mkdir Deftones
 danny_boy@dannys-labtop:~$ ls
 NAME_Project  Desktop    Deftones
@@ -98,6 +112,8 @@ touch *name*
 ```
 Example:
 ```bash
+danny_boy@dannys-labtop:~/Deftones$ ls
+_
 danny_boy@dannys-labtop:~/Deftones$ touch Rosemary
 danny_boy@dannys-labtop:~/Deftones$ ls
 Rosemary
@@ -114,15 +130,17 @@ or
 nano *name* 
 ```
 
-- You can now add your notes and things of the sort, even write your code if you love pain. Make sure you constantly save “ctrl+s”. To exit: “ctrl+x” 
+- You can now create notes and things of the sort, or even write your code if you enjoy pain. Make sure you constantly save “ctrl+s”. To exit: “ctrl+x” 
 
 ## This also works to create specfic file types! 
 - For example, to create a python file:
 ```bash
-touch *name*.py
+touch *file_name*.py
 ```
 Example:
 ```bash
+danny_boy@dannys-labtop:~/Deftones$ ls
+Rosemary
 danny_boy@dannys-labtop:~/Deftones$ touch Entombed.py
 danny_boy@dannys-labtop:~/Deftones$ ls
 Entombed.py  Rosemary
@@ -181,6 +199,7 @@ danny_boy@dannys-labtop:~/Worn-Tin$ ls
 Deftones
 danny_boy@dannys-labtop:~/Worn-Tin$ rm -r Deftones/
 danny_boy@dannys-labtop:~/Worn-Tin$ ls
+_
 ```
 
 To find more advanced guidance, I strongly recommend simply searching for them on Firefox, and following reliable sources such as StackExchange, Official Websites, or Community Forums. 
