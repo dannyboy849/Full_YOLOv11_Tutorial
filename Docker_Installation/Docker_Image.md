@@ -59,11 +59,12 @@ Simply find the folder with the Docker Image (inside of ~/ultralytics folder)
  //   It follows <image_name>:<image_tag> - the name for the image, then tag you want.
 
 
-## Step 3. Create A Name for your to-be container:
+## Step 3. Create A Name For Your To-Be Container:
 ```bash
 sudo docker build -t yolov11_birds .
 ```
 - Change "yolov11_birds" with your own image name
+- This will take a few minutes so be patient!
 - **To leave the container, type "exit" or "ctrl+d"**
 
 
