@@ -1,5 +1,5 @@
 # This will serves as a start-from-finish guide for YOLO training
-For this most part, all of the work mentioned below will be in your bash terminal, but modifying any of the files inside YOLO will be in Python.
+For the most part, all of the work mentioned below will be in your bash terminal, but modifying any of the files inside YOLO will be in Python. I, Daniel Vargas, am the sole creator of this repository, and if there is anything missing or needs clarification, please feel free to reach out to me at dvargas88@ou.edu. Hope this helps and happy data training!!
 <br>
 <br>
 **If you use this repository for guidance, please cite this repo. Good Luck!**
@@ -32,7 +32,7 @@ Do this if you want to find the optimal hyperparameters for your model.
 
 
 # Bird_Project_Daniel Summary
-This is also my repository I originally made for a research project called *link inserted if paper is accepted*. I have uploaded some of my experimental results. I will mainly use this as a backup for my files, but also as a free dataset for anyone who wants to work with it. If there is anything missing or needs clarification, please feel free to reach out to me at dvargas88@ou.edu. Hope this helps!!
+This is also my repository I originally made for a research project called *link inserted if paper is accepted*. I have uploaded some of my experimental results. I will mainly use this as a backup for my files, but also as a free dataset for anyone who wants to work with it. Again, if there is anything missing or needs clarification, please feel free to reach out to me at dvargas88@ou.edu.
 
 
 # Summary Results
