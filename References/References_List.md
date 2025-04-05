@@ -14,6 +14,9 @@
 
  # Docker Container
 
+- airou-lab, “GitHub - airou-lab/Docker-GPU-Tutorial: Docker Tutorial,” GitHub, 2024. Available: https://github.com/airou-lab/Docker-GPU-Tutorial.git
+
+
 - “Enable GPU support,” Docker Documentation, 2025. Available: https://docs.docker.com/compose/how-tos/gpu-support/ 
 
 
