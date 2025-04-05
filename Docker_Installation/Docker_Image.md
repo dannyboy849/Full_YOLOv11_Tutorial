@@ -81,3 +81,6 @@ sudo docker run --gpus all nvidia/cuda:12.0-base nvidia-smi
 
 
 # Good work! Next, we move onto the Docker Container!
+
+# References:
+- Ultralytics, “YOLO11,” Ultralytics.com, 2024. Available: https://docs.ultralytics.com/models/yolo11/
