@@ -10,9 +10,11 @@ Note from now on: every time I say “type *something*” I am referring to insi
 ## Open a terminal
 - Either you can click on your terminal on the taskbar, or you can shortcut using “ctrl+alt+t” on your keyboard
 
-## Confirm you're using the correct directory
-- You will see your username alongside the name you gave your computer and *your_name*:~$ 
-- ~ means you're in your "home" directory.
+## Knowing your current directory
+- You will see your username alongside the name you gave your computer and *your_name*:~$ Note that ~ means you're in your "home" directory. It will look something like this:
+```bash
+danny_boy@dannys-labtop:~$ 
+```
 
 ## Always update your computer! 
 - Check available updates:
@@ -40,6 +42,11 @@ nvidia-smi
 ```bash
 ls
 ```
+Example:
+```bash
+danny_boy@dannys-labtop:~$ ls
+NAME_Project  Documents
+```
 
 ## Changing Directory's
 - To change which current directory you are in, type “cd *directory_name*
@@ -47,20 +54,41 @@ ls
 ```bash
 cd ..
 ```
-
-## To Find a Specfic Folder
-To find a specfic folder, type: 
+Example:
 ```bash
-~/*directory_name*
-``` 
+danny_boy@dannys-labtop:~/Bird_Project$ cd ..
+danny_boy@dannys-labtop:~$ 
+```
 
 - To go back to your home directory, just type:
 ```bash
 cd
 ```
+Example:
+```bash
+danny_boy@dannys-labtop:~/NAME_Project/yolov5$ cd
+danny_boy@dannys-labtop:~$ 
+```
+
+## To Find A Specfic Directory
+To find a specfic directory, type: 
+```bash
+~/*directory_name*
+``` 
+Example:
+```bash
+danny_boy@dannys-labtop:~$ ~/NAME_Project/
+bash: /home/danny_boy/NAME_Project/: Is a directory
+```
 
 ## If you want to create a new directory, type “mkdir *name*” 
-- For your own sanity, always use *some_name* with a “_” instead of a space with every folder/file. 
+- For your own sanity, always use *some_name* with a “_” instead of a space with every folder/file.
+Example:
+```bash
+danny_boy@dannys-labtop:~$ mkdir Deftones
+danny_boy@dannys-labtop:~$ ls
+NAME_Project  Desktop    Deftones
+```
 
 ## To make a simple file, such as for notes (if you don’t want to open the Text Editor) 
 - Note that you will need to download these packages.
@@ -68,50 +96,98 @@ cd
 ```bash
 touch *name*
 ```
-
-or
-
+Example:
 ```bash
-gedit *name*
+danny_boy@dannys-labtop:~/Deftones$ touch Rosemary
+danny_boy@dannys-labtop:~/Deftones$ ls
+Rosemary
 ```
 
 - To open and modify these files:
 ```bash
+gedit *name*
+```
+
+or
+
+```bash
 nano *name* 
 ```
 
-- You can now add your notes and things of the sort. Make sure you constantly save “ctrl+s”. To exit: “ctrl+x” 
+- You can now add your notes and things of the sort, even write your code if you love pain. Make sure you constantly save “ctrl+s”. To exit: “ctrl+x” 
 
 ## This also works to create specfic file types! 
 - For example, to create a python file:
 ```bash
 touch *name*.py
 ```
-
-## To move files to another folder: 
+Example:
 ```bash
-mv *name* *directory_name* 
+danny_boy@dannys-labtop:~/Deftones$ touch Entombed.py
+danny_boy@dannys-labtop:~/Deftones$ ls
+Entombed.py  Rosemary
 ```
-## To move folders into another folder: 
+
+## To move a file to another folder: 
+```bash
+mv ~/path/to/*file_name* ~/path/to/*new_directory* 
+```
+Example:
+```bash
+danny_boy@dannys-labtop:~/Deftones$ ls
+Entombed.py  Rosemary
+danny_boy@dannys-labtop:~$ sudo mv ~/Deftones/Entombed.py ~/Worn-Tin/
+danny_boy@dannys-labtop:~/Deftones$ ls
+Rosemary
+danny_boy@dannys-labtop:~/Worn-Tin$ ls
+Entombed.py
+```
+
+## To move a folder into another folder: 
 ```bash
 sudo mv ~/current_directory ~/desired_directory 
 ```
-  
+Example:
+```bash
+danny_boy@dannys-labtop:~$ ls
+NAME_Project   Desktop   Deftones   Worn-Tin
+danny_boy@dannys-labtop:~$ sudo mv ~/Deftones/ ~/Worn-Tin/
+danny_boy@dannys-labtop:~$ ls
+NAME_Project   Desktop   Worn-Tin
+danny_boy@dannys-labtop:~/Worn-Tin$ ls
+Deftones  Entombed.py
+```
+ 
 ## To delete a file:
 ```bash
-rm *name*”
+rm *file_name*
+```
+Example:
+```bash
+danny_boy@dannys-labtop:~/Worn-Tin$ ls
+Deftones  Entombed.py
+danny_boy@dannys-labtop:~/Worn-Tin$ rm Entombed.py 
+danny_boy@dannys-labtop:~/Worn-Tin$ ls
+Deftones
 ```
 
 ## To delete a folder:
 ```bash
-rm –r *name* 
+rm –r *folder_name* 
+```
+Example:
+```bash
+danny_boy@dannys-labtop:~/Worn-Tin$ ls
+Deftones
+danny_boy@dannys-labtop:~/Worn-Tin$ rm -r Deftones/
+danny_boy@dannys-labtop:~/Worn-Tin$ ls
 ```
 
-To find more advanced guidance, I strongly recommend simply searching for them on Firefox, and following reliable sources such as StackExchange, official websites, or community forums. 
+To find more advanced guidance, I strongly recommend simply searching for them on Firefox, and following reliable sources such as StackExchange, Official Websites, or Community Forums. 
 
  
 
-**I STRONGLY recommend using VSCode for all your programming.** Below is a guide: 
+**I STRONGLY recommend using VSCode for all your programming.** Below is a short guide: 
 # Downloading VSCode
 ## Step 1. Download Debian  
 ```bash
@@ -146,6 +222,7 @@ sudo apt update
 
 sudo apt install code # or code-insiders
 ```
+
 
 ## Step 4: Sign in!
 **Done! This is FAR better than the small code editors mentioned earlier.**
