@@ -15,4 +15,4 @@ output_directory = '/path/to/file/desired_folder'
 ```
 
 # References:
-- airou-lab, “GitHub - airou-lab/3D_Multi_Bird_Tracking,” GitHub, 2024. Available: https://github.com/airou-lab/3D_Multi_Bird_Tracking.git. [Accessed: Apr. 05, 2025]
+- airou-lab, “GitHub - airou-lab/3D_Multi_Bird_Tracking,” GitHub, 2024. Available: https://github.com/airou-lab/3D_Multi_Bird_Tracking.git
