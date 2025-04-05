@@ -25,3 +25,12 @@ sudo docker start -ai yolov11_birds
 
 
 # Great Job! Next, we move into working into Data_Annotation!
+
+
+# References:
+
+- airou-lab, “GitHub - airou-lab/Docker-GPU-Tutorial: Docker Tutorial,” GitHub, 2024. Available: https://github.com/airou-lab/Docker-GPU-Tutorial.git
+
+- “Enable GPU support,” Docker Documentation, 2025. Available: https://docs.docker.com/compose/how-tos/gpu-support/ 
+
+- S. Agarwal, “How to Use Your GPU in a Docker Container,” Roboflow Blog, Oct. 22, 2024. Available: https://blog.roboflow.com/use-the-gpu-in-docker/ 
