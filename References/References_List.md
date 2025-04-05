@@ -1,4 +1,5 @@
-# Getting Started References
+A full list of my references (in recommended order of completion) 
+# Getting_Started
 
 ## Installing_Ubuntu24.04:
 
