@@ -1,8 +1,6 @@
-<p align="center">
+<p style="text-align: center;">
 # If you use this repository for guidance, please cite this repo. Good Luck!
 </p>
-<br>
-<br>
 
 # This will serves as a start-from-finish guide for YOLO training
 For this most part, all of the work mentioned below will be in your bash terminal, but modifying any of the files inside YOLO will be in Python.
