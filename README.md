@@ -1,5 +1,5 @@
 # This will serves as a start-from-finish guide for YOLO training
-For the most part, all of the work mentioned below will be in your bash terminal, but modifying any of the files inside YOLO will be in Python. I, Daniel Vargas, am the sole creator of this repository, and if there is anything missing or needs clarification, please feel free to reach out to me at dvargas88@ou.edu. Hope this helps and happy data training!!
+For the most part, all of the work mentioned below will be in your bash terminal, but modifying any of the files inside YOLO will be in Python. I, Daniel Vargas, am the sole creator of this repository, so if there is anything missing or needs clarification, please feel free to reach out to me at dvargas88@ou.edu. Hope this helps and happy data training!!
 <br>
 <br>
 **If you use this repository for guidance, please cite this repo. Good Luck!**
