@@ -1,30 +1,34 @@
-# This serves as a start-from-finish guide for YOLO training
+# This will serves as a start-from-finish guide for YOLO training
 This is all in your bash terminal, but modifying any of the files inside YOLO will be in Python. Good Luck!
 
 ### First, I would like to give credit to my co-researcher, Mathis Morales, for their repository that helped tremendously with setting up the Docker Container!
 ```bash
 https://github.com/airou-lab/Docker-GPU-Tutorial.git
 ```
+## Below is the recommend order of completion
 
-## Begin With Getting_Started
+## Step 1. Getting_Started
 - Installing_Ubuntu24.04
 - Using_Ubuntu24.04
 
-## Continue With Docker_Installation
+## Step 2. Docker_Installation
 - Docker_Image
 - Docker_Container
 
-## Image_Conversion
-You only have to do this if your images are in video format.
+## Step 3. Image_Conversion (Optional)
+Do this if your images are in video format.
 
-## Finally, YOLOv11
+## Step 4. YOLOv11
 - Data_Annotation
 - YOLOv11_Build
+
+## Step 5. Automation (Optional)
+Do this if you want to find the optimal hyperparameters for your model.
 
 # Done! Congratulations, and good luck!
 
 
-# Bird_Project_Daniel
+# Bird_Project_Daniel Summary
 This is also my repository where I upload all of my experimental results. I will mainly use this as a backup for my files, but also as a free dataset for anyone who wants to work with my datasets. If there is anything missing or that needs clarification, please feel free to reach out to me at dvargas88@ou.edu. Hope this helps!!
 
 
