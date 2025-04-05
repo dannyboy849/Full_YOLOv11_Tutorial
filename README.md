@@ -1,6 +1,6 @@
 # This will serves as a start-from-finish guide for YOLO training
 This is all in your bash terminal, but modifying any of the files inside YOLO will be in Python.
-
+<br>
 <br>
 **If you use this repository for guidance, please cite this repo. Good Luck!**
 
