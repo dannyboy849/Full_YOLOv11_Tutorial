@@ -86,3 +86,14 @@ Refer below **Step 4** for an important note!
   
 
 # Thats it! Next, I recommend checking out "Using_Ubuntu24.04"!
+
+
+# References:
+- Ubuntu.com, 2024. Available: https://ubuntu.com/blog/ubuntu-desktop-24-04-noble-numbat-deep-dive
+  
+- “Install Ubuntu desktop,” Ubuntu. Available: https://ubuntu.com/tutorials/install-ubuntu-desktop#2-download-an-ubuntu-image
+  
+- “balenaEtcher - Flash OS images to SD cards & USB drives,” etcher.balena.io. Available: https://etcher.balena.io/
+  
+- Ubuntu, “Download Ubuntu Desktop | Download | Ubuntu,” Ubuntu, 2019. Available: https://ubuntu.com/download/desktop
+
