@@ -50,13 +50,13 @@ sudo docker pull continuumio/miniconda3:latest
 
 
 ## Step 2. Use Ultralytics Docker Image
-Simply find the folder with the Docker Image (inside of ~/ultralytics folder) and skip to Step 3.
+Simply find the folder with the Docker Image (inside of ~/ultralytics folder)
 
-    ## Step 3. (Optional) Create your image:
-    ```python
-    sudo docker build -t yolov11_birds:latest .
-    ```
-    It follows <image_name>:<image_tag> - the name for the image, then tag you want.
+//    ## Step 3. (Optional) Create your image:
+//    ```python
+//    sudo docker build -t yolov11_birds:latest .
+//    ```
+ //   It follows <image_name>:<image_tag> - the name for the image, then tag you want.
 
 
 ## Step 3. Create A Name for your to-be container:
