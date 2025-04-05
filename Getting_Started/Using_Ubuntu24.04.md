@@ -4,7 +4,7 @@ Now that you’ve installed Ubuntu, you essentially have to relearn how to use a
 
 Note from now on: every time I say “type *something*” I am referring to inside of your terminal. Also, it’s vital you understand everything in Linux is case-sensitive 
 (ie, 
-- cd = good,
+- cd = good
 - Cd = will NOT work
 
 ## Open a terminal
