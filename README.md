@@ -1,9 +1,8 @@
-<p align="center">
-**If you use this repository for guidance, please cite this repo. Good Luck!**
-</p>
-
 # This will serves as a start-from-finish guide for YOLO training
 For this most part, all of the work mentioned below will be in your bash terminal, but modifying any of the files inside YOLO will be in Python.
+<br>
+<br>
+**If you use this repository for guidance, please cite this repo. Good Luck!**
 
 ### First, I would like to give credit to my co-researcher, Mathis Morales, for their repository that helped tremendously with setting up the Docker Container!
 ```bash
