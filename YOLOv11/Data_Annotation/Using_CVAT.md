@@ -31,11 +31,10 @@ CVAT is very simple and intuitive to use. However, you will need to install and 
 Finally, to export your data will depend on which software you wish you use: (in our case, YOLO uses .txt, so we used the YOLO 1.1 option at the very bottom) 
 
 
+# Data annotation is done! Onto working in YOLOv11!
+
+
 # References:
 - Google, “Google Chrome - The Fast, Simple and Secure Browser from Google,” Google.com. Available: https://www.google.com/chrome/
 
 - “Computer Vision Annotation Tool,” Cvat.ai, 2025. Available: https://app.cvat.ai/auth/login
-
-
-
-# Data annotation is done! Onto working in YOLOv11!
