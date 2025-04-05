@@ -12,7 +12,7 @@ attempt to block these actions anyways)
 
 # How To Dual-Boot A Computer With Ubuntu (24.04) 
 
-If you already have the flashdrive ready, review Steps 3 & 4 then Skip to step 7! 
+If you already have the flashdrive ready, review Steps 3 & 4 then skip to Step 7! 
 
 
 ## Step 1. Backup Your Files
@@ -40,7 +40,7 @@ Refer below **Step 4** for an important note!
 - Select “Assign letter” and select your favorite letter (ex M:)
 - To ensure correct drive creation, it should appear in your files under your local disk (C:)
 
-- **If you have more than 1 disk (SSD) you have the preferred method – You can allocate a full SSD to Ubuntu! Ensure all your Windows's files are on Disk 0 (C:) then skip to step 7, but instead you’ll shrink Disk 1 to the total volume available (your other SSD that is NOT C:)**
+- **If you have more than 1 disk (SSD) you have the preferred method – You can allocate a full SSD to Ubuntu! Ensure all your Windows's files are on Disk 0 (C:) then skip to step 7 (if you have the flashdrive ready), but instead you’ll shrink Disk 1 to the total volume available (your other SSD that is NOT C:)**
 
 
 ## Step 5. Download balenaEtcher For Windows x86|64 (Installer) 
@@ -82,7 +82,6 @@ Refer below **Step 4** for an important note!
 - You now will have the option of Ubuntu or Windows! 
 
 **You’ve successfully dual booted Windows and Ubuntu! Congratulations!**
-
   
 
 # Thats it! Next, I recommend checking out "Using_Ubuntu24.04"!
