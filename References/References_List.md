@@ -33,7 +33,7 @@
 - Google, “Google Chrome - The Fast, Simple and Secure Browser from Google,” Google.com. Available: https://www.google.com/chrome/ 
  
 
-- “Computer Vision Annotation Tool,” Cvat.ai, 2025. Available: https://app.cvat.ai/auth/login. [Accessed: Apr. 01, 2025] 
+- “Computer Vision Annotation Tool,” Cvat.ai, 2025. Available: https://app.cvat.ai/auth/login
 
 
 # YOLOv11 
