@@ -1,5 +1,5 @@
 <p align="center">
-# If you use this repository for guidance, please cite this repo. Good Luck!
+**If you use this repository for guidance, please cite this repo. Good Luck!**
 </p>
 
 # This will serves as a start-from-finish guide for YOLO training
