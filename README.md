@@ -11,7 +11,7 @@ I, Daniel Vargas, am the sole creator of this repository, so if there is anythin
 ```bash
 https://github.com/airou-lab/Docker-GPU-Tutorial.git
 ```
-## Below is the recommend order of completion
+## Below Is The Recommend Order Of Completion
 
 ## Step 1. Getting_Started
 - Installing_Ubuntu24.04
