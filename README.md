@@ -34,7 +34,7 @@ Do this if you want to find the optimal hyperparameters for your model.
 # Done! Congratulations, and good luck!
 
 
-# Bird_Project_Daniel Summary
+# Daniel's Project Summary
 This is also my repository I originally made for a research project called * *link inserted if paper is accepted* *. I have uploaded some of my experimental results. I will mainly use this as a backup for my files, but also as a free dataset for anyone who wants to work with it. Again, if there is anything missing or needs clarification, please feel free to reach out to me at dvargas88@ou.edu.
 
 
