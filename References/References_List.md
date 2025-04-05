@@ -11,6 +11,7 @@
 
 - Ubuntu, “Download Ubuntu Desktop | Download | Ubuntu,” Ubuntu, 2019. Available: https://ubuntu.com/download/desktop 
 
+- B. Marijan, “Bash Commands: The Ultimate Cheat Sheet + Downloadable PDF,” Knowledge Base by phoenixNAP, Aug. 24, 2023. Available: https://phoenixnap.com/kb/bash-commands
 
  # Image_Conversion
  
