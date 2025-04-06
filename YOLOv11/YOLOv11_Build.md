@@ -163,34 +163,29 @@ Finally, ensure you have the yolos.pt INSIDE of the ~/data/ folder. If not, it w
 ```bash
 yolo train model=yolo11s.pt data=/home/Documents/Bird_Project/data/birds_dataset_1.yaml epochs=1000 batch=24 device=0
 ```
+
+- model = yolo11s - your version of yolo you want to train on
 - data = where your *words*.yaml is located.  
-- epochs = 1000 - how many iterations of training you want it to train for. As mentioned in the other document, more than 50 epochs is not necessary. 
-- Imgsz = Image size for training (adjust based on resolution) 
+- epochs = 1000 - how many training iterations you want. The training iterations directly relates to your dataset and its difficulty to train on.
+- imgsz = Image resolution of each image (can be adjusted at a higher computational expense) 
 - batch = 24 - number of images per epoch 
 - device = 0 - your GPU
 
 
 **A note before continuing: All of these can be changed by performing Step #2**
 
-- model = yolo11s - your version of yolo you want to train on
-- data = path to your .yaml file from previous
-- epochs = 1000 - training iterations - adjust to desired epochs you want to train on (Higher the number, greater the accuracy, but longer training)
-- Batch = 24 - Amount of images per epoch
-- Imgsz = Image resolution of each image (can be adjusted at a higher computational expense)
-- device = 0 - which GPU its training on
-
 
 ### Monitor GPU Usage
-- If your training sessions demands more computaional power than capable, your computer will crash! **Lowering the batch size** (since it consumes all of your dedicated VRAM) is the best solution I have found. Avoid going higher than **XGB-4GB** (X is your total available).
+- If your training sessions demands more computaional power than capable, your computer will crash! **Lowering the batch size** (since its consuming all of your dedicated VRAM) is the best solution I have found. Avoid going higher than **XGB-4GB** (X is your total available).
 
-Now, depending on your GPU, it should only take 5-20 minutes to train on 1800 (out of 3000) images with 100 epochs. I recommend training on 1000 epochs, and adding an early stop at the end:
+- Now, depending on your GPU, it should only take 5-20 minutes to train on 1800 (out of 3000) images with 100 epochs. I recommend training on 1000 epochs, and adding an early stop at the end. Early stop (patience) acts when there is no improvement in results over the number of assigned patience.
 ```bash
 ...*words*.yaml patience=100
 ```
 
-Our training session stopped at 154 epochs, training for 18 minutes (7 seconds per epoch). 
+- Our training session stopped at 154 epochs - this means our model saw no improvement after 54 epochs. But with the size of our dataset, this is highly unlikely. The training session's total duration was 18 minutes (7 seconds per epoch). 
 
-This ensures you have as accurate data as you can get after converging and avoid having to train for hours - but stopping too early (like this example) most likely will not converge. We recommend adjusting early stop (patience) to at least 500.
+- This also ensures you have as accurate your model you can get after converging and avoids having to train for hours - but stopping too early (like this example) most likely will not converge fully. We recommend adjusting early stop (patience) to at least 500.
 
 
 ## Step 7. Validate your data
@@ -223,7 +218,7 @@ Now that you're done training, you can test the accuracy of your trained model b
 This will go back and test on your /test images folder. You can also apply the trained best.pt weight to other new images for classification, although for birds, this will not be very accurate without heavy fine-tuning/re-annotating (again, see Automatation).
 
 
-# **You now have a fully custom-trained CNN model you can apply to all of your data! Congratulations and good luck!** 
+# You now have a fully custom-trained CNN model you can apply to any of your data! Congratulations!
 
 ### Notes for myself (Ignore):
 Yolov5: When applying images all together and inserting a divide to allow for yolo to randomly grab images, the model was too precise, with no overfitting. The results were too accurate because they essentially trained all on the same data and when we would test on them, the weights new exactly what gender and where the birds were. This, of course, does not produce valid results and should be rejected. However, when we trained with the appropriate split, the accuracy went from 98% to 48%. A vastly different result, and indicates we change modify some of the values, such as the training model (engine) and attempt to find a more accurate model. As of now, we are using Adam and AdamW, however the results have not been promising. The highest results acheived have been on independent cameras with Camera 3 being the highest at 78% precison. The next action is to continue to find a higher model, as with both cameras, we have only achieved a maximum of 63% accuracy (basically guessing.) We may continue to test, but due to deadlines, we may be restricted to limiting to one camera at a time and ensuring we fine-tune to the best of our ability and use the data we attain.
