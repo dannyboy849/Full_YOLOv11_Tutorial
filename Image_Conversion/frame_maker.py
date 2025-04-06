@@ -5,7 +5,7 @@ import os
 video_file = '~/NAME_Project/yolov11/data/videos/camera_angle_1.mp4'
 
 # Create a directory to save the frames
-output_directory = '~/NAME_Project/yolov11/data/video_frames'
+output_directory = '~/NAME_Project/yolov11/data/video_frames/camera_angle_x' # Replace x with video number
 os.makedirs(output_directory, exist_ok=True)
 
 # Open the video file
