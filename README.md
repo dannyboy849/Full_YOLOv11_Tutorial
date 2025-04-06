@@ -41,9 +41,13 @@ This is my repository I originally made for a research project called * *link in
 # Summary Results
 ## For YOLOv5
 - Our results of Camera 1 was 54% precison for tracking and classification and 23.4% accurate in IoU (mAP-95)
+- 
 - Our results of Camera 3, our accuracy was 64% for tracking and classification and 27.3% accurate in IoU (mAP-95)
-As you may notice, these results are low. On top of this fact, these arent even our camera feed combined together yet. As of now, we believe this is due to our parameters, as well as the data input. We will feed it our full 9600 images instead of the half we have been doing up until now. We will also resort to using YOLOv11 instead as YOLOv5 is now 5 years old. 
+- 
+- As you may notice, these results are low. On top of this fact, these arent even our camera feed combined together yet. As of now, we believe this is due to our parameters, as well as the data input. We will feed it our full 9600 images instead of the half we have been doing up until now. We will also resort to using YOLOv11 instead as YOLOv5 is now 5 years old. 
 
 - I will be testing on YOLOv11 soon - working on a very complicated installation. 
+
+## Update!
 
 - Complicated installation completed! We now have an accuracy using simultaneous tracking-and-classification of 71.4% for both camera angles! BUT, our tracking-THEN-classification acheived 87.5% accuracy! Hooray for StackExchange!
