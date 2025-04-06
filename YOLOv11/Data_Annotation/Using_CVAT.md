@@ -1,11 +1,6 @@
 # Setting up CVAT 
 CVAT is very simple and intuitive to use. However, you will need to install and use Google Chrome for this as it is not supported by Firefox. 
 
-
-<li class="masthead__menu-item">
-    <a href="https://app.cvat.ai/auth/login">Quickjump to CVAT now!</a>
-</li>
-
 <br>
 
 I want to make a note that you can also use Roboflow as a data annotation software, but I did not use it, thereby I am not familiar with its setup. I do know its better for automating some parts of the annotation, but again, I did not use it. Feel free to check it out though!
@@ -22,8 +17,15 @@ I want to make a note that you can also use Roboflow as a data annotation softwa
 </li>
 
 ## Step 2. Create a CVAT acount
+<li class="masthead__menu-item">
+    <a href="https://app.cvat.ai/auth/login">Quickjump to CVAT now!</a>
+</li>
+
 - Create an account in CVAT. I recommend personal accounts, but I'm unsure if this affects organizations and potential for inviting other users. 
 
+<li class="masthead__menu-item">
+    <a href="https://app.cvat.ai/auth/login">Quickjump to CVAT now!</a>
+</li>
 
 ## Step 3. Create a Project
 - Select “Create Project” 
