@@ -6,20 +6,16 @@ tuned parameters in order for the automated system to find a beginning ground.
 
 
 ## Step 1. Download the auto_run_experiments.py file
-This file, of course, has everything you need to hypertune your model. You can manually adjust the testing values to 
-you desire (please check through and adjust as you need) You can also rename the .py file to whatever you wish, just
-ensure you remember it will be a different name than whats in #5
+This file, of course, has everything you need to hypertune your model. You can manually adjust the testing values to your hearts desire. You can also rename the .py file to whatever you wish, just ensure you remember it!
 
 
-## Step 2. Ensure you already have your docker container created
-In order to proceed any further, you need to have your container up and ready to run. Personally, I mounted my data
-on its own seperate folder that had been copied from the original folder and made its own new docker container 
-(GPU-enabled) to ensure if there was any risk of corruption, it would only affect that folder/container.
+## Step 2. Ensure Your Docker Container Was Created
+In order to proceed any further, you need to have your container up and ready to run. Personally, I mounted my data on its own seperate folder that had been copied from the original folder and made its own new docker container (GPU-enabled) to ensure if there was any risk of corruption, it would only affect that folder/container.
 
 
 ## Step 3. Make a venv
 In bash, I had many issues with "import pandas as pd" as it relied on python, yet I could only use python3 and no longer use pip3. This is likely due to my inexperience, as I'm a Mechanical Engineer with little experience in programming, so please forgive my novice formatting. So, I created a venv to bypass this issue. The following will guide you
-through the simple set-up.
+through the simple set-up:
 ```bash
 python3 -m venv .venv (build new venv)
 source .venv/bin/activate (start venv)
@@ -54,5 +50,5 @@ Run this command:
 python3 auto_run_experiments.py
 ```
 
-That's it! Now you just wait for the automation process to complete itself. 
+That's it! Now you wait for the automation process to complete. 
 # **Important Note** The automation process is set automatically to 10 iterations - to adjust this, simply go into the python file and change "" to your desired amount of iterations.
