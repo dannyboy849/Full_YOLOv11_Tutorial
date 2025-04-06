@@ -5,6 +5,8 @@ CVAT is very simple and intuitive to use. However, you will need to install and 
 <li class="masthead__menu-item">
     <a href="https://app.cvat.ai/auth/login">Quickjump to CVAT now!</a>
 </li>
+
+<br>
 <br>
 
 -I do want to make a note that you can also use roboflow as a data annotation software, but I did not use it, thereby I am not familiar with its setup. I do know its better for automating some parts of the annotation, but again, I did not use it. Feel free to check it out though!
