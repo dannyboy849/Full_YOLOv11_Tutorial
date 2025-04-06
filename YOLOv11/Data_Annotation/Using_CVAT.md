@@ -3,10 +3,11 @@ CVAT is very simple and intuitive to use. However, you will need to install and 
 
 -I do want to make a note that you can also use roboflow as a data annotation software, but I did not use it, thereby I am not familiar with its setup. I do know its better for automating some parts of the annotation, but again, I did not use it. Feel free to check it out though!
 
-```bash
-https://roboflow.com/
-```
+<li class="masthead__menu-item">
+    <a href="https://roboflow.com/">Research</a>
+</li>
 
+- https://roboflow.com/
 
 ## Step 1. Create a CVAT acount
 - Create an account in CVAT. I recommend personal accounts, but I'm unsure if this affects organizations and potential for inviting other users. 
