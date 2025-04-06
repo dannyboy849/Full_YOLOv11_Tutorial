@@ -1,6 +1,6 @@
 # Convert your video into the proper .PNG format
 - Refer to my "frame_maker.py" file and modify these two lines of code below.
-- Copy the path to your frames directory (your ~/video_frames folder) and add your camera videos (~/camera_angle_1.mp4) to the path.
+- Copy the path to your frames directory (your "~/video_frames" folder) and add your camera videos ("~/camera_angle_1.mp4") to the path.
 - Running the script should create the frames in the respective folder.
 ```bash
 # Define the path to your video file
