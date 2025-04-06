@@ -22,7 +22,6 @@ I want to make a note that you can also use Roboflow as a data annotation softwa
 </li>
 
 <br>
-<br>
 
 - Create an account in CVAT. I recommend personal accounts, but I'm unsure if this affects organizations and potential for inviting other users. 
 
