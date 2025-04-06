@@ -210,7 +210,7 @@ A note before continuing - All of these can be changed by performing Step #2
 ## Step 8. Test your data:
 Now that you're done training, you can test the accuracy of your trained model by testing on your images/test data on the previously unseen images (that were not in your images folder from earlier). You can do this by running:
 ```bash
-    yolo predict model=runs/detect/train/weights/best.pt source=/path/to/new/images device=0 save=True 
+yolo predict model=runs/detect/train/weights/best.pt source=/path/to/new/images device=0 save=True 
 ```
 
 - model = predict - for testing your model, this is your custom-trained dataset (best.pt)
