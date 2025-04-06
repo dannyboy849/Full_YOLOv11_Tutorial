@@ -18,16 +18,12 @@ I want to make a note that you can also use Roboflow as a data annotation softwa
 
 ## Step 2. Create a CVAT acount
 <li class="masthead__menu-item">
-    <a href="https://app.cvat.ai/auth/login">Quickjump to CVAT now!</a>
+    <a href="https://app.cvat.ai/auth/login">Quickjump to CVAT!</a>
 </li>
 
 <br>
 
 - Create an account in CVAT. I recommend personal accounts, but I'm unsure if this affects organizations and potential for inviting other users. 
-
-<li class="masthead__menu-item">
-    <a href="https://app.cvat.ai/auth/login">Quickjump to CVAT now!</a>
-</li>
 
 ## Step 3. Create a Project
 - Select “Create Project” 
