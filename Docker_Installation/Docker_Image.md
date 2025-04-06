@@ -42,7 +42,7 @@ sudo docker run hello-world
 # How to create a Docker image for YOLOv11
 
 ## Step 1. Pull The Latest Miniconda3 Image:
-You can refer to /ultralytics/docker/docker for their built-in image
+You can refer to /ultralytics/docker/docker for their built-in image. If not, refer to the folder containing this document and download the Docker file there. 
 
 ```bash
 sudo docker pull continuumio/miniconda3:latest
