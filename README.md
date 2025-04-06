@@ -1,4 +1,4 @@
-# This will serves as a start-from-finish guide for YOLO training
+# This repository serves as a start-from-finish guide for YOLO training
 For the most part, all of the work mentioned below will be in your bash terminal, but modifying any of the files inside YOLO will be in Python. 
 <br>
 <br>
