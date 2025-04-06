@@ -30,7 +30,7 @@ I want to make a note that you can also use Roboflow as a data annotation softwa
 
 
 ## Step 4. Create Task
-- Make a Task
+- Create a Task
 
 
 ## Step 5. Assign Task
