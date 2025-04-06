@@ -54,6 +54,8 @@ A full list of my references (in recommended order of completion)
 
 ## Data Annotation:
 
+- https://roboflow.com/
+
 - “Computer Vision Annotation Tool,” Cvat.ai, 2025. Available: https://app.cvat.ai/auth/login
   
 - Google, “Google Chrome - The Fast, Simple and Secure Browser from Google,” Google.com. Available: https://www.google.com/chrome/ 
