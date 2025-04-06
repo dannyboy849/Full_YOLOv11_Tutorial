@@ -1,7 +1,7 @@
 # How to install YOLOv11 on Ubuntu 24.04 using a GPU-enabled Docker container (the easy way)
 ### Notes:
 
-- We used our GeForce RTX 4070 SUPER (12 GB VRAM) and an Intel® Core™ i7-14700KF (28 threads) to train YOLO. On the CPU, training for 1000 epochs took 20 hours 36 minutes, while on the GPU it took 4 hours 4 minutes.
+- We used our GeForce RTX 4070 SUPER (12 GB VRAM) (GPU) and an Intel® Core™ i7-14700KF (28 threads) (CPU) to train YOLO. On the CPU, training for 1000 epochs elapsed 20 hours 36 minutes, while on the GPU it elapsed 4 hours 4 minutes.
 
 - Why is GPU better? Simple — it's designed to process images in parallel (it’s a graphics processing unit).
 
@@ -16,7 +16,7 @@ pip install ultralytics
 Note: This may not work on your terminal. If this is the case, try either of these methods:
 
 The easiest way:
-- option a) make a python3 venv and use pip from there. Then, move it to whatever folder you are going to work in. You can do this either in a terminal or in VSCOde (see Docker_Installation)
+- Option a) make a python3 venv and use pip from there. Then, move it to whatever folder you are going to work in. You can do this either in a terminal or in VSCOde (see Docker_Installation)
 
 - Make sure you have python3 installed, check if its already installed:
 ```bash
@@ -39,8 +39,8 @@ source venv/bin/activate
 ```
 
 The more difficult route:
-- option b) In another existing docker container you have, run it there. Then, move it to whatever folder you are going to work in.
-Or you can run this command to create a temporary container:
+- Option b) In another existing docker container you have, run it there. Then, move it to whatever folder you are going to work in.
+- Or you can run this command to create a temporary container:
 ```bash
 docker run --rm -it ubuntu bash
 ```
@@ -58,6 +58,7 @@ docker run --rm -it ubuntu bash
 sudo docker start -ai yolov11_birds
 ```
 Change "yolov11_birds" to the desired name of your container.
+
 
 
 # How to train your custom dataset
@@ -139,6 +140,7 @@ Resources:
     <a href="https://docs.ultralytics.com/models/yolo11/#performance-metrics">YOLOv11 Documentation</a>
 </li>
 
+
 ## Step 4. Manually Annotate Data
 Refer to instructions inside the /Data_Annotation folder. Return here for Step 5.
 
@@ -175,9 +177,7 @@ yolo train model=yolo11s.pt data=/home/Documents/Bird_Project/data/birds_dataset
 - batch = 24 - number of images per epoch 
 - device = 0 - your GPU
 
-
 **A note before continuing: All of these can be changed by performing Step #2**
-
 
 ### Monitor GPU Usage
 - If your training sessions demands more computaional power than capable, your computer will crash! **Lowering the batch size** (since its consuming all of your dedicated VRAM) is the best solution I have found. Avoid going higher than **XGB-4GB** (X is your total available).
@@ -218,8 +218,8 @@ yolo predict model=runs/detect/train/weights/best.pt source=/path/to/new/images 
 - split = which set of images it will grab images (assuming you divided files properly as instructed previously)**
 - save = saves your results (mAP, mAP-50, etc) 
 
-
 This will go back and test on your /test images folder. You can also apply the trained best.pt weight to other new images for classification, although for birds, this will not be very accurate without heavy fine-tuning/re-annotating (again, see Automatation).
+
 
 
 # You now have a fully custom-trained CNN model you can apply to any of your data! Congratulations!
@@ -227,6 +227,8 @@ This will go back and test on your /test images folder. You can also apply the t
 ### Notes for myself (Ignore):
 Yolov5: When applying images all together and inserting a divide to allow for yolo to randomly grab images, the model was too precise, with no overfitting. The results were too accurate because they essentially trained all on the same data and when we would test on them, the weights new exactly what gender and where the birds were. This, of course, does not produce valid results and should be rejected. However, when we trained with the appropriate split, the accuracy went from 98% to 48%. A vastly different result, and indicates we change modify some of the values, such as the training model (engine) and attempt to find a more accurate model. As of now, we are using Adam and AdamW, however the results have not been promising. The highest results acheived have been on independent cameras with Camera 3 being the highest at 78% precison. The next action is to continue to find a higher model, as with both cameras, we have only achieved a maximum of 63% accuracy (basically guessing.) We may continue to test, but due to deadlines, we may be restricted to limiting to one camera at a time and ensuring we fine-tune to the best of our ability and use the data we attain.
 - Update: after using hyperparameter automation in YOLOv11, we achieved 72% accuracy!
+
+
 
 # References:
 - Ultralytics, “YOLO11,” Ultralytics.com, 2024. Available: https://docs.ultralytics.com/models/yolo11/
