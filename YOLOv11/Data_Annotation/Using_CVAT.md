@@ -21,6 +21,9 @@ I want to make a note that you can also use Roboflow as a data annotation softwa
     <a href="https://app.cvat.ai/auth/login">Quickjump to CVAT now!</a>
 </li>
 
+<br>
+<br>
+
 - Create an account in CVAT. I recommend personal accounts, but I'm unsure if this affects organizations and potential for inviting other users. 
 
 <li class="masthead__menu-item">
