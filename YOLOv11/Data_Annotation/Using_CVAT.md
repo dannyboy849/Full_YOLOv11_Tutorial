@@ -47,7 +47,7 @@ I want to make a note that you can also use Roboflow as a data annotation softwa
 
 
 ## Step 8. Export your annotations!
-Finally, to export your data will depend on which software you wish you use: (in our case, YOLO uses .txt, so we used the YOLO 1.1 option at the very bottom) 
+Finally, to export your data will depend on which software you wish you use the YOLO 1.1 option at the very bottom. CVAT will export .txt files, which are your annotations to feed into your YOLO /data/labels folder. Note that there is an option to save images, but this saves the original images, not the annotated ones. 
 
 
 # Data annotation is done! Onto working in YOLOv11!
