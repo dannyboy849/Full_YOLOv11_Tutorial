@@ -2,7 +2,7 @@ import cv2
 import os
 
 # Define the path to your video file
-video_file = '~/NAME_Project/yolov11/data$/videos/camera_angle_1.mp4'
+video_file = '~/NAME_Project/yolov11/data/videos/camera_angle_1.mp4'
 
 # Create a directory to save the frames
 output_directory = '~/NAME_Project/yolov11/data/video_frames'
