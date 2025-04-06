@@ -131,9 +131,13 @@ augment=True allows the augmentation to actually augment itself and ensure you h
 ```
 
 Resources: 
-- Massive help from: https://medium.com/@estebanuri/training-yolov11-object-detector-on-a-custom-dataset-39bba09530ff
-- Documentation: https://docs.ultralytics.com/models/yolo11/#performance-metrics
+<li class="masthead__menu-item">
+    <a href="https://medium.com/@estebanuri/training-yolov11-object-detector-on-a-custom-dataset-39bba09530ff">Massive help from Medium!</a>
+</li>
 
+<li class="masthead__menu-item">
+    <a href="https://docs.ultralytics.com/models/yolo11/#performance-metrics">YOLOv11 Documentation</a>
+</li>
 
 ## Step 4. Manually Annotate Data
 Refer to instructions inside the /Data_Annotation folder. Return here for Step 5.
