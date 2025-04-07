@@ -22,7 +22,7 @@ https://github.com/airou-lab/Docker-GPU-Tutorial.git
 - Docker_Container
 
 ## Step 3. Image_Conversion (Optional)
-Do this if your images are in video format.
+Do this to convert your video (.mp4) to images (.PNG) to feed into CVAT for data_annotation
 
 ## Step 4. YOLOv11
 - Data_Annotation
