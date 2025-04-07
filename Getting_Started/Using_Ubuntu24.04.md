@@ -251,7 +251,7 @@ Fun fact: you don’t have to activate your docker container unless you want to 
 
 
 
-# That's it! Now, onto building our Docker Container! 
+# That's it! Now, onto building our Docker Container (or the recommended connection to GitHub to upload your data to a repository)! 
 
 
 # References:
