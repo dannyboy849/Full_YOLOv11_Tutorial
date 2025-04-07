@@ -9,8 +9,6 @@ sudo apt update
 sudo apt upgrade
 sudo apt install git
 ```
-Image_References/Creating_a_repository_add_button.png
-<img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/Creating_a_repository_add_button.png"> 
 
 - You can refer to the link below if needed:
 <li class="masthead__menu-item">
@@ -107,7 +105,12 @@ dannyboy@dannys-labtop:~/NAME_Project/Mytest$ git commit -m "A message that desc
 
 
 ## Step 8: Creating a repository on GitHub
-- Hopping over to GitHub on a browser, 
+- Hopping over to GitHub on a browser, you can refer to the image below to find the add button:
+<img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/Creating_a_repository_add_button.png">
+
+- Create a new repository. The image below is what it should look like:
+<img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/Creating_a_repository_example.png"> 
+
 
 ## Step : Generate a SSH key
 - In the command line, navigate to the directory where you would like to create a local clone of your new project (I recommend inside of your project folder)
