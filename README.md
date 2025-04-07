@@ -5,13 +5,13 @@ For the most part, all of the work mentioned below will be in your bash terminal
 I, Daniel Vargas, am the sole creator of this repository, so if there is anything missing or needs clarification, please feel free to reach out to me at dvargas88@ou.edu. Please note that I am a Mechanical Engineer by training, and I had to learn about Programming, Docker, and CNNs in 3 months. So, have mercy if there are any mistakes. Please notify me if there are issues or if I misguide a section as I always appreciate feedback and criticism. Anyways, hope this helps - good luck and happy data training!!
 <br>
 
-### If you use this repository for guidance, please cite this repo
+## If you use this repository for guidance, please cite this repo
 
 ### First, I would like to give credit to my co-researcher, Mathis Morales, for their repository that helped tremendously with the set up of the Docker Container, as well as their advice throughout the project!
 ```bash
 https://github.com/airou-lab/Docker-GPU-Tutorial.git
 ```
-## Below Is The Recommend Order Of Completion
+# Recommend Order Of Completion
 
 ## Step 1. Getting_Started
 - Installing_Ubuntu24.04
