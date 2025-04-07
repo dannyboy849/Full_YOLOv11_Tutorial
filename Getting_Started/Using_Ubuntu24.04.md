@@ -1,7 +1,8 @@
 # Using Ubuntu 24.04 
 
 Now that you’ve installed Ubuntu, you essentially have to relearn how to use a computer! Fortunately, Ubuntu automatically installs Firefox and pins it to your toolbar. “How to install *anything* on Linux” will become your catchphrase. Ubuntu also includes “Text Editor”, an “App Center” that is terribly optimized, and “Software Updater” which is known to crash computers! Instead of using these, you will now become a fully pledged programmer. The infamous “Terminal” and heavenly "VSCode" will become your new best friends. We will now go into the basics and some commands of how to use the terminal.
-- Its important to note that if you are mising any packages, Linux will actually typically give you the command you need to install it!
+
+### Its important to note that if you are mising any packages, Linux will actually typically give you the command you need to install it!
 
 Note from now on: every time I say “type *something*” I am referring to inside of your terminal. Also, it’s vital you understand **everything in Linux is case-sensitive** 
 (ie, 
