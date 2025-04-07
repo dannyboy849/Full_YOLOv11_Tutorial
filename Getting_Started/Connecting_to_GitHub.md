@@ -32,7 +32,7 @@ git config --global user.email "email_id"
 ```
 - Example
 ```bash
-dannyboy@dannys-labtop:~/NAME_Project$ git config --global user.email "some_name@gmail.com"
+dannyboy@dannys-labtop:~/NAME_Project$ git config --global user.email "user_email@gmail.com"
 ```
 
 
@@ -44,7 +44,7 @@ git init Mytest # Replace Mytest with the desired name of your future repository
 - Example
 ```bash
 dannyboy@dannys-labtop:~/NAME_Project$ git init Mytest
-Initialized empty Git repository in /home/ghabibi/Bird_Project/Mytest/.git/
+Initialized empty Git repository in /home/dannyboy/Bird_Project/Mytest/.git/
 
 ```
 
@@ -110,44 +110,148 @@ dannyboy@dannys-labtop:~/NAME_Project/Mytest$ git commit -m "A message that desc
 
 - Create a new repository. The image below is what it should look like:
 <img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/Creating_a_repository_example.png"> 
+- It goes without saying, you can modify anything option you'd like. For projects, I strongly recommend making your repository private unless you want to make your work/data publicly available. **Ensure you remove any compromising information.**
 
 
-## Step : Generate a SSH key
-- In the command line, navigate to the directory where you would like to create a local clone of your new project (I recommend inside of your project folder)
+## Step 9: Connect to the repository!
+- Now that your repo is created, copy your repo address! This can be found as shown in the image below:
+<img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/Link_to_repository.png">
+
+- Then, you'll run this command using your repo address:
 ```bash
-ghabibi@dannys-labtop:~/Bird_Project$ cd Mytest/
-ghabibi@dannys-labtop:~/Bird_Project/Mytest$ ls
+git remote add origin https://github.com/username/repo_name.git
 ```
-- To create a repository for your project, use the gh repo create subcommand. When prompted, select Create a new repository on GitHub from scratch and enter the name of your new project. If you want your project to belong to an organization instead of to your personal account, specify the organization name and project name with organization-name/project-name.
-- Follow the interactive prompts. To clone the repository locally, confirm yes when asked if you would like to clone the remote project directory.
+
+- **Important Note: Make sure you replace 'username' and 'repo_name' in the path with your Github username and folder!**
+
+- Example
+```bash
+dannyboy@dannys-labtop:~/NAME_Project/Mytest$ git remote add origin https://github.com/dannyboy849/Mytest.git
+```
 
 
-## Step : Creating a repository
+## Step 10: Pushing files to your GitHub repo
+- Using this command, this uploads your files/folders from local device to your GitHub online repo:
+```bash
+git push origin master
+```
 
+- Example
+```bash
+dannyboy@dannys-labtop:~/NAME_Project/Mytest$ git push origin master
+Username for 'https://github.com': user_email@gmail.com
+Password for 'https://user_email%99gmail.com@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/dannyboy849/Mytest.git/'
+```
+- As shown above, you may be denied remote access. Don't worry yet! Simply follow Step 11. and you'll be ready to go!
+**THIS IS CRITICALLY IMPORTANT: if you made an SSH key, you will sign in your your PERSONAL ACCESS TOKEN!!!**
 
-## Step : Adding a key
-- This lets create what's called an *access key* and it lets you access your repository from your device. Make a note that it only works for **this particular device**. If you wish to access the same repository on another device, you have to repeat the *access key* process.
+  
+## Step 11: How to find Personal Access Tokens
+- Refer to *Developer Settings* Found at the bottom in settings
+- As shown in the image below, you'll select *Generate new token*
+<img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/Generating_personal_token.png">
+- You'll get a key. Make sure to save this somewhere secure for future use.
+- You will then fill out the respective information
+```bash
+git clone https://github.com/USERNAME/REPO.git
+Username: YOUR-USERNAME
+Password: YOUR-PERSONAL-ACCESS-TOKEN
+```
+- If you successfully signed in and pushed, **skip to Step 13!**
 
+## Step 12: Generate a SSH key
+- This lets us create what's called an *SSH key* and it lets you access your repository remotely from your device. Make a note that it only works for **this particular device**. If you wish to access the same repository on another device, you have to repeat the *SSH key* process.
+- Navigate to your GitHub settings as shown below:
+<img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/Making_SSH_keys.png">
 
-## Step :
+- For obvious reasons I'm not showing my SSH key, but below is what you should see. Click on *New SSH key*:
+<img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/Create_ssh_key.png">
 
+- Below is what you should see. You will fill in the information including the desired name of your device's SSH key, as well as the key generated from your local device:
+<img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/adding_ssh_key.png">
 
-## Step :
+- Generate SSH key from your local device:
+```bash
+dannyboy@dannys-labtop:~/NAME_Project/ssh_key$ ssh-keygen -t ed25519 -C "user_email@gmail.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/dannyboy/.ssh/id_ed25519): 
+Enter passphrase (empty for no passphrase): [Type a passphrase]
+Enter same passphrase again: [Type passphrase again]
+```
 
+- You will then type the following to confirm you successfully created your key:
+```bash
+eval "$(ssh-agent -s)"
+```
 
-## Step 7:
+- Example
+```bash
+dannyboy@dannys-labtop:~/NAME_Project/ssh_key$ eval "$(ssh-agent -s)"
+Agent pid 12345 # This will be a pid unique to you
+```
+
+- Add your SSH private key to the ssh-agent:
+```bash
+ssh-add ~/.ssh/id_ed25519
+```
+
+- Example
+```bash
+dannyboy@dannys-labtop:~/NAME_Project/ssh_key$ ssh-add ~/.ssh/id_ed25519
+Identity added: /home/dannyboy/.ssh/id_ed25519 (user_email@gmail.com)
+```
+
+- Finally, print your SSH public key:
+```bash
+cat ~/.ssh/id_ed25519.pub
+```
+
+- Example
+```bash
+dannyboy@dannys-labtop:~/NAME_Project$ cat ~/.ssh/id_ed25519.pub
+# Copy the full string below
+ssh-ed25519 *super long string of letters and numbers* user_email@gmail.com
+```
+
+- Copy the full string noted and paste it into where it asks for your SSH key.
+- If the top of your screen says *You have successfully added the key 'user_email@gmail.com'* Congrats! You can now remotely access and push to your GitHub repository (and GitHub in general). **Now, refer back to Step 10**
+
+## Step 13:
+**Congratulations!** That's all there is to it! Now you can back all of your data safely. Here is a list of the most important and commonly used commands to push your files/folders to your repository:
 
 ```bash
-
+git init # Initializes a new Git repository
 ```
-<li class="masthead__menu-item">
-    <a href=""></a>
-</li>
-- Then, sign-in with your password (Don't worry, its safe and the only person who can see your information are adminstrative accounts (you or your school))
+
+```bash
+git init # Initializes a new Git repositor
+```
+
+```bash
+git clone [URL] # Clones a repository from a remote source-
+```
+
+```bash
+git add [file] # Adds files to the staging area
+```
+
+```bash
+git commit -m "commit message" # Commits your changes with a message
+```
+
+```bash
+git push # Pushes your changes to the remote repository
+```
+
+```bash
+git pull # Pulls updates from the remote repository
+```
 
 
-
-# Done! Now you can back all of your data safely. Next, we move onto creating our docker container. 
+# Next, we move onto creating our docker container!
 
 
 
