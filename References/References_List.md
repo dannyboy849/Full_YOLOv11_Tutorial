@@ -14,9 +14,15 @@ A full list of my references (in recommended order of completion)
 
 - Ubuntu, “Download Ubuntu Desktop | Download | Ubuntu,” Ubuntu, 2019. Available: https://ubuntu.com/download/desktop 
 
+
 ## Using_Ubuntu24.04:
 
 - B. Marijan, “Bash Commands: The Ultimate Cheat Sheet + Downloadable PDF,” Knowledge Base by phoenixNAP, Aug. 24, 2023. Available: https://phoenixnap.com/kb/bash-commands
+
+
+## Connecting_to_GitHub
+
+- 262588213843476, “Installing Git on Linux, Mac OS X and Windows,” Gist, Feb. 04, 2025. Available: https://gist.github.com/derhuerst/1b15ff4652a867391f03#file-linux-md
 
 
 
