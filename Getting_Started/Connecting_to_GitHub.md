@@ -10,7 +10,7 @@ sudo apt upgrade
 sudo apt install git
 ```
 Image_References/Creating_a_repository_add_button.png
-<img src="Image_References/Creating_a_repository_add_button.png"> 
+<img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/Creating_a_repository_add_button.png"> 
 
 - You can refer to the link below if needed:
 <li class="masthead__menu-item">
