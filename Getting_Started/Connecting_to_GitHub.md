@@ -22,6 +22,9 @@ sudo apt install git
 
 ## Step 2: Generate a SSH key
 - In the command line, navigate to the directory where you would like to create a local clone of your new project (I recommend inside of your project folder)
+```bash
+gh repo create
+```
 - To create a repository for your project, use the gh repo create subcommand. When prompted, select Create a new repository on GitHub from scratch and enter the name of your new project. If you want your project to belong to an organization instead of to your personal account, specify the organization name and project name with organization-name/project-name.
 - Follow the interactive prompts. To clone the repository locally, confirm yes when asked if you would like to clone the remote project directory.
 
