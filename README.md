@@ -20,6 +20,7 @@ https://github.com/airou-lab/Docker-GPU-Tutorial.git
 ## Step 2. Docker_Installation
 - Docker_Image
 - Docker_Container
+- Connection to GitHub (Optional)
 
 ## Step 3. Image_Conversion (Optional)
 Do this to convert your video (.mp4) to images (.PNG) to feed into CVAT for data_annotation
