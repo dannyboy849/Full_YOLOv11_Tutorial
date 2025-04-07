@@ -145,8 +145,8 @@ remote: Support for password authentication was removed on August 13, 2021.
 remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
 fatal: Authentication failed for 'https://github.com/dannyboy849/Mytest.git/'
 ```
-- As shown above, you may be denied remote access. Don't worry yet! Simply follow Step 11. and you'll be ready to go!
-**THIS IS CRITICALLY IMPORTANT: if you made an SSH key, you will sign in your your PERSONAL ACCESS TOKEN!!!**
+- As shown above, you may be denied remote access. Don't worry yet! Simply follow Step 12. and you'll be ready to go!
+**THIS IS CRITICALLY IMPORTANT: if you made an SSH key, you will sign in your *PERSONAL ACCESS TOKEN* as shown in Step 11!!!**
 
   
 ## Step 11: How to find Personal Access Tokens
