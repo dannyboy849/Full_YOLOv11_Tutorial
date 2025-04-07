@@ -9,8 +9,10 @@ Note from now on: every time I say “type *something*” I am referring to insi
 - cd = good
 - Cd = will NOT work
 
+
 ## Open a terminal
 - Either you can click on your terminal on the taskbar, or you can shortcut using “ctrl+alt+t” on your keyboard
+
 
 ## Knowing your current directory
 - You will see your username alongside the name you gave your computer and *your_name*:~$ Note that ~ means you're in your "home" directory. It will look something like this:
@@ -29,6 +31,7 @@ sudo apt-get update
 sudo apt-get upgrade
 ```
 
+
 ## Check if your GPU is successfully identified
 - Confirm Ubuntu is able to identify your GPU:
 ```bash
@@ -36,8 +39,76 @@ nvidia-smi
 ```
 - You should see your GPU listed 
 
+
 ## Your IP address
-- If you want to know your IP address, you can type “ifconfig” 
+- If you want to know your IP address, you can type “ifconfig”
+
+
+## If you want to create a new directory, type “mkdir *name*” 
+- For your own sanity, always use *some_name* with a “_” instead of a space with every folder/file.
+Example:
+```bash
+danny_boy@dannys-labtop:~$ ls
+NAME_Project  Desktop
+danny_boy@dannys-labtop:~$ mkdir Deftones
+danny_boy@dannys-labtop:~$ ls
+NAME_Project  Desktop    Deftones
+```
+
+
+## To make a simple file, such as for notes (if you don’t want to open the Text Editor) 
+- Note that you will need to download these packages.
+- Inside of your desired directory, type:
+```bash
+touch *name*
+```
+Example:
+```bash
+danny_boy@dannys-labtop:~/Deftones$ ls
+_
+danny_boy@dannys-labtop:~/Deftones$ touch Rosemary
+danny_boy@dannys-labtop:~/Deftones$ ls
+Rosemary
+```
+
+- To open and modify these files:
+```bash
+gedit *name*
+```
+
+or
+
+```bash
+nano *name* 
+```
+- You can now create notes and things of the sort, or even write your code if you enjoy pain. Make sure you constantly save “ctrl+s”. To exit: “ctrl+x” 
+
+
+## This also works to create specfic file types! 
+- For example, to create a python file:
+```bash
+touch *file_name*.py
+```
+Example:
+```bash
+danny_boy@dannys-labtop:~/Deftones$ ls
+Rosemary
+danny_boy@dannys-labtop:~/Deftones$ touch Entombed.py
+danny_boy@dannys-labtop:~/Deftones$ ls
+Entombed.py  Rosemary
+```
+- **Important Note: you don't actually have to use touch, you can just type "gedit c.py" and it will also create and open the file.**
+
+## Renaming a file or folder
+This is simple! You will use the "mv" command!
+- Rename a file:
+```bash
+mv current_filename new_filename
+```
+- Rename a folder:
+```bash
+mv current_foldername new_foldername
+```
 
 ## Listing Folders/Files Inside of Current Folder
 - To find out which folders/files are under the directory you are in, type “ls” --> lower-case L:
@@ -84,6 +155,7 @@ danny_boy@dannys-labtop:~/NAME_Project/yolov5$ cd
 danny_boy@dannys-labtop:~$
 ```
 
+
 ## To Find A Specfic Directory
 To find a specfic directory, type: 
 ```bash
@@ -95,58 +167,6 @@ danny_boy@dannys-labtop:~$ ~/NAME_Project/
 bash: /home/danny_boy/NAME_Project/: Is a directory
 ```
 
-## If you want to create a new directory, type “mkdir *name*” 
-- For your own sanity, always use *some_name* with a “_” instead of a space with every folder/file.
-Example:
-```bash
-danny_boy@dannys-labtop:~$ ls
-NAME_Project  Desktop
-danny_boy@dannys-labtop:~$ mkdir Deftones
-danny_boy@dannys-labtop:~$ ls
-NAME_Project  Desktop    Deftones
-```
-
-## To make a simple file, such as for notes (if you don’t want to open the Text Editor) 
-- Note that you will need to download these packages.
-- Inside of your desired directory, type:
-```bash
-touch *name*
-```
-Example:
-```bash
-danny_boy@dannys-labtop:~/Deftones$ ls
-_
-danny_boy@dannys-labtop:~/Deftones$ touch Rosemary
-danny_boy@dannys-labtop:~/Deftones$ ls
-Rosemary
-```
-
-- To open and modify these files:
-```bash
-gedit *name*
-```
-
-or
-
-```bash
-nano *name* 
-```
-
-- You can now create notes and things of the sort, or even write your code if you enjoy pain. Make sure you constantly save “ctrl+s”. To exit: “ctrl+x” 
-
-## This also works to create specfic file types! 
-- For example, to create a python file:
-```bash
-touch *file_name*.py
-```
-Example:
-```bash
-danny_boy@dannys-labtop:~/Deftones$ ls
-Rosemary
-danny_boy@dannys-labtop:~/Deftones$ touch Entombed.py
-danny_boy@dannys-labtop:~/Deftones$ ls
-Entombed.py  Rosemary
-```
 
 ## To move a file to another folder: 
 ```bash
@@ -163,6 +183,7 @@ danny_boy@dannys-labtop:~/Worn-Tin$ ls
 Entombed.py
 ```
 
+
 ## To move a folder into another folder: 
 ```bash
 sudo mv ~/current_directory ~/desired_directory 
@@ -177,6 +198,7 @@ NAME_Project   Desktop   Worn-Tin
 danny_boy@dannys-labtop:~/Worn-Tin$ ls
 Deftones  Entombed.py
 ```
+
  
 ## To delete a file:
 ```bash
@@ -190,6 +212,7 @@ danny_boy@dannys-labtop:~/Worn-Tin$ rm Entombed.py
 danny_boy@dannys-labtop:~/Worn-Tin$ ls
 Deftones
 ```
+
 
 ## To delete a folder:
 ```bash
