@@ -29,7 +29,7 @@ https://github.com/airou-lab/Docker-GPU-Tutorial.git
 Do this to convert your video (.mp4) to images (.PNG) to feed into CVAT for data_annotation
 
 ## Step 4. [YOLOv11](YOLOv11)
-- [Data_Annotation](YOLOv11/Data_Annotation/Using_CVAT.md)
+- [Data_Annotation (Using CVAT)](YOLOv11/Data_Annotation/Using_CVAT.md)
 - [YOLOv11_Build](YOLOv11/YOLOv11_Build.md)
 
 ## Step 5. [Hyperparameterization Automation (Optional)](YOLOv11/Automation/Automated_Hypertuning.md)
