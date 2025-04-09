@@ -1,5 +1,5 @@
 # Setting up CVAT 
-CVAT is very simple and intuitive to use. However, you will need to install and use Google Chrome for this as it is not supported by Firefox. 
+CVAT - created by Intel - is very simple and intuitive to use. However, you will need to install and use Google Chrome for this as it is not supported by any other browser as of now. . According to CVAT, this is because it was only tested and designed for use on Chrome.
 <br>
 
 - I want to make a note that you can also use Roboflow as a data annotation software, but I did not use it, thereby I am not familiar with its setup. I do know its better for automating some parts of the annotation, but again, I did not use it. Feel free to check it out though!
@@ -45,6 +45,7 @@ CVAT is very simple and intuitive to use. However, you will need to install and 
 ## Step 7. Manually Annotate
 - Now, you’ll simply go through your entire dataset and manually annotate (you only have to do this once, but the more annotated data you have, the more accurate your model will be)
 - This is by far the most time-consuming step. Be patient and remember to save consistently!
+- **WARNING: Do NOT use the automation tool provided by CVAT, as it frequently freezes and crashes. This makes is vitally important you save very often.**
 
 
 ## Step 8. Export your annotations!
