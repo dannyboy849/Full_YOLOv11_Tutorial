@@ -41,16 +41,19 @@ You'll have to copy and paste the link into Chrome - Or use this guide on Chrome
 
 
 ## Step 5. Create Task
+- Now, select "Create a new task"
+<img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/prior_to_task.png">
+
 - Here, you'll upload your raw images - that is, all of the images you want to annotate.
-- By default, CVAT reduces your image quality to save space. However, pending on your project detail, you can adjust this back to 100%.
-- You can also select starting frame, and if you wish to stop on some specific frame.
-- Frame step is how many frames it will "grab". Depending on your camera FPS (ours is 60FPS) you can adjust this to something like "60/15 = 4FPS" $`60/15 = 4FPS`$
-- Create a Task
+
+- By default, CVAT reduces your image quality to save space. However, pending on your project detail, you can adjust this back to 100%. You can also select starting frame, and if you wish to stop on some specific frame.
+
+- Frame step is how many frames it will "grab". Depending on your camera FPS (ours is 60FPS) you can adjust this to something like "$`60/15 = 4FPS`$" The higher the FPS does not necessariliy mean the higher the accuracy, unless high speeds are involved. 
 <img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/creating_a_task.png">
 
 
 ## Step . My projects
-
+<img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/prior_to_task.png">
 
 ## Step 6. Assign Task
 - Assign the task to someone (yourself)
