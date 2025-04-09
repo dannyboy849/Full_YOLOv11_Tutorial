@@ -32,7 +32,7 @@ Do this to convert your video (.mp4) to images (.PNG) to feed into CVAT for data
 - Data_Annotation
 - YOLOv11_Build
 
-## Step 5. Automation (Optional)
+## Step 5. Hyperparameterization Automation (Optional)
 Do this if you want to find the optimal hyperparameters for your model.
 
 # Done! Congratulations For Your Hard Work!
