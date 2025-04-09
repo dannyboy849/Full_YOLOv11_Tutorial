@@ -29,32 +29,45 @@ You'll have to copy and paste the link into Chrome - Or use this guide on Chrome
 
 ## Step 3. Create a Project
 - Select “Create Project” 
+<img src="">
 
 
 ## Step 4. Create Task
 - Create a Task
+<img src="">
 
 
-## Step 5. Assign Task
-- Assign the task to someone (yourself) 
-
-
-## Step 6. Upload Raw Images
+## Step 5. Upload Raw Images
 - Upload your dataset (raw images) and create your labels (We used .PNG images)
+<img src="">
+
+
+## Step 6. Assign Task
+- Assign the task to someone (yourself) 
+<img src="">
+
+
+## Step . Select your label
+Choose the label you want and 2 point box - the dropdown selection allows you to jump.
+<img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/Selecting_Labels.png">
+**You can press N to immediately reuse a label, but you will have to refer to the dropdown selection to switch labels each time**
 
 
 ## Step 7. Manually Annotate
-- Now, you’ll simply go through your entire dataset and manually annotate (you only have to do this once, but the more annotated data you have, the more accurate your model will be)
+- Now, you’ll simply go through your entire dataset and manually annotate (you only have to annotate once, but the more annotated data you have, the more accurate your model will be)
+- <img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/Annotation_Process.png">
 - This is by far the most time-consuming step. Be patient and remember to save consistently!
 **WARNING: Do NOT use the automation tool provided by CVAT, as it frequently freezes and crashes. This makes is vitally important you save very often.**
 
 
 ## Step 8. Export your annotations!
-Finally, to export your data will depend on which software you wish you use the YOLO 1.1 option at the very bottom. CVAT will export .txt files, which are your annotations to feed into your YOLO /data/labels folder. Note that there is an option to save images, but this saves the original images, not the annotated ones. 
+Finally, export your data! CVAT will export your annotations as .txt files, which you will feed into your YOLOv11 /data/labels folder.
+<img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/export_selection.png">
 
+- Now, export your data as YOLO1.1 (or as you need pending your CNN) - you can find it at the very bottom of the options. Note that there is an option to save images, but this saves the original images, not the annotated ones. 
+<img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/export_as_yolo1.1.png">
 
-# Data annotation is done! Onto working in YOLOv11!
-
+# Data annotation is done! Now, onto working in YOLOv11! How exciting.
 
 # References:
 - Google, “Google Chrome - The Fast, Simple and Secure Browser from Google,” Google.com. Available: https://www.google.com/chrome/
