@@ -6,6 +6,7 @@ I, Daniel Vargas, am the sole creator of this repository, so if there is anythin
 <br>
 
 ## Its also very important to note that this is all performed on a GeForce GPU. I am unware how this effects any of the following instructions for AMD, but I don't imagine it would effect it much besides GPU-usage tracking and setting up a GPU-enabled Docker container. 
+<br>
 
 ## If you use this repository for guidance, please cite this repo
 
