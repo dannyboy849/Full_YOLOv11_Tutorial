@@ -5,8 +5,7 @@ For the most part, all of the work mentioned below will be in your bash terminal
 I, Daniel Vargas, am the sole creator of this repository, so if there is anything missing or needs clarification, please feel free to reach out to me at dvargas88@ou.edu. **Please note that I am a Mechanical Engineer by training, and I had to learn about Programming, Docker, and CNNs in 3 months.** So, have mercy if there are any mistakes. Please notify me if there are issues or if I misguide a section as I always appreciate feedback and criticism. Anyways, hope this helps - good luck and happy data training!!
 <br>
 
-## Its also very important to note that this is all performed on a GeForce GPU. I am unware how this effects any of the following instructions for AMD, but I don't imagine it would effect it much besides GPU-usage tracking and setting up a GPU-enabled Docker container. 
-<br>
+### Its also very important to note that this is all performed on an NVIDIA GPU. I am unware how this effects any of the following instructions for AMD, but I don't imagine it would effect it much besides GPU-usage tracking and setting up a GPU-enabled Docker container. 
 <br>
 
 ## If you use this repository for guidance, please cite this repo
