@@ -45,7 +45,7 @@ CVAT - created by Intel - is very simple and intuitive to use. However, you will
 ## Step 7. Manually Annotate
 - Now, you’ll simply go through your entire dataset and manually annotate (you only have to do this once, but the more annotated data you have, the more accurate your model will be)
 - This is by far the most time-consuming step. Be patient and remember to save consistently!
-- **WARNING: Do NOT use the automation tool provided by CVAT, as it frequently freezes and crashes. This makes is vitally important you save very often.**
+**WARNING: Do NOT use the automation tool provided by CVAT, as it frequently freezes and crashes. This makes is vitally important you save very often.**
 
 
 ## Step 8. Export your annotations!
