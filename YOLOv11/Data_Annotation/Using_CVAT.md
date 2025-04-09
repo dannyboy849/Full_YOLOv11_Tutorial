@@ -21,6 +21,10 @@ CVAT is very simple and intuitive to use. However, you will need to install and 
 </li>
 
 <br>
+- Below is the login screen you should now see:
+<li class="masthead__menu-item">
+    <a href="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/CVAT_Login.png">Quickjump to CVAT!</a>
+</li>
 
 - Create an account in CVAT. I recommend personal accounts, but I'm unsure if this affects organizations and potential for inviting other users. 
 
