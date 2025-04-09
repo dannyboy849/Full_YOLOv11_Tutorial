@@ -27,35 +27,46 @@ You'll have to copy and paste the link into Chrome - Or use this guide on Chrome
 
 - Create an account in CVAT. I recommend personal accounts, but I'm unsure if this affects organizations and potential for inviting other users. 
 
-## Step 3. Create a Project
+
+## Step 3. Create a Project - Starting from Homepage
+- You're now in the homepage! 
 - Select “Create Project” 
-<img src="">
+<img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/creating_a_project_homepage.png">
 
 
-## Step 4. Create Task
+## Step 4. Project Details
+- Fill in your desired project details - you can put whatever you want here, from vague to highly-detailed.
+- Select "Submit and Continue". Otherwise, you'll be taken back to the homepage
+<img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/create_new_project.png">
+
+
+## Step 5. Create Task
+- Here, you'll upload your raw images - that is, all of the images you want to annotate.
+- By default, CVAT reduces your image quality to save space. However, pending on your project detail, you can adjust this back to 100%.
+- You can also select starting frame, and if you wish to stop on some specific frame.
+- Frame step is how many frames it will "grab". Depending on your camera FPS (ours is 60FPS) you can adjust this to something like "60/15 = 4FPS" $`60/15 = 4FPS`$
 - Create a Task
-<img src="">
+<img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/creating_a_task.png">
 
 
-## Step 5. Upload Raw Images
-- Upload your dataset (raw images) and create your labels (We used .PNG images)
-<img src="">
+## Step . My projects
 
 
 ## Step 6. Assign Task
-- Assign the task to someone (yourself) 
-<img src="">
+- Assign the task to someone (yourself)
+<img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/Assigning%20_and_opening_annotation.png">
 
 
 ## Step . Select your label
 Choose the label you want and 2 point box - the dropdown selection allows you to jump.
 <img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/Selecting_Labels.png">
-**You can press N to immediately reuse a label, but you will have to refer to the dropdown selection to switch labels each time**
+**You can press "N" to reuse a label, but you will have to refer to the dropdown selection to switch labels each time**
 
 
 ## Step 7. Manually Annotate
-- Now, you’ll simply go through your entire dataset and manually annotate (you only have to annotate once, but the more annotated data you have, the more accurate your model will be)
-- <img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/Annotation_Process.png">
+- Now, you’ll go through your entire dataset and manually annotate (you only have to annotate once, but the more annotated data you have, the more accurate your model will be)
+<img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/Annotation_Process.png">
+
 - This is by far the most time-consuming step. Be patient and remember to save consistently!
 **WARNING: Do NOT use the automation tool provided by CVAT, as it frequently freezes and crashes. This makes is vitally important you save very often.**
 
