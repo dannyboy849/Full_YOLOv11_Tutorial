@@ -1,6 +1,5 @@
 # Setting up CVAT 
 CVAT is very simple and intuitive to use. However, you will need to install and use Google Chrome for this as it is not supported by Firefox. 
-
 <br>
 
 I want to make a note that you can also use Roboflow as a data annotation software, but I did not use it, thereby I am not familiar with its setup. I do know its better for automating some parts of the annotation, but again, I did not use it. Feel free to check it out though!
