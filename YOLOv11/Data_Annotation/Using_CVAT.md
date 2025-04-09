@@ -16,6 +16,7 @@ CVAT - created by Intel - is very simple and intuitive to use. However, you will
 </li>
 
 ## Step 2. Create a CVAT acount
+You'll have to copy and paste the link into Chrome - Or use this guide on Chrome!
 <li class="masthead__menu-item">
     <a href="https://app.cvat.ai/auth/login">Quickjump to CVAT!</a>
 </li>
