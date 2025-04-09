@@ -16,6 +16,7 @@ https://github.com/airou-lab/Docker-GPU-Tutorial.git
 ```
 # Recommend Order Of Completion
 
+Check my [Getting_Started](Getting_Started/Connecting_to_GitHub.md)!
 ## Step 1. Getting_Started
 - Installing_Ubuntu24.04
 - Using_Ubuntu24.04
