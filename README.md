@@ -16,24 +16,23 @@ https://github.com/airou-lab/Docker-GPU-Tutorial.git
 ```
 # Recommend Order Of Completion
 
-Check my [Getting_Started](Getting_Started/Connecting_to_GitHub.md)!
-## Step 1. Getting_Started
-- Installing_Ubuntu24.04
-- Using_Ubuntu24.04
+## Step 1. [Getting_Started](Getting_Started)
+- [Installing_Ubuntu24.04](Getting_Started/Installing_Ubuntu24.04.md)
+- [Using_Ubuntu24.04](Getting_Started/Installing_Ubuntu24.04.md)
+- [Connecting to GitHub (Optional)](Getting_Started/Connecting_to_GitHub.md)
 
-## Step 2. Docker_Installation
-- Docker_Image
-- Docker_Container
-- Connecting to GitHub (Optional)
+## Step 2. [Docker_Installation](Docker_Installation)
+- [Docker_Image](Docker_Installation/Docker_Image.md)
+- [Docker_Container](Docker_Installation/Docker_Container.md)
 
-## Step 3. Image_Conversion (Optional)
+## Step 3. [Image_Conversion (Optional)](Image_Conversion/README.md)
 Do this to convert your video (.mp4) to images (.PNG) to feed into CVAT for data_annotation
 
-## Step 4. YOLOv11
-- Data_Annotation
-- YOLOv11_Build
+## Step 4. [YOLOv11](YOLOv11)
+- [Data_Annotation](YOLOv11/Data_Annotation/Using_CVAT.md)
+- [YOLOv11_Build](YOLOv11/YOLOv11_Build.md)
 
-## Step 5. Hyperparameterization Automation (Optional)
+## Step 5. [Hyperparameterization Automation (Optional)](YOLOv11/Automation/Automated_Hypertuning.md)
 Do this if you want to find the optimal hyperparameters for your model.
 
 # Done! Congratulations On Your Hard Work!
