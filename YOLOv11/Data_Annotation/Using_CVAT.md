@@ -52,21 +52,21 @@ You'll have to copy and paste the link into Chrome - Or use this guide on Chrome
 <img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/creating_a_task.png">
 
 
-## Step . My projects
+## Step 6. My projects
 <img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/prior_to_task.png">
 
-## Step 6. Assign Task
+## Step 7. Assign Task
 - Assign the task to someone (yourself)
 <img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/Assigning%20_and_opening_annotation.png">
 
 
-## Step . Select your label
+## Step 8. Select your label
 Choose the label you want and 2 point box - the dropdown selection allows you to jump.
 <img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/Selecting_Labels.png">
 **You can press "N" to reuse a label, but you will have to refer to the dropdown selection to switch labels each time**
 
 
-## Step 7. Manually Annotate
+## Step 9. Manually Annotate
 - Now, you’ll go through your entire dataset and manually annotate (you only have to annotate once, but the more annotated data you have, the more accurate your model will be)
 <img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/Annotation_Process.png">
 
@@ -74,12 +74,22 @@ Choose the label you want and 2 point box - the dropdown selection allows you to
 **WARNING: Do NOT use the automation tool provided by CVAT, as it frequently freezes and crashes. This makes is vitally important you save very often.**
 
 
-## Step 8. Export your annotations!
-Finally, export your data! CVAT will export your annotations as .txt files, which you will feed into your YOLOv11 /data/labels folder.
+## Step 10. Export your annotations!
+Finally, export your data!
 <img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/export_selection.png">
 
 - Now, export your data as YOLO1.1 (or as you need pending your CNN) - you can find it at the very bottom of the options. Note that there is an option to save images, but this saves the original images, not the annotated ones. 
 <img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/export_as_yolo1.1.png">
+
+- Refer to "Requests" tab at the top:
+<img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/requests_exports.png">
+
+## Step 11.
+- CVAT will export your annotations as a .zip file. Unzip it, and you should be provided .txt files
+- The directory should be something like "Documents/job_JOB#_annotations_DATE_yolo 1.1/obj_train_data/ALL_YOUR_.txt" as shown below:
+<img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/files_unzipped.png">
+- Feed this annotations into your YOLOv11 /data/labels folder:
+<img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/upload_.txt.png">
 
 # Data annotation is done! Now, onto working in YOLOv11! How exciting.
 
