@@ -41,7 +41,21 @@ nvidia-smi
 
 
 ## Your IP address
-- If you want to know your IP address, you can type “ifconfig”
+- If you want to know your IP address for some reason, type:
+```bash
+ifconfig
+```
+
+## Listing Folders/Files Inside of Current Folder
+- To print your current folder to show files inside of that directory, type “ls” --> lower-case L:
+```bash
+ls
+```
+Example:
+```bash
+danny_boy@dannys-labtop:~$ ls
+NAME_Project  Documents
+```
 
 
 ## If you want to create a new directory, type “mkdir *name*” 
@@ -99,6 +113,7 @@ Entombed.py  Rosemary
 ```
 - **Important Note: you don't actually have to use touch, you can just type "gedit c.py" and it will also create and open the file.**
 
+
 ## Renaming a file or folder
 This is simple! You will use the "mv" command!
 - Rename a file:
@@ -110,16 +125,6 @@ mv current_filename new_filename
 mv current_foldername new_foldername
 ```
 
-## Listing Folders/Files Inside of Current Folder
-- To find out which folders/files are under the directory you are in, type “ls” --> lower-case L:
-```bash
-ls
-```
-Example:
-```bash
-danny_boy@dannys-labtop:~$ ls
-NAME_Project  Documents
-```
 
 ## Changing Directory's
 - To change which current directory you are in:
