@@ -50,7 +50,7 @@ Initialized empty Git repository in /home/dannyboy/Bird_Project/Mytest/.git/
 
 - Mytest is your folder that is created and "init" makes the folder a GitHub repository. Go into this new folder:
 ```bash
-cd Mytestf
+cd Mytest
 ```
 - Example
 ```bash
