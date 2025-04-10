@@ -72,7 +72,23 @@ sudo systemctl restart docker
 ```bash
 sudo docker run --gpus all nvidia/cuda:12.0-base nvidia-smi
 ```
+- If you get an error, see below!
 
+## Step 5. Error with cuda
+You may get an error stating that it cannot find cuda. 
+```bash
+dannyboy@dannys-labtop:~/NAME_Project/Mytest/yolov5$ sudo docker run --gpus all nvidia/cuda:12.0-base nvidia-smi
+> Unable to find image 'nvidia/cuda:12.0-base' locally
+```
+
+This is an issue as you might guess. No worries, we have a solution! 
+```bash
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/cuda-keyring_1.1-1_all.deb
+sudo apt install ./cuda-keyring_1.1-1_all.deb
+sudo apt update
+sudo apt install cuda-toolkit
+```
+This might take a while to download everything so be patient. To check your cuda version:
 
 
 # Good work! Next, we move onto the Docker Container!
