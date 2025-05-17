@@ -239,13 +239,17 @@ To find more advanced guidance, I strongly recommend simply searching for them o
 
 **I STRONGLY recommend using VSCode for all your programming.** Below is a short guide: 
 # Downloading VSCode
-## Step 1. Download Debian  
+## Step 1. Download VSCode Debian Package
+Download the Debian Package from VSCodes Official Website: https://code.visualstudio.com/download
+
+Then, in your downloads folder (or wherever you put it), unpack the package:
 ```bash
 sudo apt install ./<file>.deb 
 ```
 
   
-# Step 2: Run this and it should automatically do the rest of the work: 
+# Step 2: Check To Ensure It Downloaded Everything
+Run this and it should automatically do the rest of the work:
 ```bash
 echo "code code/add-microsoft-repo boolean true" | sudo debconf-set-selections 
 ```
@@ -264,7 +268,7 @@ rm -f packages.microsoft.gpg
 ```
 
 
-## Step 3: Updates
+## Step 3: Update!
 ```bash
 sudo apt install apt-transport-https 
 
