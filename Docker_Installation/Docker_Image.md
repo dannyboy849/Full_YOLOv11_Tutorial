@@ -72,10 +72,10 @@ Simply find the folder with the Docker Image (inside of ~/ultralytics folder)
 
 ## Step 3. Create A Name For Your To-Be Container:
 ```bash
-sudo docker build -t yolov11_birds .
+sudo docker build -t NAME_Project .
 ```
-- Change "yolov11_birds" with your own image name
-- This will take a few minutes so be patient!
+- Change "NAME_Project" with your own image name.
+- This may take a few minutes, so be patient!
 - **To leave the container, type "exit" or "ctrl+d"**
 
 
@@ -89,8 +89,8 @@ sudo systemctl restart docker
 ```bash
 sudo docker run --gpus all nvidia/cuda:12.0-base nvidia-smi
 ```
-- If you get an error, see below!
-
+Continue to Step 5 if you encounter an error with finding the image!
+### Note: this is my specific version of CUDA, the one your project requires may be different (ie, cuda:11.0). This site may be useful for you: https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html
 
 ## Step 5. Error with cuda
 You may get an error stating that it cannot find cuda. 
@@ -99,7 +99,7 @@ dannyboy@dannys-labtop:~/NAME_Project/Mytest/yolov5$ sudo docker run --gpus all 
 > Unable to find image 'nvidia/cuda:12.0-base' locally
 ```
 
-This is an issue as you might guess. Fear thou Not! We have a solution! 
+This is an issue as you might guess, but fear thou not! We have a solution! 
 ```bash
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/cuda-keyring_1.1-1_all.deb
 sudo apt install ./cuda-keyring_1.1-1_all.deb
