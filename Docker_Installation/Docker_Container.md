@@ -11,7 +11,7 @@ sudo docker run --name NAME_Project -v /home/dannyboy/Documents/NAME_Project/ult
 - it: makes it interactive
 - NAME_Project:latest is your <image_name>:<image_tag>.
 
-- Everything inside /home/dannyboy/Documents/NAME_Project/ultralytics/ultralytics (on your host) will be available inside the container at /home/Documents/Bird_Project
+- Everything inside /home/dannyboy/Documents/NAME_Project/ultralytics/ultralytics (on your host) will be available inside the container at /home/Documents/NAME_Project
 - In other words, this is where the container will grab from and allow access (otherwise you will be restricted to the folder you mounted it in). Change to the files you want it to access.
 
 
