@@ -135,8 +135,8 @@ dannyboy@dannys-labtop:~/NAME_Project/Mytest$ git remote add origin https://gith
 ```bash
 git push origin master
 ```
-
-- Example
+If it works, continue to Step 13. If not, continue immediately below.
+### Note: Unless you had already connected your GitHub to your device, you may encounter the issue below!
 ```bash
 dannyboy@dannys-labtop:~/NAME_Project/Mytest$ git push origin master
 Username for 'https://github.com': user_email@gmail.com
@@ -145,25 +145,12 @@ remote: Support for password authentication was removed on August 13, 2021.
 remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
 fatal: Authentication failed for 'https://github.com/dannyboy849/Mytest.git/'
 ```
-- As shown above, you may be denied remote access. Don't worry yet! Simply follow Step 12. and you'll be ready to go!
-**THIS IS CRITICALLY IMPORTANT: if you made an SSH key, you will sign in your *PERSONAL ACCESS TOKEN* as shown in Step 11!!!**
+- As shown above, you have been denied remote access. Don't worry yet! Simply continue to Step 11. and you'll be ready to go!
+**THIS IS CRITICALLY IMPORTANT: if you made an SSH key, you will sign in your *PERSONAL ACCESS TOKEN* as shown in Step 12!!!**
 
   
-## Step 11: How to find Personal Access Tokens
-- Refer to *Developer Settings* Found at the bottom in settings
-- As shown in the image below, you'll select *Generate new token*
-<img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/Generating_personal_token.png">
-- You'll get a key. Make sure to save this somewhere secure for future use.
-- You will then fill out the respective information
-```bash
-git clone https://github.com/USERNAME/REPO.git
-Username: YOUR-USERNAME
-Password: YOUR-PERSONAL-ACCESS-TOKEN
-```
-- If you successfully signed in and pushed, **skip to Step 13!**
-
-## Step 12: Generate a SSH key
-- This lets us create what's called an *SSH key* and it lets you access your repository remotely from your device. Make a note that it only works for **this particular device**. If you wish to access the same repository on another device, you have to repeat the *SSH key* process.
+## Step 11: Generate a SSH key
+- This lets us create what's called an *SSH key* and it lets you access your repositories remotely from your device. Make a note that it ONLY works for **this particular device**. If you wish to access the same repositories on another device, you have to repeat the *SSH key* process.
 - Navigate to your GitHub settings as shown below:
 <img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/Making_SSH_keys.png">
 
@@ -216,8 +203,23 @@ dannyboy@dannys-labtop:~/NAME_Project$ cat ~/.ssh/id_ed25519.pub
 ssh-ed25519 *super long string of letters and numbers* user_email@gmail.com
 ```
 
-- Copy the full string noted and paste it into where it asks for your SSH key.
-- If the top of your screen says *You have successfully added the key 'user_email@gmail.com'* Congrats! You can now remotely access and push to your GitHub repository (and GitHub in general). **Now, refer back to Step 10**
+- Copy the full string noted and paste it into where it asks for your SSH key. Include EVERYTHING in the string including "ssh-ed..some_numbers..your_email"
+- If the top of your screen says *You have successfully added the key 'user_email@gmail.com'* Congrats! You can now remotely access and push to your GitHub repositories. **Now, refer back to Step 10**
+
+
+## Step 12: How to find Personal Access Tokens
+- Refer to *Developer Settings* Found at the bottom in settings
+- As shown in the image below, you'll select *Generate new token*
+<img src="https://github.com/dannyboy849/Full_YOLOv11_Tutorial/blob/main/Image_References/Generating_personal_token.png">
+- You'll get a key. Make sure to save this somewhere secure for future use.
+- You will then fill out the respective information
+```bash
+git clone https://github.com/USERNAME/REPO.git
+Username: YOUR-USERNAME
+Password: YOUR-PERSONAL-ACCESS-TOKEN
+```
+- If you successfully signed in and pushed, **continue to Step 13!**
+
 
 ## Step 13:
 **Congratulations!** That's all there is to it! Now you can back all of your data safely. Here is a list of the most important and commonly used commands to push your files/folders to your repository:
