@@ -146,7 +146,7 @@ cd ..
 ```
 Example:
 ```bash
-danny_boy@dannys-labtop:~/Bird_Project$ cd ..
+danny_boy@dannys-labtop:~/NAME_Project$ cd ..
 danny_boy@dannys-labtop:~$ 
 ```
 
