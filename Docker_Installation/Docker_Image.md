@@ -126,3 +126,4 @@ Build cuda_12.0.r12.0/compiler.32267302_0
 
 # References:
 - Ultralytics, “YOLO11,” Ultralytics.com, 2024. Available: https://docs.ultralytics.com/models/yolo11/
+- NVIDIA, "NVIDIA CUDA Toolkit Release Notes," NVIDIA.com, 2025. Available: https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html
