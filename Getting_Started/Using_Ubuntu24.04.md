@@ -200,6 +200,7 @@ NAME_Project   Desktop   Deftones   Worn-Tin
 danny_boy@dannys-labtop:~$ sudo mv ~/Deftones/ ~/Worn-Tin/
 danny_boy@dannys-labtop:~$ ls
 NAME_Project   Desktop   Worn-Tin
+danny_boy@dannys-labtop:~$ cd /Worn-Tin
 danny_boy@dannys-labtop:~/Worn-Tin$ ls
 Deftones  Entombed.py
 ```
