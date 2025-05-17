@@ -26,7 +26,7 @@ The first thing you will need is a flashdrive (at least 8GB)
 ## Step 3. Computer Storage Requirements
 Ensure you have at least 256 GB to allocate to the computer/laptop you wish to dual boot. 
 (it's a lot, but the files you will be using will be heavy 
-(we allocated 512GB and we’ve alredy used 85% for 2 projects!)) 
+(we allocated 512GB and we’ve already used 85% for 2 projects!)) 
 Refer below **Step 4** for an important note! 
 
 
@@ -44,9 +44,10 @@ Refer below **Step 4** for an important note!
 
 
 ## Step 5. Download balenaEtcher For Windows x86|64 (Installer) 
-
+You can find balenaEtcher here: https://etcher.balena.io/
 
 ## Step 6. Download Ubuntu
+- Head over to Ubuntu's official website: https://ubuntu.com/blog/ubuntu-desktop-24-04-noble-numbat-deep-dive
 - Ensure you're at the official Ubuntu 24.04 ISO, then download it onto your main SSD 
 - Insert your flashdrive
 - Open balenaEtcher
