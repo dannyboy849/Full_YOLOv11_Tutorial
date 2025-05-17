@@ -37,7 +37,24 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 sudo docker run hello-world
 ```
 
+You'll get a friendly response from our buddy Docker:
+```bash
+dannyboy@dannys-labtop:~$ sudo docker run hello-world
+[sudo] password for dannyboy: enter_your_password_dummy
 
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+```
+Our crusader lives! Now onwards.
 
 # How to create a Docker image for YOLOv11
 
@@ -74,6 +91,7 @@ sudo docker run --gpus all nvidia/cuda:12.0-base nvidia-smi
 ```
 - If you get an error, see below!
 
+
 ## Step 5. Error with cuda
 You may get an error stating that it cannot find cuda. 
 ```bash
@@ -81,15 +99,28 @@ dannyboy@dannys-labtop:~/NAME_Project/Mytest/yolov5$ sudo docker run --gpus all 
 > Unable to find image 'nvidia/cuda:12.0-base' locally
 ```
 
-This is an issue as you might guess. No worries, we have a solution! 
+This is an issue as you might guess. Fear thou Not! We have a solution! 
 ```bash
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/cuda-keyring_1.1-1_all.deb
 sudo apt install ./cuda-keyring_1.1-1_all.deb
 sudo apt update
 sudo apt install cuda-toolkit
 ```
-This might take a while to download everything so be patient. To check your cuda version:
 
+This might take a while to download everything so be patient. After it downloads, check your cuda version to ensure it downloaded properly:
+```bash
+nvcc --version
+```
+
+You will get something like this: 
+```bash
+dannyboy@dannys-labtop:~$ nvcc --version
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2023 NVIDIA Corporation
+Built on Fri_Jan__6_16:45:21_PST_2023
+Cuda compilation tools, release 12.0, V12.0.140
+Build cuda_12.0.r12.0/compiler.32267302_0
+```
 
 # Good work! Next, we move onto the Docker Container!
 
