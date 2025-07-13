@@ -1,0 +1,24 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Sparrow3D Dataset
+message: >-
+  If you use this dataset, please cite it using the metadata
+  from this file.
+type: dataset
+authors:
+  - given-names: Daniel
+    family-names: Vargas
+    email: dvargas88@ou.edu
+    affiliation: Student
+    orcid: 'https://orcid.org/0009-0000-2877-847X'
+repository-code: 'https://github.com/dannyboy849/Full_YOLOv11_Tutorial'
+abstract: >-
+  Serves as guidance for learning about YOLOv11 setup, our
+  annotated house sparrow dataset, and the sequence to
+  recreate our application.
+license: CC-BY-4.0
+commit: Preliminary Conference Paper Submission Dataset
+version: 1.0.1
+date-released: '2025-07-13'
