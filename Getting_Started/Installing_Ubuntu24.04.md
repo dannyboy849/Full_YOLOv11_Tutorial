@@ -44,7 +44,7 @@ Refer below **Step 4** for an important note!
 
 
 ## Step 5. Download balenaEtcher For Windows x86|64 (Installer) 
-You can find balenaEtcher here: https://etcher.balena.io/
+[BalenaEtcher download link](https://etcher.balena.io/)
 
 ## Step 6. Download Ubuntu
 - Head over to [Ubuntu's official website](https://ubuntu.com/download/desktop)
