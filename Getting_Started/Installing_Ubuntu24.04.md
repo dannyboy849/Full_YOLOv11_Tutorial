@@ -6,7 +6,7 @@ friendly to both beginning programmers and those with advanced experience with L
 or WindowsOS, etc. Fun fact: every OS was built starting from Linux. Aside from this, 
 Ubuntu is also one of the most secure forms of Linux because of its constant updates, 
 so long you do not download unsecure items from online (although Ubuntu will immediately 
-attempt to block these actions anyways)  
+attempt to block these actions anyways) **Note: this is mainly a guide for Windows-to-Ubuntu. Also, I strongly recommend using a new and empty SSD as it's otherwise far more difficult**
   
 
 
@@ -20,7 +20,7 @@ Before anything else, I strongly recommend backing up your files into an externa
 
 
 ## Step 2. Flashdrive Requirements
-The first thing you will need is a flashdrive (at least 8GB) 
+The first thing you will need is a flashdrive (at least **8GB**). The Ubuntu file is **~5.7GB**.
 
 
 ## Step 3. Computer Storage Requirements
@@ -32,7 +32,7 @@ Refer below **Step 4** for an important note!
 
 ## Step 4. Partitioning 
 
-- Search “Disk Management” in your windows search bar
+- Search “Disk Management” in your Windows search bar
 - Right-click on your “(C:) Drive
 - Shrink your C: drive to the 64 GB below half of your total available storage
 - There will be a section at the bottom in “Disk 0” labelled “Unallocated”
@@ -47,7 +47,7 @@ Refer below **Step 4** for an important note!
 You can find balenaEtcher here: https://etcher.balena.io/
 
 ## Step 6. Download Ubuntu
-- Head over to Ubuntu's official website: https://ubuntu.com/blog/ubuntu-desktop-24-04-noble-numbat-deep-dive
+- Head over to [Ubuntu's official website](https://ubuntu.com/download/desktop)
 - Ensure you're at the official Ubuntu 24.04 ISO, then download it onto your main SSD 
 - Insert your flashdrive
 - Open balenaEtcher
@@ -78,7 +78,7 @@ You can find balenaEtcher here: https://etcher.balena.io/
 - Select the partition you made earlier (ex M:)
 - Allocate the full space
 - Install!
-- Create Password and Sign-in information (**STRONGLY recommend writing it down**)
+- Create Password and Sign-in information (**STRONGLY recommend writing it down too**)
 - Remove Flash drive after instructed and restart computer
 - You now will have the option of Ubuntu or Windows! 
 
