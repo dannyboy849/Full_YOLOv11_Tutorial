@@ -2,7 +2,7 @@
 
 Now that you’ve installed Ubuntu, you essentially have to relearn how to use a computer! Fortunately, Ubuntu automatically installs Firefox and pins it to your toolbar. “How to install *anything* on Linux” will become your catchphrase. Ubuntu also includes “Text Editor”, an “App Center” that is terribly optimized, and “Software Updater” which is known to crash computers! Instead of using these, you will now become a fully pledged programmer. The infamous “Terminal” and heavenly "VSCode" will become your new best friends. We will now go into the basics and some commands of how to use the terminal.
 
-### Its important to note that if you are mising any packages, Linux will actually typically give you the command you need to install it!
+### Its important to note that if you are mising any packages, Linux will typically give you the command you need to install it!
 
 Note from now on: every time I say “type *something*” I am referring to inside of your terminal. Also, it’s vital you understand **everything in Linux is case-sensitive** 
 (ie, 
@@ -23,17 +23,21 @@ danny_boy@dannys-labtop:~$
 ## Always update your computer! 
 - Check available updates:
 ```bash
-sudo apt-get update
+sudo apt update
 ```
 
 - Download upgrades:
 ```bash
-sudo apt-get upgrade
+sudo apt upgrade
 ```
 
+- Autocleaning Desktop (Optional):
+```bash
+sudo apt autoremove # Removes everything your computer isn't using and frees a bit of storage
+```
 
 ## Check if your GPU is successfully identified
-- Confirm Ubuntu is able to identify your GPU:
+- Confirm Ubuntu is able to identify your GPU (if using NVIDIA):
 ```bash
 nvidia-smi
 ```
@@ -256,7 +260,7 @@ echo "code code/add-microsoft-repo boolean true" | sudo debconf-set-selections
 
 - If this doesn't work, you will manually have to do it: 
 ```bash
-sudo apt-get install wget gpg
+sudo apt install wget gpg
 
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 
