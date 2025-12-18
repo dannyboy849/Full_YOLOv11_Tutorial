@@ -1,0 +1,7 @@
+# If you prefer conda over venv, create an environment using:
+# conda create --name <env> 
+# or, using venv:
+# python3 -m venv <name>
+# platform: linux-64
+
+joblib pandas
