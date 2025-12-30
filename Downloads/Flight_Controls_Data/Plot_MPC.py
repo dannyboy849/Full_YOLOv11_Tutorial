@@ -27,6 +27,8 @@ time = np.arange(Tsim_steps) * dT
 ref_traj = ref_traj_full[:Tsim_steps, :]
 
 
+
+
 # Plot States vs Reference
 plt.figure(figsize=(14, 9))
 for i in range(n_x):
@@ -39,6 +41,8 @@ for i in range(n_x):
 
 plt.xlabel('Time (s)')
 plt.suptitle('MPC State Tracking Results')
+plt.savefig('MPC_Output/State_vs_Reference.pdf', dpi=600, bbox_inches='tight')
+plt.savefig('MPC_Output/State_vs_Reference.png', dpi=600, bbox_inches='tight')
 plt.tight_layout()
 plt.show()
 
@@ -46,8 +50,6 @@ plt.show()
 # Plot Inputs
 plt.figure(figsize=(10, 6))
 time_u = time[:u_hist.shape[0]] 
-
-
 for i in range(n_u):
     plt.subplot(n_u, 1, i + 1)
     plt.plot(time_u, u_hist[:, i], label=f'Command {INPUT_VARS[i]}')
@@ -56,7 +58,10 @@ for i in range(n_u):
     plt.grid(True)
 plt.xlabel('Time (s)')
 plt.suptitle('MPC Input Commands')
+plt.savefig('MPC_Output/Inputs.pdf', dpi=600, bbox_inches='tight')
+plt.savefig('MPC_Output/Inputs.png', dpi=600, bbox_inches='tight')
 plt.show()
+
 
 plt.figure(figsize=(10, 4))
 plt.plot(time, x_hist[:, 8], label='Actual Yaw Sin (x[8])')
@@ -65,4 +70,6 @@ plt.ylabel('Yaw Sin Value', fontsize=12)
 plt.xlabel('Time (s)', fontsize=12)
 plt.legend()
 plt.grid(True)
+plt.savefig('MPC_Output/Yaw_sin.pdf', dpi=600, bbox_inches='tight')
+plt.savefig('MPC_Output/Yaw_sin.png', dpi=600, bbox_inches='tight')
 plt.show()

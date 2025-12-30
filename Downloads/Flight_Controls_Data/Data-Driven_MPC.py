@@ -1,5 +1,5 @@
 import os
-import joblib, json, numpy as np
+import joblib, numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import optuna
@@ -11,7 +11,6 @@ from sklearn.neural_network import MLPRegressor
 from sklearn.linear_model import Ridge
 from sklearn.linear_model import BayesianRidge
 from sklearn.multioutput import MultiOutputRegressor
-from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.multioutput import MultiOutputRegressor
 from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.model_selection import TimeSeriesSplit
@@ -139,7 +138,7 @@ def prepare_mpc_data(df):
     df['yaw_cos'] = np.cos(yaw_rad)
 
 
-    # updated STATE_VARS w/ local coords + yaw improvement
+    # relative forces of the drone
     STATE_VARS = [
         'pos_east', 'pos_north', 'pos_up',
         'OSD.xSpeed [m/s]', 'OSD.ySpeed [m/s]', 'OSD.zSpeed [m/s]',
@@ -160,9 +159,9 @@ def prepare_mpc_data(df):
     TARGET_DELTA = [f'delta_{s}' for s in STATE_VARS]
     
 
-    # define all features
+    # external forces acting on the drone
     global FEATURES
-    FEATURES = INPUT_VARS + STATE_VARS + ['wind_e', 'wind_n' , 'dT']
+    FEATURES = INPUT_VARS + STATE_VARS + ['wind_e', 'wind_n' , 'dT'] 
 
 
     # drop NaNs
@@ -185,50 +184,46 @@ def prepare_mpc_data(df):
 # 3. Wind Estimation
 # ------------------------------------------------
 
-def estimate_wind_from_residuals(actual_next_states, predicted_next_states, STATE_VARS, df_processed, split_idx):
+# def estimate_wind_from_residuals(actual_next_states, predicted_next_states, STATE_VARS, df_processed, split_idx):
     
-    # indices for ENU positions and velocities
-    ve_idx = STATE_VARS.index('OSD.xSpeed [m/s]')
-    vn_idx = STATE_VARS.index('OSD.ySpeed [m/s]')
+#     # indices for ENU positions and velocities
+#     ve_idx = STATE_VARS.index('OSD.xSpeed [m/s]')
+#     vn_idx = STATE_VARS.index('OSD.ySpeed [m/s]')
 
 
-
-    N_test = predicted_next_states.shape[0]
-
-
-    # extract measured_v at indices split_idx+0
-    N_test = predicted_next_states.shape[0]
+#     # extract measured_v at indices split_idx+0
+#     N_test = predicted_next_states.shape[0]
 
 
-    # align the indices correctly with the test set
-    V_ground_east = df_processed['OSD.xSpeed [m/s]'].values[split_idx : split_idx + N_test]
-    V_ground_north = df_processed['OSD.ySpeed [m/s]'].values[split_idx : split_idx + N_test]
+#     # align the indices correctly with the test set
+#     V_ground_east = df_processed['OSD.xSpeed [m/s]'].values[split_idx : split_idx + N_test]
+#     V_ground_north = df_processed['OSD.ySpeed [m/s]'].values[split_idx : split_idx + N_test]
 
-    # calculate Air Speed Vector
-    V_air_east = predicted_next_states[:, ve_idx] 
-    V_air_north = predicted_next_states[:, vn_idx]
+#     # calculate Air Speed Vector
+#     V_air_east = predicted_next_states[:, ve_idx] 
+#     V_air_north = predicted_next_states[:, vn_idx]
 
-    # calculate Wind Speed Vector
-    V_wind_east = V_ground_east - V_air_east
-    V_wind_north = V_ground_north - V_air_north
+#     # calculate Wind Speed Vector
+#     V_wind_east = V_ground_east - V_air_east
+#     V_wind_north = V_ground_north - V_air_north
 
 
-    # speed & direction
-    est_speed = np.sqrt(V_wind_east**2 + V_wind_north**2)
-    dir_rad = np.arctan2(V_wind_north, V_wind_east)
-    dir_deg = np.degrees(dir_rad)
-    est_dir_from = (270 - dir_deg) % 360 
+#     # speed & direction
+#     est_speed = np.sqrt(V_wind_east**2 + V_wind_north**2)
+#     dir_rad = np.arctan2(V_wind_north, V_wind_east)
+#     dir_deg = np.degrees(dir_rad)
+#     est_dir_from = (270 - dir_deg) % 360 
 
-    # smooth the speed/direction data to reduce sensor noise
-    if len(est_speed) >= 51:
-        est_speed = savgol_filter(est_speed, 51, 3)
-        V_wind_east = savgol_filter(V_wind_east, 51, 3)
-        V_wind_north = savgol_filter(V_wind_north, 51, 3)
-        dir_rad_smooth = np.arctan2(V_wind_north, V_wind_east)
-        est_dir_from = (270 - np.degrees(dir_rad_smooth)) % 360
+#     # smooth the speed/direction data to reduce sensor noise
+#     if len(est_speed) >= 51:
+#         est_speed = savgol_filter(est_speed, 51, 3)
+#         V_wind_east = savgol_filter(V_wind_east, 51, 3)
+#         V_wind_north = savgol_filter(V_wind_north, 51, 3)
+#         dir_rad_smooth = np.arctan2(V_wind_north, V_wind_east)
+#         est_dir_from = (270 - np.degrees(dir_rad_smooth)) % 360
         
 
-    return est_speed, est_dir_from, V_wind_east, V_wind_north
+#     return est_speed, est_dir_from, V_wind_east, V_wind_north
 
 
 
@@ -536,7 +531,7 @@ if __name__ == '__main__':
         # run study with safe try/except and modest trial count
         try:
             study = optuna.create_study(direction='minimize', sampler=optuna.samplers.TPESampler(seed=42))
-            study.optimize(objective, n_trials=15, n_jobs=1, show_progress_bar=True) # Change n_trials for desired training epochs
+            study.optimize(objective, n_trials=11, n_jobs=1, show_progress_bar=True) # change n_trials for desired training epochs
 
 
             best = study.best_params
@@ -576,7 +571,7 @@ if __name__ == '__main__':
 
 
 
-        # --- 3b. Measuring safety boundary violations ---
+        # --- 3b. measuring safety boundary violations ---
 
         actual_yaw_sin = actual_next_states[:, STATE_VARS.index('yaw_sin')]
         actual_yaw_cos = actual_next_states[:, STATE_VARS.index('yaw_cos')]
@@ -591,7 +586,7 @@ if __name__ == '__main__':
         print("\n--- Running Safety Analysis using Best Model ---")
 
 
-        # analyze safety states
+        # analyze safety state violations
         analyze_violations(
             actual_next_states[:, STATE_VARS.index('pos_up')], 
             mlp_best_preds[:, STATE_VARS.index('pos_up')], 
@@ -614,25 +609,25 @@ if __name__ == '__main__':
         )
 
 
-        # Wind Prediction
+        # # Wind Prediction
 
-        N_test = len(actual_next_states) # Number of samples in test set
+        # N_test = len(actual_next_states) # Number of samples in test set
 
-        # 1. Align all required arrays to the test set indices (split_idx to end)
-        actual_wind_speed = df_processed['WEATHER.windSpeed [m/s]'].values[split_idx : split_idx + N_test]
-        actual_wind_direction = df_processed['WEATHER.windDirection_deg'].values[split_idx : split_idx + N_test]
+        # # 1. align all required arrays to the test set indices (split_idx to end)
+        # actual_wind_speed = df_processed['WEATHER.windSpeed [m/s]'].values[split_idx : split_idx + N_test]
+        # actual_wind_direction = df_processed['WEATHER.windDirection_deg'].values[split_idx : split_idx + N_test]
         
-        # 2. Call the function with perfectly aligned arrays
-        est_speed, est_dir, _, _ = estimate_wind_from_residuals(
-            actual_next_states, 
-            br_preds, # Use the correct predictions array name
-            STATE_VARS,
-            df_processed, # We only need this for structure/indices now
-            split_idx
-        )
+        # # 2. call the function with perfectly aligned arrays
+        # est_speed, est_dir, _, _ = estimate_wind_from_residuals(
+        #     actual_next_states, 
+        #     br_preds,
+        #     STATE_VARS,
+        #     df_processed,
+        #     split_idx
+        # )
 
 
-        return ridge_preds, actual_wind_speed,actual_wind_direction, N_test,  br_preds, rf_preds, lr_preds, mlp_preds, mlp_best_preds, actual_next_states, best_mlp_model, est_speed, est_dir, br_model 
+        return ridge_preds,  br_preds, rf_preds, lr_preds, mlp_preds, mlp_best_preds, actual_next_states, best_mlp_model # , actual_wind_direction, actual_wind_speed, est_speed, est_dir, br_model 
 
 
 
@@ -643,7 +638,7 @@ if __name__ == '__main__':
 
 
     # ensures X_train_scaled, y_train_scaled, etc. are available
-    ridge_preds, br_preds, rf_preds, lr_preds, mlp_preds, mlp_best_preds, actual_next_states, best_mlp_model_instance, est_speed, est_dir, best_br_model = run_benchmarks(
+    ridge_preds, br_preds, rf_preds, lr_preds, mlp_preds, mlp_best_preds, actual_next_states, mlp_best_model = run_benchmarks( # , est_speed, est_dir
         X_train_scaled, 
         X_test_scaled, 
         y_train_scaled, 
@@ -655,7 +650,7 @@ if __name__ == '__main__':
 
 
     # re-run prediction step using the `best_model`
-    delta_pred_test_scaled = best_br_model.predict(X_test_scaled)
+    delta_pred_test_scaled = mlp_model.predict(X_test_scaled)
 
     def estimate_linear_model(df):
         """
@@ -724,12 +719,12 @@ if __name__ == '__main__':
         'dT': df_processed['dT'].mean()
     }
     joblib.dump(do_mpc_bundle, BEST_MODEL_OUTPUT_PATH)
-    print(f"Saved do_mpc bundle (A,B...) to {BEST_MODEL_OUTPUT_PATH}")
+    print(f"Saved do_mpc bundle to {BEST_MODEL_OUTPUT_PATH}")
 
 
-    # Save the trained MLP model to a separate file (so you don't overwrite the AB bundle)
-    # joblib.dump(best_br_model, BEST_MODEL_OUTPUT_PATH)
-    # print(f"Saved MLP model to {BEST_MODEL_OUTPUT_PATH}")
+    # Save the trained MLP model to a separate file
+    joblib.dump(mlp_model, BEST_MLP_MODEL_PATH)
+    print(f"Saved MLP model to {BEST_MLP_MODEL_PATH}")
 
 
     # Wind Setup
@@ -749,13 +744,15 @@ if __name__ == '__main__':
         # fallback: if you used X_train/X_test, compute from X
         split_idx = len(X_train_scaled)  # adapt to your context
 
+    N_test = len(X)
+
     # Extracting indexing
     roll_idx = STATE_VARS.index('OSD.roll')
     pitch_idx = STATE_VARS.index('OSD.pitch')
     yaw_sin_idx = STATE_VARS.index('yaw_sin')
     yaw_cos_idx = STATE_VARS.index('yaw_cos')
     altitude_idx = STATE_VARS.index('pos_up')
-    wind_idx = safe_state_index('WEATHER.windSpeed [m/s]')
+    # wind_idx = safe_state_index('WEATHER.windSpeed [m/s]')
 
 
     # Extracting actual states
@@ -771,8 +768,8 @@ if __name__ == '__main__':
     actual_yaw_sin = df_processed['yaw_sin'].values[split_idx:]
     actual_yaw_cos = df_processed['yaw_cos'].values[split_idx:]
     actual_yaw = np.degrees(np.arctan2(actual_yaw_sin, actual_yaw_cos))
-    actual_wind_speed = df_processed['WEATHER.windSpeed [m/s]'].values[split_idx:]
-    actual_wind_direction = df_processed['WEATHER.windDirection_deg'].values[split_idx:]
+    # actual_wind_speed = df_processed['WEATHER.windSpeed [m/s]'].values[split_idx:]
+    # actual_wind_direction = df_processed['WEATHER.windDirection_deg'].values[split_idx:]
 
 
     # Extracting predicted states
@@ -782,6 +779,7 @@ if __name__ == '__main__':
     predicted_yaw_sin = states_next_pred[:, yaw_sin_idx]
     predicted_yaw_cos = states_next_pred[:, yaw_cos_idx]
     predicted_yaw = np.degrees(np.arctan2(predicted_yaw_sin, predicted_yaw_cos))
+    assert predicted_altitude.shape == actual_altitude.shape        
 
 
     # Model-predicted next state using learned f(x,u)
@@ -797,9 +795,6 @@ if __name__ == '__main__':
     error_yaw = (error_yaw + 180) % 360 - 180 
 
 
-    assert predicted_altitude.shape == actual_altitude.shape        
-
-
     # Plot flight time
     time_points = df_processed['OSD.flyTime [s]'].values[split_idx : split_idx + N_test] # Align time axis precisely    
 
@@ -810,14 +805,14 @@ if __name__ == '__main__':
     rmse_rf = np.sqrt(mean_squared_error(actual_next_states, rf_preds))
     rmse_lr = np.sqrt(mean_squared_error(actual_next_states, lr_preds))
     rmse_bmlp = np.sqrt(mean_squared_error(actual_next_states, mlp_best_preds))
-    rmse_speed = np.sqrt(mean_squared_error(actual_wind_speed, est_speed))
-    dir_error = actual_wind_direction - est_dir
-    dir_error = (dir_error + 180) % 360 - 180
-    rmse_direction = np.sqrt(mean_squared_error(np.zeros_like(dir_error), dir_error))
+    # rmse_speed = np.sqrt(mean_squared_error(actual_wind_speed, est_speed))
+    # dir_error = actual_wind_direction - est_dir
+    # dir_error = (dir_error + 180) % 360 - 180
+    # rmse_direction = np.sqrt(mean_squared_error(np.zeros_like(dir_error), dir_error))
 
-    print("\n--- Wind Estimation RMSE ---")
-    print(f"Wind Speed RMSE: {rmse_speed:.4f} m/s")
-    print(f"Wind Direction RMSE: {rmse_direction:.4f} m/s")
+    # print("\n--- Wind Estimation RMSE ---")
+    # print(f"Wind Speed RMSE: {rmse_speed:.4f} m/s")
+    # print(f"Wind Direction RMSE: {rmse_direction:.4f} m/s")
 
 
     # check to ensure matching
@@ -835,7 +830,7 @@ if __name__ == '__main__':
         plt.plot(time_points, br_data, label='BayesianRidge Prediction', color='purple', alpha=0.7)
         plt.plot(time_points, rf_data, label='Random Forest Prediction', color='orange', alpha=0.7)
         plt.plot(time_points, mlp_data, label='MLP Prediction', color='blue', alpha=0.7)
-        plt.plot(time_points, best_mlp_data, label='MLP Prediction', color='blue', alpha=0.7)
+        plt.plot(time_points, best_mlp_data, label='MLP+Optuna Prediction', color='blue', alpha=0.7)
         plt.xlabel('Time (s)', fontsize=12)
         plt.ylabel(unit_label, fontsize=12)
         plt.legend(loc='upper right', fontsize=11)
@@ -852,7 +847,7 @@ if __name__ == '__main__':
 
 
     ax.plot(actual_east_full, actual_north_full, actual_up_full, label='True Flight Path', color='red', linewidth=4, alpha=0.6)
-    ax.plot(br_preds[:, STATE_VARS.index('pos_east')], br_preds[:, STATE_VARS.index('pos_north')], br_preds[:, STATE_VARS.index('pos_up')], label=f'Best MLP Path - RMSE: {rmse_br:.4f}', color='black', linewidth=2)
+    ax.plot(mlp_preds[:, STATE_VARS.index('pos_east')], mlp_preds[:, STATE_VARS.index('pos_north')], mlp_preds[:, STATE_VARS.index('pos_up')], label=f'MLP Path - RMSE: {rmse_br:.4f}', color='black', linewidth=2)
     ax.set_xlabel('East Position (m)', fontsize=12)
     ax.set_ylabel('North Position (m)', fontsize=12)
     ax.set_zlabel('Altitude (m)', fontsize=12)
@@ -875,7 +870,7 @@ if __name__ == '__main__':
     ax.plot(rf_preds[:, STATE_VARS.index('pos_east')], rf_preds[:, STATE_VARS.index('pos_north')], rf_preds[:, STATE_VARS.index('pos_up')], label=f'Random Forest Predicted Path - RMSE: {rmse_rf:.4f}', color='orange', linewidth=1)
     ax.plot(lr_preds[:, STATE_VARS.index('pos_east')], lr_preds[:, STATE_VARS.index('pos_north')], lr_preds[:, STATE_VARS.index('pos_up')], label=f'Linear Regression Predicted Path - RMSE: {rmse_lr:.4f}', color='cyan', linewidth=1)
     ax.plot(mlp_preds[:, STATE_VARS.index('pos_east')], mlp_preds[:, STATE_VARS.index('pos_north')], mlp_preds[:, STATE_VARS.index('pos_up')], label=f'MLP Predicted Path - RMSE: {rmse_mlp:.4f}', color='blue', linewidth=1)
-    ax.plot(mlp_best_preds[:, STATE_VARS.index('pos_east')], mlp_best_preds[:, STATE_VARS.index('pos_north')], mlp_best_preds[:, STATE_VARS.index('pos_up')], label=f'Best MLP Path - RMSE: {rmse_bmlp:.4f}', color='black', linewidth=1)
+    ax.plot(mlp_best_preds[:, STATE_VARS.index('pos_east')], mlp_best_preds[:, STATE_VARS.index('pos_north')], mlp_best_preds[:, STATE_VARS.index('pos_up')], label=f'MLP+Optuna Path - RMSE: {rmse_bmlp:.4f}', color='black', linewidth=1)
     ax.set_xlabel('East Position (m)', fontsize=12)
     ax.set_ylabel('North Position (m)', fontsize=12)
     ax.set_zlabel('Altitude (m)', fontsize=12)
@@ -1016,13 +1011,17 @@ if __name__ == '__main__':
 
 
         for i, (title, idx, unit) in enumerate(state_info):
-            ax = axes_unc[i] # Use 'ax' as local variable
+            ax = axes_unc[i]
+
+            
+            # 1. Handle Yaw Angle Conversion specifically
             if title == 'Yaw Angle':    
                 actual_sin = actual_next_states[:, STATE_VARS.index('yaw_sin')]
                 actual_cos = actual_next_states[:, STATE_VARS.index('yaw_cos')]
                 actual_data = np.degrees(np.arctan2(actual_sin, actual_cos))
                 
 
+                # Convert predictions for yaw plotting
                 for model_name, preds in model_preds.items():
                     pred_sin = preds[:, STATE_VARS.index('yaw_sin')]
                     pred_cos = preds[:, STATE_VARS.index('yaw_cos')]
@@ -1030,13 +1029,15 @@ if __name__ == '__main__':
                     ax.plot(time_points, pred_data, label=f'{model_name} Pred', linestyle='--')
                 
 
+                # 2. Handle all other states (including actual data line for yaw)
                 else:
                     # For all other states (roll, pitch, alt, pos, vel)
                     actual_data = actual_next_states[:, idx]
-                    ax.plot(time_points, actual_data, label='True Flight Data', color='red', linewidth=3, alpha=0.7)
+                    # ax.plot(time_points, actual_data, label='True Flight Data', color='red', linewidth=3, alpha=0.7)
                     
-                    for model_name, preds in model_preds.items():
-                        ax.plot(time_points, preds[:, idx], label=f'{model_name} Pred', linestyle='--')
+
+                ax.plot(time_points, actual_data, label='True Flight Data', color='red', linewidth=3, alpha=0.7)
+
 
             ax.set_ylabel(unit, fontsize=14)
             ax.grid(True)
@@ -1117,33 +1118,32 @@ if __name__ == '__main__':
     ax_yaw_err.axhline(y=rmse_yaw, color='black', linestyle='--', label=f'RMSE: {rmse_yaw:.4f} deg')
 
 
-    time_points = df_processed['OSD.flyTime [s]'].values[split_idx : split_idx + N_test] # Align time axis precisely
+    time_points = df_processed['OSD.flyTime [s]'].values[split_idx : split_idx + N_test]
 
 
     # Wind Plots
 
+    # fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 8), sharex=True)
 
-    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 8), sharex=True)
+    # ax1.plot(time_points, actual_wind_speed, label='Actual Measured Wind Speed', color='red', linewidth=2)
+    # ax1.plot(time_points, est_speed, label='Estimated Wind Speed', color='blue', linestyle='--')
+    # ax1.axhline(y=rmse_speed, color='black', linestyle='--', label=f'RMSE: {rmse_speed:.4f} m/s')
+    # ax1.set_title('Wind Speed: Actual vs. Estimated')
+    # ax1.set_ylabel('Speed (m/s)')
+    # ax1.legend()
+    # ax1.grid(True)
 
-    ax1.plot(time_points, actual_wind_speed, label='Actual Measured Wind Speed', color='red', linewidth=2)
-    ax1.plot(time_points, est_speed, label='Estimated Wind Speed', color='blue', linestyle='--')
-    ax1.axhline(y=rmse_speed, color='black', linestyle='--', label=f'RMSE: {rmse_speed:.4f} m/s')
-    ax1.set_title('Wind Speed: Actual vs. Estimated')
-    ax1.set_ylabel('Speed (m/s)')
-    ax1.legend()
-    ax1.grid(True)
+    # ax2.plot(time_points, actual_wind_direction, label='Actual Measured Direction', color='red', linewidth=2)
+    # ax2.plot(time_points, est_dir, label='Estimated Direction (Model Residuals)', color='blue', linestyle='--')
+    # # Add horizontal line for the RMSE value
+    # ax2.axhline(y=rmse_direction, color='black', linestyle='--', label=f'RMSE: {rmse_direction:.4f} deg')
+    # ax2.set_title('Wind Direction: Actual vs. Estimated')
+    # ax2.set_xlabel('Time (s)')
+    # ax2.set_ylabel('Direction (Degrees)')
+    # ax2.set_ylim(0, 360)
+    # ax2.legend()
+    # ax2.grid(True)
 
-    ax2.plot(time_points, actual_wind_direction, label='Actual Measured Direction', color='red', linewidth=2)
-    ax2.plot(time_points, est_dir, label='Estimated Direction (Model Residuals)', color='blue', linestyle='--')
-    # Add horizontal line for the RMSE value
-    ax2.axhline(y=rmse_direction, color='black', linestyle='--', label=f'RMSE: {rmse_direction:.4f} deg')
-    ax2.set_title('Wind Direction: Actual vs. Estimated')
-    ax2.set_xlabel('Time (s)')
-    ax2.set_ylabel('Direction (Degrees)')
-    ax2.set_ylim(0, 360)
-    ax2.legend()
-    ax2.grid(True)
-
-    plt.tight_layout()
-    plt.savefig('Outputs/8G_wind_estimation_comparison.pdf', dpi=600, bbox_inches='tight')
-    plt.show()
+    # plt.tight_layout()
+    # plt.savefig('Outputs/8G_wind_estimation_comparison.pdf', dpi=600, bbox_inches='tight')
+    # plt.show()
