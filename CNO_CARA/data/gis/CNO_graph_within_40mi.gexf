@@ -1,0 +1,3576 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2025-11-11">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="Edges within 40.0 mi">
+    <attributes mode="static" class="edge">
+      <attribute id="3" title="cost" type="double" />
+    </attributes>
+    <attributes mode="static" class="node">
+      <attribute id="0" title="x" type="double" />
+      <attribute id="1" title="y" type="double" />
+      <attribute id="2" title="type" type="string" />
+    </attributes>
+    <nodes>
+      <node id="Durant" label="Durant">
+        <attvalues>
+          <attvalue for="0" value="3.0" />
+          <attvalue for="1" value="3.0" />
+          <attvalue for="2" value="Hospital" />
+        </attvalues>
+      </node>
+      <node id="Talihina" label="Talihina">
+        <attvalues>
+          <attvalue for="0" value="95.25376247399664" />
+          <attvalue for="1" value="62.91029385165298" />
+          <attvalue for="2" value="Hospital" />
+        </attvalues>
+      </node>
+      <node id="Idabel" label="Idabel">
+        <attvalues>
+          <attvalue for="0" value="105.53248214603616" />
+          <attvalue for="1" value="-14.409483190858126" />
+          <attvalue for="2" value="Clinic" />
+        </attvalues>
+      </node>
+      <node id="Broken Bow" label="Broken Bow">
+        <attvalues>
+          <attvalue for="0" value="109.85966630166352" />
+          <attvalue for="1" value="-2.478295163380409" />
+          <attvalue for="2" value="Clinic" />
+        </attvalues>
+      </node>
+      <node id="Hugo" label="Hugo">
+        <attvalues>
+          <attvalue for="0" value="59.40212244817725" />
+          <attvalue for="1" value="-5.23411096238193" />
+          <attvalue for="2" value="Clinic" />
+        </attvalues>
+      </node>
+      <node id="Atoka" label="Atoka">
+        <attvalues>
+          <attvalue for="0" value="28.334207875759972" />
+          <attvalue for="1" value="31.322745476167754" />
+          <attvalue for="2" value="Clinic" />
+        </attvalues>
+      </node>
+      <node id="McAlester" label="McAlester">
+        <attvalues>
+          <attvalue for="0" value="45.68652476464811" />
+          <attvalue for="1" value="69.47451093101085" />
+          <attvalue for="2" value="Clinic" />
+        </attvalues>
+      </node>
+      <node id="Poteau" label="Poteau">
+        <attvalues>
+          <attvalue for="0" value="131.55354951866485" />
+          <attvalue for="1" value="70.07447283543995" />
+          <attvalue for="2" value="Clinic" />
+        </attvalues>
+      </node>
+      <node id="Stigler" label="Stigler">
+        <attvalues>
+          <attvalue for="0" value="86.23142680947691" />
+          <attvalue for="1" value="108.01680623242493" />
+          <attvalue for="2" value="Clinic" />
+        </attvalues>
+      </node>
+      <node id="Hub_1" label="Hub_1">
+        <attvalues>
+          <attvalue for="0" value="0.0" />
+          <attvalue for="1" value="-20.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_2" label="Hub_2">
+        <attvalues>
+          <attvalue for="0" value="20.0" />
+          <attvalue for="1" value="-20.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_3" label="Hub_3">
+        <attvalues>
+          <attvalue for="0" value="40.0" />
+          <attvalue for="1" value="-20.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_4" label="Hub_4">
+        <attvalues>
+          <attvalue for="0" value="60.0" />
+          <attvalue for="1" value="-20.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_5" label="Hub_5">
+        <attvalues>
+          <attvalue for="0" value="80.0" />
+          <attvalue for="1" value="-20.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_6" label="Hub_6">
+        <attvalues>
+          <attvalue for="0" value="100.0" />
+          <attvalue for="1" value="-20.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_7" label="Hub_7">
+        <attvalues>
+          <attvalue for="0" value="120.0" />
+          <attvalue for="1" value="-20.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_8" label="Hub_8">
+        <attvalues>
+          <attvalue for="0" value="0.0" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_9" label="Hub_9">
+        <attvalues>
+          <attvalue for="0" value="20.0" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_10" label="Hub_10">
+        <attvalues>
+          <attvalue for="0" value="40.0" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_11" label="Hub_11">
+        <attvalues>
+          <attvalue for="0" value="60.0" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_12" label="Hub_12">
+        <attvalues>
+          <attvalue for="0" value="80.0" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_13" label="Hub_13">
+        <attvalues>
+          <attvalue for="0" value="100.0" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_14" label="Hub_14">
+        <attvalues>
+          <attvalue for="0" value="120.0" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_15" label="Hub_15">
+        <attvalues>
+          <attvalue for="0" value="0.0" />
+          <attvalue for="1" value="20.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_16" label="Hub_16">
+        <attvalues>
+          <attvalue for="0" value="20.0" />
+          <attvalue for="1" value="20.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_17" label="Hub_17">
+        <attvalues>
+          <attvalue for="0" value="40.0" />
+          <attvalue for="1" value="20.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_18" label="Hub_18">
+        <attvalues>
+          <attvalue for="0" value="60.0" />
+          <attvalue for="1" value="20.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_19" label="Hub_19">
+        <attvalues>
+          <attvalue for="0" value="80.0" />
+          <attvalue for="1" value="20.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_20" label="Hub_20">
+        <attvalues>
+          <attvalue for="0" value="100.0" />
+          <attvalue for="1" value="20.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_21" label="Hub_21">
+        <attvalues>
+          <attvalue for="0" value="120.0" />
+          <attvalue for="1" value="20.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_22" label="Hub_22">
+        <attvalues>
+          <attvalue for="0" value="0.0" />
+          <attvalue for="1" value="40.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_23" label="Hub_23">
+        <attvalues>
+          <attvalue for="0" value="20.0" />
+          <attvalue for="1" value="40.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_24" label="Hub_24">
+        <attvalues>
+          <attvalue for="0" value="40.0" />
+          <attvalue for="1" value="40.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_25" label="Hub_25">
+        <attvalues>
+          <attvalue for="0" value="60.0" />
+          <attvalue for="1" value="40.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_26" label="Hub_26">
+        <attvalues>
+          <attvalue for="0" value="80.0" />
+          <attvalue for="1" value="40.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_27" label="Hub_27">
+        <attvalues>
+          <attvalue for="0" value="100.0" />
+          <attvalue for="1" value="40.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_28" label="Hub_28">
+        <attvalues>
+          <attvalue for="0" value="120.0" />
+          <attvalue for="1" value="40.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_29" label="Hub_29">
+        <attvalues>
+          <attvalue for="0" value="0.0" />
+          <attvalue for="1" value="60.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_30" label="Hub_30">
+        <attvalues>
+          <attvalue for="0" value="20.0" />
+          <attvalue for="1" value="60.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_31" label="Hub_31">
+        <attvalues>
+          <attvalue for="0" value="40.0" />
+          <attvalue for="1" value="60.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_32" label="Hub_32">
+        <attvalues>
+          <attvalue for="0" value="60.0" />
+          <attvalue for="1" value="60.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_33" label="Hub_33">
+        <attvalues>
+          <attvalue for="0" value="80.0" />
+          <attvalue for="1" value="60.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_34" label="Hub_34">
+        <attvalues>
+          <attvalue for="0" value="100.0" />
+          <attvalue for="1" value="60.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_35" label="Hub_35">
+        <attvalues>
+          <attvalue for="0" value="120.0" />
+          <attvalue for="1" value="60.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_36" label="Hub_36">
+        <attvalues>
+          <attvalue for="0" value="0.0" />
+          <attvalue for="1" value="80.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_37" label="Hub_37">
+        <attvalues>
+          <attvalue for="0" value="20.0" />
+          <attvalue for="1" value="80.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_38" label="Hub_38">
+        <attvalues>
+          <attvalue for="0" value="40.0" />
+          <attvalue for="1" value="80.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_39" label="Hub_39">
+        <attvalues>
+          <attvalue for="0" value="60.0" />
+          <attvalue for="1" value="80.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_40" label="Hub_40">
+        <attvalues>
+          <attvalue for="0" value="80.0" />
+          <attvalue for="1" value="80.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_41" label="Hub_41">
+        <attvalues>
+          <attvalue for="0" value="100.0" />
+          <attvalue for="1" value="80.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_42" label="Hub_42">
+        <attvalues>
+          <attvalue for="0" value="120.0" />
+          <attvalue for="1" value="80.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_43" label="Hub_43">
+        <attvalues>
+          <attvalue for="0" value="0.0" />
+          <attvalue for="1" value="100.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_44" label="Hub_44">
+        <attvalues>
+          <attvalue for="0" value="20.0" />
+          <attvalue for="1" value="100.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_45" label="Hub_45">
+        <attvalues>
+          <attvalue for="0" value="40.0" />
+          <attvalue for="1" value="100.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_46" label="Hub_46">
+        <attvalues>
+          <attvalue for="0" value="60.0" />
+          <attvalue for="1" value="100.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_47" label="Hub_47">
+        <attvalues>
+          <attvalue for="0" value="80.0" />
+          <attvalue for="1" value="100.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_48" label="Hub_48">
+        <attvalues>
+          <attvalue for="0" value="100.0" />
+          <attvalue for="1" value="100.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+      <node id="Hub_49" label="Hub_49">
+        <attvalues>
+          <attvalue for="0" value="120.0" />
+          <attvalue for="1" value="100.0" />
+          <attvalue for="2" value="CandidateHub" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge source="Durant" target="Atoka" id="0">
+        <attvalues>
+          <attvalue for="3" value="37.99999999999999" />
+        </attvalues>
+      </edge>
+      <edge source="Durant" target="Hub_1" id="1">
+        <attvalues>
+          <attvalue for="3" value="23.194827009486403" />
+        </attvalues>
+      </edge>
+      <edge source="Durant" target="Hub_2" id="2">
+        <attvalues>
+          <attvalue for="3" value="28.600699292150182" />
+        </attvalues>
+      </edge>
+      <edge source="Durant" target="Hub_8" id="3">
+        <attvalues>
+          <attvalue for="3" value="4.242640687119285" />
+        </attvalues>
+      </edge>
+      <edge source="Durant" target="Hub_9" id="4">
+        <attvalues>
+          <attvalue for="3" value="17.26267650163207" />
+        </attvalues>
+      </edge>
+      <edge source="Durant" target="Hub_10" id="5">
+        <attvalues>
+          <attvalue for="3" value="37.12142238654117" />
+        </attvalues>
+      </edge>
+      <edge source="Durant" target="Hub_15" id="6">
+        <attvalues>
+          <attvalue for="3" value="17.26267650163207" />
+        </attvalues>
+      </edge>
+      <edge source="Durant" target="Hub_16" id="7">
+        <attvalues>
+          <attvalue for="3" value="24.041630560342615" />
+        </attvalues>
+      </edge>
+      <edge source="Durant" target="Hub_22" id="8">
+        <attvalues>
+          <attvalue for="3" value="37.12142238654117" />
+        </attvalues>
+      </edge>
+      <edge source="Talihina" target="Poteau" id="9">
+        <attvalues>
+          <attvalue for="3" value="36.99999999999996" />
+        </attvalues>
+      </edge>
+      <edge source="Talihina" target="Hub_26" id="10">
+        <attvalues>
+          <attvalue for="3" value="27.523786694097826" />
+        </attvalues>
+      </edge>
+      <edge source="Talihina" target="Hub_27" id="11">
+        <attvalues>
+          <attvalue for="3" value="23.396759070912594" />
+        </attvalues>
+      </edge>
+      <edge source="Talihina" target="Hub_28" id="12">
+        <attvalues>
+          <attvalue for="3" value="33.723253639921296" />
+        </attvalues>
+      </edge>
+      <edge source="Talihina" target="Hub_32" id="13">
+        <attvalues>
+          <attvalue for="3" value="35.37368483598992" />
+        </attvalues>
+      </edge>
+      <edge source="Talihina" target="Hub_33" id="14">
+        <attvalues>
+          <attvalue for="3" value="15.52891109885292" />
+        </attvalues>
+      </edge>
+      <edge source="Talihina" target="Hub_34" id="15">
+        <attvalues>
+          <attvalue for="3" value="5.567457315167454" />
+        </attvalues>
+      </edge>
+      <edge source="Talihina" target="Hub_35" id="16">
+        <attvalues>
+          <attvalue for="3" value="24.916783139007848" />
+        </attvalues>
+      </edge>
+      <edge source="Talihina" target="Hub_39" id="17">
+        <attvalues>
+          <attvalue for="3" value="39.17761892726285" />
+        </attvalues>
+      </edge>
+      <edge source="Talihina" target="Hub_40" id="18">
+        <attvalues>
+          <attvalue for="3" value="22.907102083195905" />
+        </attvalues>
+      </edge>
+      <edge source="Talihina" target="Hub_41" id="19">
+        <attvalues>
+          <attvalue for="3" value="17.73653931549479" />
+        </attvalues>
+      </edge>
+      <edge source="Talihina" target="Hub_42" id="20">
+        <attvalues>
+          <attvalue for="3" value="30.073814655447794" />
+        </attvalues>
+      </edge>
+      <edge source="Talihina" target="Hub_48" id="21">
+        <attvalues>
+          <attvalue for="3" value="37.39215255670597" />
+        </attvalues>
+      </edge>
+      <edge source="Idabel" target="Broken Bow" id="22">
+        <attvalues>
+          <attvalue for="3" value="12.69164175604323" />
+        </attvalues>
+      </edge>
+      <edge source="Idabel" target="Hub_5" id="23">
+        <attvalues>
+          <attvalue for="3" value="26.137358755829805" />
+        </attvalues>
+      </edge>
+      <edge source="Idabel" target="Hub_6" id="24">
+        <attvalues>
+          <attvalue for="3" value="7.865255042877294" />
+        </attvalues>
+      </edge>
+      <edge source="Idabel" target="Hub_7" id="25">
+        <attvalues>
+          <attvalue for="3" value="15.510091909723176" />
+        </attvalues>
+      </edge>
+      <edge source="Idabel" target="Hub_12" id="26">
+        <attvalues>
+          <attvalue for="3" value="29.31792711576448" />
+        </attvalues>
+      </edge>
+      <edge source="Idabel" target="Hub_13" id="27">
+        <attvalues>
+          <attvalue for="3" value="15.435075786138263" />
+        </attvalues>
+      </edge>
+      <edge source="Idabel" target="Hub_14" id="28">
+        <attvalues>
+          <attvalue for="3" value="20.41916449520855" />
+        </attvalues>
+      </edge>
+      <edge source="Idabel" target="Hub_20" id="29">
+        <attvalues>
+          <attvalue for="3" value="34.85141162360797" />
+        </attvalues>
+      </edge>
+      <edge source="Idabel" target="Hub_21" id="30">
+        <attvalues>
+          <attvalue for="3" value="37.32722339414908" />
+        </attvalues>
+      </edge>
+      <edge source="Broken Bow" target="Idabel" id="31">
+        <attvalues>
+          <attvalue for="3" value="12.69164175604323" />
+        </attvalues>
+      </edge>
+      <edge source="Broken Bow" target="Hub_5" id="32">
+        <attvalues>
+          <attvalue for="3" value="34.62094470155773" />
+        </attvalues>
+      </edge>
+      <edge source="Broken Bow" target="Hub_6" id="33">
+        <attvalues>
+          <attvalue for="3" value="20.105301787383784" />
+        </attvalues>
+      </edge>
+      <edge source="Broken Bow" target="Hub_7" id="34">
+        <attvalues>
+          <attvalue for="3" value="20.24441917900429" />
+        </attvalues>
+      </edge>
+      <edge source="Broken Bow" target="Hub_12" id="35">
+        <attvalues>
+          <attvalue for="3" value="29.962336667281726" />
+        </attvalues>
+      </edge>
+      <edge source="Broken Bow" target="Hub_13" id="36">
+        <attvalues>
+          <attvalue for="3" value="10.166364468038413" />
+        </attvalues>
+      </edge>
+      <edge source="Broken Bow" target="Hub_14" id="37">
+        <attvalues>
+          <attvalue for="3" value="10.438788935046682" />
+        </attvalues>
+      </edge>
+      <edge source="Broken Bow" target="Hub_19" id="38">
+        <attvalues>
+          <attvalue for="3" value="37.37476990027833" />
+        </attvalues>
+      </edge>
+      <edge source="Broken Bow" target="Hub_20" id="39">
+        <attvalues>
+          <attvalue for="3" value="24.545605982175516" />
+        </attvalues>
+      </edge>
+      <edge source="Broken Bow" target="Hub_21" id="40">
+        <attvalues>
+          <attvalue for="3" value="24.659686148969325" />
+        </attvalues>
+      </edge>
+      <edge source="Hugo" target="Hub_3" id="41">
+        <attvalues>
+          <attvalue for="3" value="24.381834109953935" />
+        </attvalues>
+      </edge>
+      <edge source="Hugo" target="Hub_4" id="42">
+        <attvalues>
+          <attvalue for="3" value="14.777988247329981" />
+        </attvalues>
+      </edge>
+      <edge source="Hugo" target="Hub_5" id="43">
+        <attvalues>
+          <attvalue for="3" value="25.343717933861498" />
+        </attvalues>
+      </edge>
+      <edge source="Hugo" target="Hub_9" id="44">
+        <attvalues>
+          <attvalue for="3" value="39.74824739517053" />
+        </attvalues>
+      </edge>
+      <edge source="Hugo" target="Hub_10" id="45">
+        <attvalues>
+          <attvalue for="3" value="20.095727731550063" />
+        </attvalues>
+      </edge>
+      <edge source="Hugo" target="Hub_11" id="46">
+        <attvalues>
+          <attvalue for="3" value="5.268147220180949" />
+        </attvalues>
+      </edge>
+      <edge source="Hugo" target="Hub_12" id="47">
+        <attvalues>
+          <attvalue for="3" value="21.25249343503981" />
+        </attvalues>
+      </edge>
+      <edge source="Hugo" target="Hub_17" id="48">
+        <attvalues>
+          <attvalue for="3" value="31.830845284972682" />
+        </attvalues>
+      </edge>
+      <edge source="Hugo" target="Hub_18" id="49">
+        <attvalues>
+          <attvalue for="3" value="25.24119279330471" />
+        </attvalues>
+      </edge>
+      <edge source="Hugo" target="Hub_19" id="50">
+        <attvalues>
+          <attvalue for="3" value="32.57350020648207" />
+        </attvalues>
+      </edge>
+      <edge source="Atoka" target="Durant" id="51">
+        <attvalues>
+          <attvalue for="3" value="37.99999999999999" />
+        </attvalues>
+      </edge>
+      <edge source="Atoka" target="Hub_9" id="52">
+        <attvalues>
+          <attvalue for="3" value="32.41255011690945" />
+        </attvalues>
+      </edge>
+      <edge source="Atoka" target="Hub_10" id="53">
+        <attvalues>
+          <attvalue for="3" value="33.42461802400692" />
+        </attvalues>
+      </edge>
+      <edge source="Atoka" target="Hub_15" id="54">
+        <attvalues>
+          <attvalue for="3" value="30.51281535789275" />
+        </attvalues>
+      </edge>
+      <edge source="Atoka" target="Hub_16" id="55">
+        <attvalues>
+          <attvalue for="3" value="14.059288247790388" />
+        </attvalues>
+      </edge>
+      <edge source="Atoka" target="Hub_17" id="56">
+        <attvalues>
+          <attvalue for="3" value="16.257160607069675" />
+        </attvalues>
+      </edge>
+      <edge source="Atoka" target="Hub_18" id="57">
+        <attvalues>
+          <attvalue for="3" value="33.62925744011692" />
+        </attvalues>
+      </edge>
+      <edge source="Atoka" target="Hub_22" id="58">
+        <attvalues>
+          <attvalue for="3" value="29.633124742729134" />
+        </attvalues>
+      </edge>
+      <edge source="Atoka" target="Hub_23" id="59">
+        <attvalues>
+          <attvalue for="3" value="12.031365965165666" />
+        </attvalues>
+      </edge>
+      <edge source="Atoka" target="Hub_24" id="60">
+        <attvalues>
+          <attvalue for="3" value="14.53910079603783" />
+        </attvalues>
+      </edge>
+      <edge source="Atoka" target="Hub_25" id="61">
+        <attvalues>
+          <attvalue for="3" value="32.833171289519825" />
+        </attvalues>
+      </edge>
+      <edge source="Atoka" target="Hub_30" id="62">
+        <attvalues>
+          <attvalue for="3" value="29.86375642716496" />
+        </attvalues>
+      </edge>
+      <edge source="Atoka" target="Hub_31" id="63">
+        <attvalues>
+          <attvalue for="3" value="30.959257628545256" />
+        </attvalues>
+      </edge>
+      <edge source="McAlester" target="Hub_23" id="64">
+        <attvalues>
+          <attvalue for="3" value="39.09660278217481" />
+        </attvalues>
+      </edge>
+      <edge source="McAlester" target="Hub_24" id="65">
+        <attvalues>
+          <attvalue for="3" value="30.018050544984337" />
+        </attvalues>
+      </edge>
+      <edge source="McAlester" target="Hub_25" id="66">
+        <attvalues>
+          <attvalue for="3" value="32.766177194407504" />
+        </attvalues>
+      </edge>
+      <edge source="McAlester" target="Hub_30" id="67">
+        <attvalues>
+          <attvalue for="3" value="27.378164873978037" />
+        </attvalues>
+      </edge>
+      <edge source="McAlester" target="Hub_31" id="68">
+        <attvalues>
+          <attvalue for="3" value="11.050019062463216" />
+        </attvalues>
+      </edge>
+      <edge source="McAlester" target="Hub_32" id="69">
+        <attvalues>
+          <attvalue for="3" value="17.16513707183476" />
+        </attvalues>
+      </edge>
+      <edge source="McAlester" target="Hub_33" id="70">
+        <attvalues>
+          <attvalue for="3" value="35.597485025054105" />
+        </attvalues>
+      </edge>
+      <edge source="McAlester" target="Hub_37" id="71">
+        <attvalues>
+          <attvalue for="3" value="27.759385343092355" />
+        </attvalues>
+      </edge>
+      <edge source="McAlester" target="Hub_38" id="72">
+        <attvalues>
+          <attvalue for="3" value="11.963380961934059" />
+        </attvalues>
+      </edge>
+      <edge source="McAlester" target="Hub_39" id="73">
+        <attvalues>
+          <attvalue for="3" value="17.766865042951213" />
+        </attvalues>
+      </edge>
+      <edge source="McAlester" target="Hub_40" id="74">
+        <attvalues>
+          <attvalue for="3" value="35.891510178153794" />
+        </attvalues>
+      </edge>
+      <edge source="McAlester" target="Hub_44" id="75">
+        <attvalues>
+          <attvalue for="3" value="39.894899891914214" />
+        </attvalues>
+      </edge>
+      <edge source="McAlester" target="Hub_45" id="76">
+        <attvalues>
+          <attvalue for="3" value="31.05063681794517" />
+        </attvalues>
+      </edge>
+      <edge source="McAlester" target="Hub_46" id="77">
+        <attvalues>
+          <attvalue for="3" value="33.71470089165864" />
+        </attvalues>
+      </edge>
+      <edge source="Poteau" target="Talihina" id="78">
+        <attvalues>
+          <attvalue for="3" value="36.99999999999996" />
+        </attvalues>
+      </edge>
+      <edge source="Poteau" target="Hub_28" id="79">
+        <attvalues>
+          <attvalue for="3" value="32.21736213301542" />
+        </attvalues>
+      </edge>
+      <edge source="Poteau" target="Hub_34" id="80">
+        <attvalues>
+          <attvalue for="3" value="33.12282430800327" />
+        </attvalues>
+      </edge>
+      <edge source="Poteau" target="Hub_35" id="81">
+        <attvalues>
+          <attvalue for="3" value="15.329041372253462" />
+        </attvalues>
+      </edge>
+      <edge source="Poteau" target="Hub_41" id="82">
+        <attvalues>
+          <attvalue for="3" value="33.07782605796902" />
+        </attvalues>
+      </edge>
+      <edge source="Poteau" target="Hub_42" id="83">
+        <attvalues>
+          <attvalue for="3" value="15.231565775541933" />
+        </attvalues>
+      </edge>
+      <edge source="Poteau" target="Hub_49" id="84">
+        <attvalues>
+          <attvalue for="3" value="32.07836782875747" />
+        </attvalues>
+      </edge>
+      <edge source="Stigler" target="Hub_39" id="85">
+        <attvalues>
+          <attvalue for="3" value="38.380062323114956" />
+        </attvalues>
+      </edge>
+      <edge source="Stigler" target="Hub_40" id="86">
+        <attvalues>
+          <attvalue for="3" value="28.701430479108733" />
+        </attvalues>
+      </edge>
+      <edge source="Stigler" target="Hub_41" id="87">
+        <attvalues>
+          <attvalue for="3" value="31.21722343784013" />
+        </attvalues>
+      </edge>
+      <edge source="Stigler" target="Hub_46" id="88">
+        <attvalues>
+          <attvalue for="3" value="27.429125662864124" />
+        </attvalues>
+      </edge>
+      <edge source="Stigler" target="Hub_47" id="89">
+        <attvalues>
+          <attvalue for="3" value="10.153810233115191" />
+        </attvalues>
+      </edge>
+      <edge source="Stigler" target="Hub_48" id="90">
+        <attvalues>
+          <attvalue for="3" value="15.932444566702193" />
+        </attvalues>
+      </edge>
+      <edge source="Stigler" target="Hub_49" id="91">
+        <attvalues>
+          <attvalue for="3" value="34.70714216831979" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_1" target="Durant" id="92">
+        <attvalues>
+          <attvalue for="3" value="23.194827009486403" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_1" target="Hub_2" id="93">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_1" target="Hub_3" id="94">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_1" target="Hub_8" id="95">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_1" target="Hub_9" id="96">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_1" target="Hub_15" id="97">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_2" target="Durant" id="98">
+        <attvalues>
+          <attvalue for="3" value="28.600699292150182" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_2" target="Hub_1" id="99">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_2" target="Hub_3" id="100">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_2" target="Hub_4" id="101">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_2" target="Hub_8" id="102">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_2" target="Hub_9" id="103">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_2" target="Hub_10" id="104">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_2" target="Hub_16" id="105">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_3" target="Hugo" id="106">
+        <attvalues>
+          <attvalue for="3" value="24.381834109953935" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_3" target="Hub_1" id="107">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_3" target="Hub_2" id="108">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_3" target="Hub_4" id="109">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_3" target="Hub_5" id="110">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_3" target="Hub_9" id="111">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_3" target="Hub_10" id="112">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_3" target="Hub_11" id="113">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_3" target="Hub_17" id="114">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_4" target="Hugo" id="115">
+        <attvalues>
+          <attvalue for="3" value="14.777988247329981" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_4" target="Hub_2" id="116">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_4" target="Hub_3" id="117">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_4" target="Hub_5" id="118">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_4" target="Hub_6" id="119">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_4" target="Hub_10" id="120">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_4" target="Hub_11" id="121">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_4" target="Hub_12" id="122">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_4" target="Hub_18" id="123">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_5" target="Idabel" id="124">
+        <attvalues>
+          <attvalue for="3" value="26.137358755829805" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_5" target="Broken Bow" id="125">
+        <attvalues>
+          <attvalue for="3" value="34.62094470155773" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_5" target="Hugo" id="126">
+        <attvalues>
+          <attvalue for="3" value="25.343717933861498" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_5" target="Hub_3" id="127">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_5" target="Hub_4" id="128">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_5" target="Hub_6" id="129">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_5" target="Hub_7" id="130">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_5" target="Hub_11" id="131">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_5" target="Hub_12" id="132">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_5" target="Hub_13" id="133">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_5" target="Hub_19" id="134">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_6" target="Idabel" id="135">
+        <attvalues>
+          <attvalue for="3" value="7.865255042877294" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_6" target="Broken Bow" id="136">
+        <attvalues>
+          <attvalue for="3" value="20.105301787383784" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_6" target="Hub_4" id="137">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_6" target="Hub_5" id="138">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_6" target="Hub_7" id="139">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_6" target="Hub_12" id="140">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_6" target="Hub_13" id="141">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_6" target="Hub_14" id="142">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_6" target="Hub_20" id="143">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_7" target="Idabel" id="144">
+        <attvalues>
+          <attvalue for="3" value="15.510091909723176" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_7" target="Broken Bow" id="145">
+        <attvalues>
+          <attvalue for="3" value="20.24441917900429" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_7" target="Hub_5" id="146">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_7" target="Hub_6" id="147">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_7" target="Hub_13" id="148">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_7" target="Hub_14" id="149">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_7" target="Hub_21" id="150">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_8" target="Durant" id="151">
+        <attvalues>
+          <attvalue for="3" value="4.242640687119285" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_8" target="Hub_1" id="152">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_8" target="Hub_2" id="153">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_8" target="Hub_9" id="154">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_8" target="Hub_10" id="155">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_8" target="Hub_15" id="156">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_8" target="Hub_16" id="157">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_8" target="Hub_22" id="158">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_9" target="Durant" id="159">
+        <attvalues>
+          <attvalue for="3" value="17.26267650163207" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_9" target="Hugo" id="160">
+        <attvalues>
+          <attvalue for="3" value="39.74824739517053" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_9" target="Atoka" id="161">
+        <attvalues>
+          <attvalue for="3" value="32.41255011690945" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_9" target="Hub_1" id="162">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_9" target="Hub_2" id="163">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_9" target="Hub_3" id="164">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_9" target="Hub_8" id="165">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_9" target="Hub_10" id="166">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_9" target="Hub_11" id="167">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_9" target="Hub_15" id="168">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_9" target="Hub_16" id="169">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_9" target="Hub_17" id="170">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_9" target="Hub_23" id="171">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_10" target="Durant" id="172">
+        <attvalues>
+          <attvalue for="3" value="37.12142238654117" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_10" target="Hugo" id="173">
+        <attvalues>
+          <attvalue for="3" value="20.095727731550063" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_10" target="Atoka" id="174">
+        <attvalues>
+          <attvalue for="3" value="33.42461802400692" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_10" target="Hub_2" id="175">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_10" target="Hub_3" id="176">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_10" target="Hub_4" id="177">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_10" target="Hub_8" id="178">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_10" target="Hub_9" id="179">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_10" target="Hub_11" id="180">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_10" target="Hub_12" id="181">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_10" target="Hub_16" id="182">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_10" target="Hub_17" id="183">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_10" target="Hub_18" id="184">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_10" target="Hub_24" id="185">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_11" target="Hugo" id="186">
+        <attvalues>
+          <attvalue for="3" value="5.268147220180949" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_11" target="Hub_3" id="187">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_11" target="Hub_4" id="188">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_11" target="Hub_5" id="189">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_11" target="Hub_9" id="190">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_11" target="Hub_10" id="191">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_11" target="Hub_12" id="192">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_11" target="Hub_13" id="193">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_11" target="Hub_17" id="194">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_11" target="Hub_18" id="195">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_11" target="Hub_19" id="196">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_11" target="Hub_25" id="197">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_12" target="Idabel" id="198">
+        <attvalues>
+          <attvalue for="3" value="29.31792711576448" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_12" target="Broken Bow" id="199">
+        <attvalues>
+          <attvalue for="3" value="29.962336667281726" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_12" target="Hugo" id="200">
+        <attvalues>
+          <attvalue for="3" value="21.25249343503981" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_12" target="Hub_4" id="201">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_12" target="Hub_5" id="202">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_12" target="Hub_6" id="203">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_12" target="Hub_10" id="204">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_12" target="Hub_11" id="205">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_12" target="Hub_13" id="206">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_12" target="Hub_14" id="207">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_12" target="Hub_18" id="208">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_12" target="Hub_19" id="209">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_12" target="Hub_20" id="210">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_12" target="Hub_26" id="211">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_13" target="Idabel" id="212">
+        <attvalues>
+          <attvalue for="3" value="15.435075786138263" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_13" target="Broken Bow" id="213">
+        <attvalues>
+          <attvalue for="3" value="10.166364468038413" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_13" target="Hub_5" id="214">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_13" target="Hub_6" id="215">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_13" target="Hub_7" id="216">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_13" target="Hub_11" id="217">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_13" target="Hub_12" id="218">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_13" target="Hub_14" id="219">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_13" target="Hub_19" id="220">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_13" target="Hub_20" id="221">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_13" target="Hub_21" id="222">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_13" target="Hub_27" id="223">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_14" target="Idabel" id="224">
+        <attvalues>
+          <attvalue for="3" value="20.41916449520855" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_14" target="Broken Bow" id="225">
+        <attvalues>
+          <attvalue for="3" value="10.438788935046682" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_14" target="Hub_6" id="226">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_14" target="Hub_7" id="227">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_14" target="Hub_12" id="228">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_14" target="Hub_13" id="229">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_14" target="Hub_20" id="230">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_14" target="Hub_21" id="231">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_14" target="Hub_28" id="232">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_15" target="Durant" id="233">
+        <attvalues>
+          <attvalue for="3" value="17.26267650163207" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_15" target="Atoka" id="234">
+        <attvalues>
+          <attvalue for="3" value="30.51281535789275" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_15" target="Hub_1" id="235">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_15" target="Hub_8" id="236">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_15" target="Hub_9" id="237">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_15" target="Hub_16" id="238">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_15" target="Hub_17" id="239">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_15" target="Hub_22" id="240">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_15" target="Hub_23" id="241">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_15" target="Hub_29" id="242">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_16" target="Durant" id="243">
+        <attvalues>
+          <attvalue for="3" value="24.041630560342615" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_16" target="Atoka" id="244">
+        <attvalues>
+          <attvalue for="3" value="14.059288247790388" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_16" target="Hub_2" id="245">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_16" target="Hub_8" id="246">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_16" target="Hub_9" id="247">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_16" target="Hub_10" id="248">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_16" target="Hub_15" id="249">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_16" target="Hub_17" id="250">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_16" target="Hub_18" id="251">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_16" target="Hub_22" id="252">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_16" target="Hub_23" id="253">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_16" target="Hub_24" id="254">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_16" target="Hub_30" id="255">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_17" target="Hugo" id="256">
+        <attvalues>
+          <attvalue for="3" value="31.830845284972682" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_17" target="Atoka" id="257">
+        <attvalues>
+          <attvalue for="3" value="16.257160607069675" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_17" target="Hub_3" id="258">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_17" target="Hub_9" id="259">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_17" target="Hub_10" id="260">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_17" target="Hub_11" id="261">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_17" target="Hub_15" id="262">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_17" target="Hub_16" id="263">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_17" target="Hub_18" id="264">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_17" target="Hub_19" id="265">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_17" target="Hub_23" id="266">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_17" target="Hub_24" id="267">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_17" target="Hub_25" id="268">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_17" target="Hub_31" id="269">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_18" target="Hugo" id="270">
+        <attvalues>
+          <attvalue for="3" value="25.24119279330471" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_18" target="Atoka" id="271">
+        <attvalues>
+          <attvalue for="3" value="33.62925744011692" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_18" target="Hub_4" id="272">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_18" target="Hub_10" id="273">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_18" target="Hub_11" id="274">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_18" target="Hub_12" id="275">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_18" target="Hub_16" id="276">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_18" target="Hub_17" id="277">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_18" target="Hub_19" id="278">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_18" target="Hub_20" id="279">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_18" target="Hub_24" id="280">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_18" target="Hub_25" id="281">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_18" target="Hub_26" id="282">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_18" target="Hub_32" id="283">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_19" target="Broken Bow" id="284">
+        <attvalues>
+          <attvalue for="3" value="37.37476990027833" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_19" target="Hugo" id="285">
+        <attvalues>
+          <attvalue for="3" value="32.57350020648207" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_19" target="Hub_5" id="286">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_19" target="Hub_11" id="287">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_19" target="Hub_12" id="288">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_19" target="Hub_13" id="289">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_19" target="Hub_17" id="290">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_19" target="Hub_18" id="291">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_19" target="Hub_20" id="292">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_19" target="Hub_21" id="293">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_19" target="Hub_25" id="294">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_19" target="Hub_26" id="295">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_19" target="Hub_27" id="296">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_19" target="Hub_33" id="297">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_20" target="Idabel" id="298">
+        <attvalues>
+          <attvalue for="3" value="34.85141162360797" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_20" target="Broken Bow" id="299">
+        <attvalues>
+          <attvalue for="3" value="24.545605982175516" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_20" target="Hub_6" id="300">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_20" target="Hub_12" id="301">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_20" target="Hub_13" id="302">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_20" target="Hub_14" id="303">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_20" target="Hub_18" id="304">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_20" target="Hub_19" id="305">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_20" target="Hub_21" id="306">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_20" target="Hub_26" id="307">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_20" target="Hub_27" id="308">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_20" target="Hub_28" id="309">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_20" target="Hub_34" id="310">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_21" target="Idabel" id="311">
+        <attvalues>
+          <attvalue for="3" value="37.32722339414908" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_21" target="Broken Bow" id="312">
+        <attvalues>
+          <attvalue for="3" value="24.659686148969325" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_21" target="Hub_7" id="313">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_21" target="Hub_13" id="314">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_21" target="Hub_14" id="315">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_21" target="Hub_19" id="316">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_21" target="Hub_20" id="317">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_21" target="Hub_27" id="318">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_21" target="Hub_28" id="319">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_21" target="Hub_35" id="320">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_22" target="Durant" id="321">
+        <attvalues>
+          <attvalue for="3" value="37.12142238654117" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_22" target="Atoka" id="322">
+        <attvalues>
+          <attvalue for="3" value="29.633124742729134" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_22" target="Hub_8" id="323">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_22" target="Hub_15" id="324">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_22" target="Hub_16" id="325">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_22" target="Hub_23" id="326">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_22" target="Hub_24" id="327">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_22" target="Hub_29" id="328">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_22" target="Hub_30" id="329">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_22" target="Hub_36" id="330">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_23" target="Atoka" id="331">
+        <attvalues>
+          <attvalue for="3" value="12.031365965165666" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_23" target="McAlester" id="332">
+        <attvalues>
+          <attvalue for="3" value="39.09660278217481" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_23" target="Hub_9" id="333">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_23" target="Hub_15" id="334">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_23" target="Hub_16" id="335">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_23" target="Hub_17" id="336">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_23" target="Hub_22" id="337">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_23" target="Hub_24" id="338">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_23" target="Hub_25" id="339">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_23" target="Hub_29" id="340">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_23" target="Hub_30" id="341">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_23" target="Hub_31" id="342">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_23" target="Hub_37" id="343">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_24" target="Atoka" id="344">
+        <attvalues>
+          <attvalue for="3" value="14.53910079603783" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_24" target="McAlester" id="345">
+        <attvalues>
+          <attvalue for="3" value="30.018050544984337" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_24" target="Hub_10" id="346">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_24" target="Hub_16" id="347">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_24" target="Hub_17" id="348">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_24" target="Hub_18" id="349">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_24" target="Hub_22" id="350">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_24" target="Hub_23" id="351">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_24" target="Hub_25" id="352">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_24" target="Hub_26" id="353">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_24" target="Hub_30" id="354">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_24" target="Hub_31" id="355">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_24" target="Hub_32" id="356">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_24" target="Hub_38" id="357">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_25" target="Atoka" id="358">
+        <attvalues>
+          <attvalue for="3" value="32.833171289519825" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_25" target="McAlester" id="359">
+        <attvalues>
+          <attvalue for="3" value="32.766177194407504" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_25" target="Hub_11" id="360">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_25" target="Hub_17" id="361">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_25" target="Hub_18" id="362">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_25" target="Hub_19" id="363">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_25" target="Hub_23" id="364">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_25" target="Hub_24" id="365">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_25" target="Hub_26" id="366">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_25" target="Hub_27" id="367">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_25" target="Hub_31" id="368">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_25" target="Hub_32" id="369">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_25" target="Hub_33" id="370">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_25" target="Hub_39" id="371">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_26" target="Talihina" id="372">
+        <attvalues>
+          <attvalue for="3" value="27.523786694097826" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_26" target="Hub_12" id="373">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_26" target="Hub_18" id="374">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_26" target="Hub_19" id="375">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_26" target="Hub_20" id="376">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_26" target="Hub_24" id="377">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_26" target="Hub_25" id="378">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_26" target="Hub_27" id="379">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_26" target="Hub_28" id="380">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_26" target="Hub_32" id="381">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_26" target="Hub_33" id="382">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_26" target="Hub_34" id="383">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_26" target="Hub_40" id="384">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_27" target="Talihina" id="385">
+        <attvalues>
+          <attvalue for="3" value="23.396759070912594" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_27" target="Hub_13" id="386">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_27" target="Hub_19" id="387">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_27" target="Hub_20" id="388">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_27" target="Hub_21" id="389">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_27" target="Hub_25" id="390">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_27" target="Hub_26" id="391">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_27" target="Hub_28" id="392">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_27" target="Hub_33" id="393">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_27" target="Hub_34" id="394">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_27" target="Hub_35" id="395">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_27" target="Hub_41" id="396">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_28" target="Talihina" id="397">
+        <attvalues>
+          <attvalue for="3" value="33.723253639921296" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_28" target="Poteau" id="398">
+        <attvalues>
+          <attvalue for="3" value="32.21736213301542" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_28" target="Hub_14" id="399">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_28" target="Hub_20" id="400">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_28" target="Hub_21" id="401">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_28" target="Hub_26" id="402">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_28" target="Hub_27" id="403">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_28" target="Hub_34" id="404">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_28" target="Hub_35" id="405">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_28" target="Hub_42" id="406">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_29" target="Hub_15" id="407">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_29" target="Hub_22" id="408">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_29" target="Hub_23" id="409">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_29" target="Hub_30" id="410">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_29" target="Hub_31" id="411">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_29" target="Hub_36" id="412">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_29" target="Hub_37" id="413">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_29" target="Hub_43" id="414">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_30" target="Atoka" id="415">
+        <attvalues>
+          <attvalue for="3" value="29.86375642716496" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_30" target="McAlester" id="416">
+        <attvalues>
+          <attvalue for="3" value="27.378164873978037" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_30" target="Hub_16" id="417">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_30" target="Hub_22" id="418">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_30" target="Hub_23" id="419">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_30" target="Hub_24" id="420">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_30" target="Hub_29" id="421">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_30" target="Hub_31" id="422">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_30" target="Hub_32" id="423">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_30" target="Hub_36" id="424">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_30" target="Hub_37" id="425">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_30" target="Hub_38" id="426">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_30" target="Hub_44" id="427">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_31" target="Atoka" id="428">
+        <attvalues>
+          <attvalue for="3" value="30.959257628545256" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_31" target="McAlester" id="429">
+        <attvalues>
+          <attvalue for="3" value="11.050019062463216" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_31" target="Hub_17" id="430">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_31" target="Hub_23" id="431">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_31" target="Hub_24" id="432">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_31" target="Hub_25" id="433">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_31" target="Hub_29" id="434">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_31" target="Hub_30" id="435">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_31" target="Hub_32" id="436">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_31" target="Hub_33" id="437">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_31" target="Hub_37" id="438">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_31" target="Hub_38" id="439">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_31" target="Hub_39" id="440">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_31" target="Hub_45" id="441">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_32" target="Talihina" id="442">
+        <attvalues>
+          <attvalue for="3" value="35.37368483598992" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_32" target="McAlester" id="443">
+        <attvalues>
+          <attvalue for="3" value="17.16513707183476" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_32" target="Hub_18" id="444">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_32" target="Hub_24" id="445">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_32" target="Hub_25" id="446">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_32" target="Hub_26" id="447">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_32" target="Hub_30" id="448">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_32" target="Hub_31" id="449">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_32" target="Hub_33" id="450">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_32" target="Hub_34" id="451">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_32" target="Hub_38" id="452">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_32" target="Hub_39" id="453">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_32" target="Hub_40" id="454">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_32" target="Hub_46" id="455">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_33" target="Talihina" id="456">
+        <attvalues>
+          <attvalue for="3" value="15.52891109885292" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_33" target="McAlester" id="457">
+        <attvalues>
+          <attvalue for="3" value="35.597485025054105" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_33" target="Hub_19" id="458">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_33" target="Hub_25" id="459">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_33" target="Hub_26" id="460">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_33" target="Hub_27" id="461">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_33" target="Hub_31" id="462">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_33" target="Hub_32" id="463">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_33" target="Hub_34" id="464">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_33" target="Hub_35" id="465">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_33" target="Hub_39" id="466">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_33" target="Hub_40" id="467">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_33" target="Hub_41" id="468">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_33" target="Hub_47" id="469">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_34" target="Talihina" id="470">
+        <attvalues>
+          <attvalue for="3" value="5.567457315167454" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_34" target="Poteau" id="471">
+        <attvalues>
+          <attvalue for="3" value="33.12282430800327" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_34" target="Hub_20" id="472">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_34" target="Hub_26" id="473">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_34" target="Hub_27" id="474">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_34" target="Hub_28" id="475">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_34" target="Hub_32" id="476">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_34" target="Hub_33" id="477">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_34" target="Hub_35" id="478">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_34" target="Hub_40" id="479">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_34" target="Hub_41" id="480">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_34" target="Hub_42" id="481">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_34" target="Hub_48" id="482">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_35" target="Talihina" id="483">
+        <attvalues>
+          <attvalue for="3" value="24.916783139007848" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_35" target="Poteau" id="484">
+        <attvalues>
+          <attvalue for="3" value="15.329041372253462" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_35" target="Hub_21" id="485">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_35" target="Hub_27" id="486">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_35" target="Hub_28" id="487">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_35" target="Hub_33" id="488">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_35" target="Hub_34" id="489">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_35" target="Hub_41" id="490">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_35" target="Hub_42" id="491">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_35" target="Hub_49" id="492">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_36" target="Hub_22" id="493">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_36" target="Hub_29" id="494">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_36" target="Hub_30" id="495">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_36" target="Hub_37" id="496">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_36" target="Hub_38" id="497">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_36" target="Hub_43" id="498">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_36" target="Hub_44" id="499">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_37" target="McAlester" id="500">
+        <attvalues>
+          <attvalue for="3" value="27.759385343092355" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_37" target="Hub_23" id="501">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_37" target="Hub_29" id="502">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_37" target="Hub_30" id="503">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_37" target="Hub_31" id="504">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_37" target="Hub_36" id="505">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_37" target="Hub_38" id="506">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_37" target="Hub_39" id="507">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_37" target="Hub_43" id="508">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_37" target="Hub_44" id="509">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_37" target="Hub_45" id="510">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_38" target="McAlester" id="511">
+        <attvalues>
+          <attvalue for="3" value="11.963380961934059" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_38" target="Hub_24" id="512">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_38" target="Hub_30" id="513">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_38" target="Hub_31" id="514">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_38" target="Hub_32" id="515">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_38" target="Hub_36" id="516">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_38" target="Hub_37" id="517">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_38" target="Hub_39" id="518">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_38" target="Hub_40" id="519">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_38" target="Hub_44" id="520">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_38" target="Hub_45" id="521">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_38" target="Hub_46" id="522">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_39" target="Talihina" id="523">
+        <attvalues>
+          <attvalue for="3" value="39.17761892726285" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_39" target="McAlester" id="524">
+        <attvalues>
+          <attvalue for="3" value="17.766865042951213" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_39" target="Stigler" id="525">
+        <attvalues>
+          <attvalue for="3" value="38.380062323114956" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_39" target="Hub_25" id="526">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_39" target="Hub_31" id="527">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_39" target="Hub_32" id="528">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_39" target="Hub_33" id="529">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_39" target="Hub_37" id="530">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_39" target="Hub_38" id="531">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_39" target="Hub_40" id="532">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_39" target="Hub_41" id="533">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_39" target="Hub_45" id="534">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_39" target="Hub_46" id="535">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_39" target="Hub_47" id="536">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_40" target="Talihina" id="537">
+        <attvalues>
+          <attvalue for="3" value="22.907102083195905" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_40" target="McAlester" id="538">
+        <attvalues>
+          <attvalue for="3" value="35.891510178153794" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_40" target="Stigler" id="539">
+        <attvalues>
+          <attvalue for="3" value="28.701430479108733" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_40" target="Hub_26" id="540">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_40" target="Hub_32" id="541">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_40" target="Hub_33" id="542">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_40" target="Hub_34" id="543">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_40" target="Hub_38" id="544">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_40" target="Hub_39" id="545">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_40" target="Hub_41" id="546">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_40" target="Hub_42" id="547">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_40" target="Hub_46" id="548">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_40" target="Hub_47" id="549">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_40" target="Hub_48" id="550">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_41" target="Talihina" id="551">
+        <attvalues>
+          <attvalue for="3" value="17.73653931549479" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_41" target="Poteau" id="552">
+        <attvalues>
+          <attvalue for="3" value="33.07782605796902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_41" target="Stigler" id="553">
+        <attvalues>
+          <attvalue for="3" value="31.21722343784013" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_41" target="Hub_27" id="554">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_41" target="Hub_33" id="555">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_41" target="Hub_34" id="556">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_41" target="Hub_35" id="557">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_41" target="Hub_39" id="558">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_41" target="Hub_40" id="559">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_41" target="Hub_42" id="560">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_41" target="Hub_47" id="561">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_41" target="Hub_48" id="562">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_41" target="Hub_49" id="563">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_42" target="Talihina" id="564">
+        <attvalues>
+          <attvalue for="3" value="30.073814655447794" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_42" target="Poteau" id="565">
+        <attvalues>
+          <attvalue for="3" value="15.231565775541933" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_42" target="Hub_28" id="566">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_42" target="Hub_34" id="567">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_42" target="Hub_35" id="568">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_42" target="Hub_40" id="569">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_42" target="Hub_41" id="570">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_42" target="Hub_48" id="571">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_42" target="Hub_49" id="572">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_43" target="Hub_29" id="573">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_43" target="Hub_36" id="574">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_43" target="Hub_37" id="575">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_43" target="Hub_44" id="576">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_43" target="Hub_45" id="577">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_44" target="McAlester" id="578">
+        <attvalues>
+          <attvalue for="3" value="39.894899891914214" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_44" target="Hub_30" id="579">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_44" target="Hub_36" id="580">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_44" target="Hub_37" id="581">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_44" target="Hub_38" id="582">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_44" target="Hub_43" id="583">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_44" target="Hub_45" id="584">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_44" target="Hub_46" id="585">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_45" target="McAlester" id="586">
+        <attvalues>
+          <attvalue for="3" value="31.05063681794517" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_45" target="Hub_31" id="587">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_45" target="Hub_37" id="588">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_45" target="Hub_38" id="589">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_45" target="Hub_39" id="590">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_45" target="Hub_43" id="591">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_45" target="Hub_44" id="592">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_45" target="Hub_46" id="593">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_45" target="Hub_47" id="594">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_46" target="McAlester" id="595">
+        <attvalues>
+          <attvalue for="3" value="33.71470089165864" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_46" target="Stigler" id="596">
+        <attvalues>
+          <attvalue for="3" value="27.429125662864124" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_46" target="Hub_32" id="597">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_46" target="Hub_38" id="598">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_46" target="Hub_39" id="599">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_46" target="Hub_40" id="600">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_46" target="Hub_44" id="601">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_46" target="Hub_45" id="602">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_46" target="Hub_47" id="603">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_46" target="Hub_48" id="604">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_47" target="Stigler" id="605">
+        <attvalues>
+          <attvalue for="3" value="10.153810233115191" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_47" target="Hub_33" id="606">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_47" target="Hub_39" id="607">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_47" target="Hub_40" id="608">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_47" target="Hub_41" id="609">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_47" target="Hub_45" id="610">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_47" target="Hub_46" id="611">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_47" target="Hub_48" id="612">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_47" target="Hub_49" id="613">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_48" target="Talihina" id="614">
+        <attvalues>
+          <attvalue for="3" value="37.39215255670597" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_48" target="Stigler" id="615">
+        <attvalues>
+          <attvalue for="3" value="15.932444566702193" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_48" target="Hub_34" id="616">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_48" target="Hub_40" id="617">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_48" target="Hub_41" id="618">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_48" target="Hub_42" id="619">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_48" target="Hub_46" id="620">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_48" target="Hub_47" id="621">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_48" target="Hub_49" id="622">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_49" target="Poteau" id="623">
+        <attvalues>
+          <attvalue for="3" value="32.07836782875747" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_49" target="Stigler" id="624">
+        <attvalues>
+          <attvalue for="3" value="34.70714216831979" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_49" target="Hub_35" id="625">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_49" target="Hub_41" id="626">
+        <attvalues>
+          <attvalue for="3" value="28.284271247461902" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_49" target="Hub_42" id="627">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_49" target="Hub_47" id="628">
+        <attvalues>
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Hub_49" target="Hub_48" id="629">
+        <attvalues>
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
